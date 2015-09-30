@@ -1,0 +1,68 @@
+\documentclass[12pt]{memoir}
+\usepackage{subfiles} % to use subfiles
+\usepackage[margin=0.8in]{geometry}
+\usepackage{taylanmacros}
+\usepackage{fourier}
+\usepackage{multicol}
+\usetikzlibrary{shapes.geometric,fit} % used in P-4-functions.tex
+
+\begin{document}
+\tableofcontents
+\chapter*{Precalculus}
+    \section*{P-0-Sets}
+    \subfile{src/P-0-sets.tex}
+    \section*{P-1-Real Numbers}
+    \subfile{src/P-1-realnumbers.tex}
+    \section*{P-2-Cartesian Coordinates}
+    \subfile{src/P-2-cartesian.tex}
+    \section*{P-3-Quadratic Equations}
+    \subfile{src/P-3-quadratics.tex}
+    \section*{P-4-Functions and Their Graphs}
+    \subfile{src/P-4-functions.tex}
+    \section*{P-5-Operations on Functions}
+    \subfile{src/P-5-operfunctions.tex}
+    \section*{P-6-Polynomials and Rational Functions}
+    \subfile{src/P-6-polys.tex}
+    \section*{P-6-Polynomials and Rational Functions}
+    \subfile{src/P-7-trigs.tex}
+\chapter*{Limits and Continuity}
+    \section*{1.1 Informal definition of limits}
+    \subfile{src/1-1-limit.tex}
+    \section*{1.2 Formal definition of Limit}
+    \subfile{src/1-5-formal}
+    \section*{1.3 One Sided Limits and Limits at Infinity}
+    \subfile{src/1-6-limit-variations}
+    \section*{1.4 Properties of limits}
+    \subfile{src/1-2-properties-limits.tex}
+    \section*{1.5 Continuity}
+    \subfile{src/1-4-continuity}
+
+
+\chapter*{Differentiation}
+    \section*{2.1 Tangent Lines and Their Slopes}
+    \subfile{src/2-1-tangent}
+    \section*{2.2 Derivative}
+    \subfile{src/2-2-derivative}
+    \section*{2.3 Differentiation Rules}
+    \subfile{src/2-3-diffrules}
+    \section*{2.4 Chain Rule}
+    \subfile{src/2-4-chain}
+    \section*{2.5 Derivatives of Trigonometric Functions}
+    \subfile{src/2-5-trig}
+    \section*{2.6 Higher Order Derivatives}
+    \subfile{src/2-6-higher}
+    \section*{2.8 Mean Value Theorem}
+    \subfile{src/2-8-mean}
+    \section*{2.9 Implicit Differentiation}
+    \subfile{src/2-9-implicit}
+    \section*{2.10 Antiderivatives}
+    \subfile{src/2-10-antider}
+
+\chapter*{Transcendental Functions}
+    \section*{3.1 Inverse Functions}
+    \subfile{src/3-1-inverse}
+    \section*{3.2 Exponential and Logarithmic Functions}
+    \subfile{src/3-2-exp}
+    \section*{3.3 The Natural Logarithm and Exponential}
+    \subfile{src/3-3-naturallog}
+\end{document}

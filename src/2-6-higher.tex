@@ -1,0 +1,47 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+Derivative of derivative is called \textbf{second derivative}. If $y=f(x)$ then
+\[
+    y'' = f''(x) = \frac{d}{dx}\frac{d}{dx} y = \frac{d^2}{dx^2}y = \frac{d^2}{dx^2} f(x).
+\]
+Similar notations can be used for third, fourth, etc. derivatives. For n-th derivative, we write
+\[
+    y^{(n)} = f^{(n)}(x) = \frac{d^n y}{dx^n}
+\]
+\begin{example}
+    Calculate all the derivatives of $y=x^3$.
+\end{example}
+\begin{example}
+    Calculate all the derivatives of $y = x^n$ where $n$ is a positive integer.
+\end{example}
+\begin{solution}
+\[
+    y^{(k)} =
+    \begin{cases}
+        \frac{n!}{(n-k)!} x^{n-k} &\text{ if } 0 \leq k \leq n\\
+        0 &\text{ if } k > n
+    \end{cases}
+\]
+\end{solution}
+
+\begin{example}
+    Show that if $A$, $B$ and $k$ are constants, then the function $y= A \cos(k t) + B \sin(k t)$ is a solution of the second order differential equation
+    \[
+        \frac{d^2 y}{dx^2} + k^2 y = 0.
+    \]
+\end{example}
+
+\begin{example}
+    If $y= \tan kx$ show that $y'' = 2k^2 y (1+y^2)$.
+\end{example}
+
+\begin{example}
+    If $f$ and $g$ are twice differentiable functions, show that
+    \[
+        (f g)'' = f'' g + 2f' g' + f g''.
+    \]
+    What do you think about the general formula for $\frac{d^n}{d x^n} (f g)$?
+\end{example}
+\end{document}

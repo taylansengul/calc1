@@ -1,0 +1,117 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+The precise definition of the limit is not easy to use. Instead, there are a number of properties that
+limits have which allow you to compute them without having to resort to the epsilon-delta definition.
+
+The following statements remain true if one replaces each limit by a one-sided limit, or a limit for $x\to\infty$.
+
+\begin{theorem}[Limits of constants and $x$]
+  If $a$ and $c$ are constants, then
+  \begin{equation}
+  \lim_{x\to a}c=c \tag{$P_1$}
+  \end{equation}
+  and
+  \begin{equation}
+    \lim_{x\to a} x= a.\tag{$P_2$}
+  \end{equation}
+\end{theorem}
+\begin{proof}
+  We must find $\delta$. For ($P_2$) choose $\delta = \epsilon$. For ($P_1$) any $\delta$ will do.
+\end{proof}
+
+\begin{theorem}[Limits of sums, products, quotients]
+  Suppose
+  \[
+  \lim_{x\to a}f(x)=L, \qquad \lim_{x\to a}g(x)=M.
+  \]
+  Then
+  \begin{align}
+    \lim_{x\to a}\bigl(f(x)+g(x)\bigr)=L+M, \tag{$P_3$} \\
+    \lim_{x\to a}\bigl(f(x)-g(x)\bigr)= L - M, \tag{$P_4$} \\
+    \lim_{x\to a}\bigl(f(x)\cdot g(x)\bigr)= L\cdot M \tag{$P_5$}
+  \end{align}
+  If $ \lim_{x\to a}g(x)\ne0$,
+  \begin{equation}
+    \lim_{x\to a}\frac{f(x)}{g(x)}= \frac{L}{M}.\tag{$P_6$}
+  \end{equation}
+  Finally, if $m$ and $n$ are integers such that $L^{m/n}$ is defined
+  \begin{equation}
+    \lim_{x\to a}(f(x))^{m/n}= L^{m/n}.\tag{$P_7$}
+  \end{equation}
+\end{theorem}
+
+In other words the limit of the sum is the sum of the limits, etc.
+One can prove these laws using the definition of limit.
+
+\begin{proof}[Proof of $(P_3)$.]
+    We can find $\delta_1 > 0$ such that $\abs{f(x) - L} < \frac\epsilon2$ and $\delta_2 > 0$ such that $\abs{g(x) - M} < \frac\epsilon2$.
+    Now choose $\delta = \min\{\delta_1, \delta_2\}$.
+    If $\abs{x-a} < \delta$, by triangle inequality
+    \[
+      \abs{f(x) + g(x) - L - M} \le \abs{f(x) - L} + \abs{g(x) - M} < \epsilon.
+    \]
+\end{proof}
+\begin{proof}[Proof of $(P_5)$.]
+  Let $\epsilon > 0$ and let
+  \[
+    \epsilon_1 = \min\{1, \frac{\epsilon}{1+|L|+|M|}\}
+  \]
+  Then $\epsilon_1>0$ and by definition, there exists $\delta_1>0$ and $\delta_2>0$ such that
+  \[
+    |f(x)-L|<\epsilon_1 \text{ whenever } 0 < |x-a|<\delta_1
+  \]
+  \[
+    |g(x)-L|<\epsilon_1 \text{ whenever } 0 < |x-a|<\delta_2
+  \]
+  Let $\delta=\min\{\delta_1, \delta_2\}$.
+
+  Use triangle inequality
+  \[
+    \begin{split}
+      |f(x)g(x)-LM|
+      & = |(f(x) - L + L) + (g(x) - M + M) -LM| \\
+      & \le |f(x)-L||g(x)-M| + |M||f(x)-L| + |L||g(x)-M| \\
+      & \le \epsilon_1^2 + |M|\epsilon_1 + |L| \epsilon_1 \\
+      & \le \epsilon_1 + |M|\epsilon_1 + |L| \epsilon_1 \\
+      & \le \epsilon_1 (1 + |M| + |L|) \le \epsilon
+    \end{split}
+  \]
+\end{proof}
+
+\begin{example}
+  Find $\lim_{x\to2}x^2$.
+
+  One has
+  \begin{align*}
+    \lim_{x\to2} x^2 &= \lim_{x\to2} x\cdot x \\
+    &= \bigl( \lim_{x\to2} x\bigr)\cdot \bigl( \lim_{x\to2} x\bigr)
+    &\text{by $(P_5)$}\\
+    &= 2\cdot 2 = 4.
+  \end{align*}
+  Similarly,
+  \begin{align*}
+    \lim_{x\to2} x^3 &= \lim_{x\to2} x\cdot x^2 \\
+    &= \bigl( \lim_{x\to2} x\bigr)\cdot \bigl( \lim_{x\to2} x^2\bigr)
+    &\text{$(P_5)$ again}\\
+    &= 2\cdot 4 = 8,
+  \end{align*}
+  and, by $(P_4)$
+  \[
+  \lim_{x\to2} x^2-1 = \lim_{x\to2} x^2 - \lim_{x\to2} 1 = 4-1 = 3,
+  \]
+  and, by $(P_4)$ again,
+  \[
+  \lim_{x\to2} x^3-1 = \lim_{x\to2} x^3 - \lim_{x\to2} 1 = 8-1 = 7,
+  \]
+  Putting all this together, one gets
+  \[
+  \lim_{x\to 2}\frac{x^3-1}{x^2-1} = \frac{2^3-1}{2^2-1} = \frac{8-1}{4-1}=
+  \frac{7}{3}
+  \]
+  because of $(P_6)$.  To apply $(P_6)$ we must check that the denominator
+  (``$L_2$'') is not zero.  Since the denominator is 3 everything is OK, and
+  we were allowed to use $(P_6)$.
+\end{example}
+\end{document}

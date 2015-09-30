@@ -1,0 +1,34 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+We learned to find the slope of a curve that is the graph of a function. But not all curves are graphs of functions such as the graph of the equation $x^2 + y^2 = 1$.
+
+Curves are graphs of equations in two variables
+\[
+    F(x, y) = 0.
+\]
+
+For the circle $F(x, y) = x^2 + y^2 -1$.
+
+
+\begin{example}
+    Find the slope of the circle $x^2 + y^2 = 25$ at the point $(3, -4)$.
+
+    1st method: solve for $y$ explicitly. $y_{1, 2} = \pm \sqrt{25 - x^2}$. The point lies on the graph of $y_2$. Take derivative of $y_2$.
+
+    Second use \textbf{implicit differentiation}. To diff w.r.t $x$ treat $y$ as a function of $x$.
+    \[
+        2x + 2y \frac{dy}{dx} = 0
+    \]
+    Plug in the point to find $dy/dx$.
+\end{example}
+
+\begin{example}
+    Find an equation of the tangent line to the curve $x \sin(xy - y^2) = 0$ at $(1, 1)$
+\end{example}
+
+\begin{example}
+    Find $y''$ in terms of $x$ and $y$ if $x y + y^2 = 2x$. The answer is $y'' = -\frac{8}{(x+2y)^3}$
+\end{example}
+\end{document}

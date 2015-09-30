@@ -1,0 +1,98 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{definition}
+  A \textbf{polynomial} is a function $P: \mathbb{R} \to \mathbb{R}$ such that
+  \[
+    P(x) = a_n x^n + \cdot + a_1 x + a_0.
+  \]
+  Here $a_n, \dots, a_1$ are called the \textbf{coefficients} of the polynomial. We assume $a_n \neq 0$. The number $n$ is called the \textbf{degree} of the polynomial.
+\end{definition}
+
+\begin{example}
+  Write polynomials of degree 0, 1 and 2.
+\end{example}
+
+Just as the quotient of two integers is called a rational number, the quotient of two polynomials is called a \textbf{rational function}. Give an example.
+
+Let $A_m$ be a polynomial of degree $m$, $B_n$ be a polynomial of degree $n$ with $m\ge n$. Then there are polynomial $Q_{m-n}$ of degree $m-n$, $R_k$ of degree $k<n$ such that
+\[
+  \frac{A_m}{B_n} = Q_{m-n} + \frac{R_k}{B_n}.
+\]
+The quotient $Q_{m-n}$ and the remainder $R_k$ can be calculated by the ``long division''.
+\begin{example}
+  Using the long division algorithm, show that
+  \[
+    \frac{2x^3-3x^2+3x+4}{x^2+1} = 2x-3 + \frac{x+7}{x^2+1}
+  \]
+\end{example}
+
+If $P$ is a polynomial and $P(r) = 0$ then $r$ is called a \textbf{root} of $P$.
+
+The Fundamental Theorem of Algebra says every polynomial of degree greater than 0 must have a root. But these roots may be complex.
+\begin{example}
+  $x^2+1$ has no real roots. Its roots are $i=\sqrt{-1}$ and $-i$.
+\end{example}
+
+\begin{theorem}
+  If r is a root of the polynomial $P$ then
+  \[
+    P(x) = (x-r) Q(x),
+  \]
+  for some polynomial $Q$ whose degree is 1 less than $P$.
+\end{theorem}
+
+The polynomial $x(x-7)^3$ has 4 roots: 0 and the other three are each equal to 7. We say that $7$ is a root of \textbf{multiplicity} $3$.
+
+By the Fundamental Theorem of Algebra and the above theorem, every polynomial of degree $n$ has exactly $n$ (not necessarily distinct) roots.
+
+\subsection*{Roots of Quadratic Polynomials}
+To obtain the solutions of
+\[
+  A x^2 + B x + C = 0, \qquad A \neq 0
+\]
+Divide by $A$ and complete to square
+\[
+  \left(x + \frac{B}{2A}\right)^2 = \frac{B^2}{4A^2} - \frac{C}{A} = \frac{B^2-4AC}{4A^2},
+\]
+Taking the square root of both sides gives the quadratic formula
+\[
+  x = \frac{-B \pm \sqrt{B^2 - 4AC}}{2A}.
+\]
+
+\textit{A form of this formula is known since B.C. 2000 by Babylonians.}
+
+The quantity $D=B^2 - 4AC$ is called the \textbf{discriminant} of the quadratic equation.
+
+\begin{itemize}
+  \item If $D>0$ then there are two distinct real roots,
+  \item If $D=0$ then there is 1 root of multiplicity 2,
+  \item If $D<0$ then there are two complex conjugate roots.
+\end{itemize}
+
+\begin{example}
+  Find the roots of the polynomials: (a) $x^2+x-1$, (b) $9x^2 -6x+1$, (c) $2x^2+x+1$.
+\end{example}
+
+\subsection*{Misc Factorings}
+
+\begin{itemize}
+  \item Difference of squares:
+  \[
+    x^2 - a^2 = (x-a)(x+a)
+  \]
+  \item Difference of cubes:
+  \[
+    x^3 - a^3 = (x-a)(x^2+ax+a^2)
+  \]
+  \item Difference of nth powers
+  \[
+    x^n - a^n = (x-a)(x^{n-1}+ a x^{n-2} + a^2 x^{n-3} + \cdots + a^{n-2}x + a^{n-1})
+  \]
+  \item If $n$ is an odd integer then $x+a$ is a factor of $x^n+a^n$,
+  \[
+    x^n + a^n = (x+a)(x^{n-1} - a x^{n-2} + a^2 x^{n-3} - \cdots - a^{n-2}x + a^{n-1})
+  \]
+\end{itemize}
+\end{document}

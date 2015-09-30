@@ -1,0 +1,94 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{definition}[Right Limit]
+  We say that
+  \begin{equation}\label{eq:one-sided-lim-formulation}
+    \lim_{x\searrow a} f(x) = L
+  \end{equation}
+  if for every $\epsilon>0$ one can find a $\delta>0$ such that
+  \[
+  a<x<a+\delta \implies |f(x)-L|<\epsilon.
+  \]
+  This is called right-limit of $f$ at $x=a$.
+\end{definition}
+
+The left-limit, i.e. the one-sided limit in which $x$ approaches $a$
+through values less than $a$ is defined in a similar way.
+
+\begin{theorem}
+If both one-sided limits
+\[
+\lim_{x\searrow a} f(x) = L_{+}, \text{ and } \lim_{x\nearrow a} f(x) =
+L_{-}
+\]
+exist, then
+\[
+\lim_{x\to a} f(x) \text{ exists} \iff L_{+}=L_{-}.
+\]
+\end{theorem}
+
+In other words, if a function has both left- and right-limits at some
+$x=a$, then that function has a limit at $x=a$ if the left- and
+right-limits are equal.
+
+\begin{example}
+    Show that $\Lim{x}{0^+} \sqrt{x} = 0$.
+
+    Solution: Choose $\delta = \epsilon^2$.
+\end{example}
+
+What happens to $f(x)$ as $x$ becomes ``larger and larger'' and ask?
+\begin{definition}[Limit at Infinity]
+  Let $f$ be some function which is defined on some interval $x_0<x<\infty$.
+  If there is a number $L$ such that for every $\epsilon>0$ one can find
+  an $A$ such that
+  \[
+  x>A \implies |f(x) - L| <\epsilon
+  \]
+  for all $x$, then we say that the limit of $f(x)$ for $x\to\infty$ is $L$.
+\end{definition}
+
+\begin{example}
+  To \emph{prove} that $\lim_{x\to\infty}1/x = 0$ we apply the definition to
+  $f(x) = 1/x$, $L=0$.
+
+  For given $\epsilon>0$ we need to show that
+  \begin{equation}\label{eq:1overx-small-for-x-large}
+    \left|\frac1x - L\right|<\epsilon \text{ for all } x>A
+  \end{equation}
+  provided we choose the right $A$.
+
+  How do we choose $A$?  $A$ is not allowed to depend on $x$, but it may
+  depend on $\epsilon$.
+
+  If we assume for now that we will only consider positive values of $x$,
+  then \eqref{eq:1overx-small-for-x-large} simplifies to
+  \[
+  \frac 1x<\epsilon
+  \]
+  which is equivalent to
+  \[
+  x>\frac1\epsilon.
+  \]
+  This tells us how to choose $A$.  Given any positive $\epsilon$, we will
+  simply choose
+  \[
+  A=\frac1\epsilon
+  \]
+  Then one has $|\frac1x-0| = \frac1x <\epsilon$ for all $x>A$.  Hence we
+  have proved that $\lim_{x\to\infty}1/x=0$.
+\end{example}
+
+\subsection*{Infinite Limits}
+\begin{definition}
+    $\Lim{x}{a} f(x) = \infty$ if for every $B>0$ there exists $\delta>0$ such that $f(x) > B$ whenever $0<\abs{x-a}<\delta$.
+\end{definition}
+
+\begin{example}
+    Verify that $\Lim{x}{0} \frac{1}{x^2} = \infty$.
+
+    Solution: Choose $\delta = 1/\sqrt{B}$.
+\end{example}
+\end{document}

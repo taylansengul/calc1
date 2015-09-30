@@ -1,0 +1,54 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+Trigonometric functions are useful for investigating many real-world phenomena where quantities fluctuate in a periodic way. Examples: elastic motions, vibrations and waves.
+
+The radian measure of an angle is defined to be the length of the arc of a unit circle corresponding to that angle.
+\[
+    \text{angle in degrees = angle in radians}\cdot \frac{180^{\circ}}{\pi}.
+\]
+
+In calculus all angles are measured in radians. When we talk about the angle $\pi/3$ we mean $\pi/3 = 60^{\circ}$ not $(\pi/3)^{\circ} \approx 1.04^{\circ}$.
+
+In the book, it is proved that
+\[
+    \frac{d}{dx} \sin x = \cos x, \qquad \frac{d}{dx} \cos x = -\sin x.
+\]
+Notice that both $\sin$ and $\cos$ are differentiable for all $x$.
+\begin{example}
+    Evaluate the derivative of
+    \begin{itemize}
+        \item[a)] $\sin(\pi x) + \cos(3x)$,
+        \item[b)] $x^2 \cos(\sqrt{x})$,
+        \item[c)] $\frac{\cos x}{1- \sin x}$,
+        \item[d)] $\sin(\cos(\tan t))$
+    \end{itemize}
+\end{example}
+
+\textbf{The derivatives of the other trigonometric functions}
+\[
+    \tan x = \frac{\sin x}{\cos x}, \qquad \sec x = \frac{1}{\cos x},
+\]
+\[
+    \cot x = \frac{\cos x}{\sin x}, \qquad \csc x = \frac{1}{\sin x}.
+\]
+Since $\cos$ and $\sin$ are eveywhere differentiable, the above functions are differentiable everywhere except where their denominators are zero. The derivatives of these functions can be derived by using quotient and reciprocal rules.
+
+\[
+    \frac{d}{dx} \tan x= \sec^2 x, \qquad \frac{d}{dx} \sec x \tan x,
+\]
+\[
+    \frac{d}{dx} \cot x = -\csc^2 x, \qquad \frac{d}{dx} \csc = -\csc x \cot x.
+\]
+
+\begin{example}
+    Verify the formuals for $\tan x$ and $\sec x$.
+\end{example}
+
+\begin{example}
+    Find the points on the curve $y=\tan(2x)$, $-\pi/4 < x < \pi/4$, where the normal is parallel to the line $y=-x/8$.
+\end{example}
+
+
+\end{document}

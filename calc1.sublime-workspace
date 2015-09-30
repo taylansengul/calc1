@@ -1,0 +1,1950 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"operatr",
+				"operatorname{name}	amsmath"
+			],
+			[
+				"begin",
+				"begin{align*}	amsmath"
+			],
+			[
+				"over",
+				"overbrace{text}	latex-document"
+			],
+			[
+				"bib",
+				"bibliography{file}	latex-document"
+			],
+			[
+				"lam",
+				"lambda	latex-mathsymbols"
+			],
+			[
+				"newde",
+				"newenvironment{nam}{begdef}{enddef}	latex-document"
+			],
+			[
+				"end",
+				"end{bmatrix}	poiseuille.tex"
+			],
+			[
+				"disc",
+				"disc_eig_prob"
+			],
+			[
+				"cent",
+				"centering	tex"
+			],
+			[
+				"under",
+				"underbrace{text}	latex-document"
+			],
+			[
+				"pi",
+				"Pi	latex-mathsymbols"
+			],
+			[
+				"sec",
+				"section*{title}	latex-document"
+			],
+			[
+				"left",
+				"left	latex-left-right-snippet"
+			],
+			[
+				"Leftrightarrow",
+				"Longleftrightarrow	latex-mathsymbols"
+			],
+			[
+				"longleft",
+				"Longleftrightarrow"
+			],
+			[
+				"longlef",
+				"Longleftrightarrow"
+			],
+			[
+				"item",
+				"item	Itemize"
+			],
+			[
+				"rar",
+				"rightarrow	latex-mathsymbols"
+			],
+			[
+				"fix",
+				"fixedptiter	(import)"
+			],
+			[
+				"max",
+				"max_iter"
+			],
+			[
+				"non",
+				"none_instance"
+			],
+			[
+				"none",
+				"none_type"
+			],
+			[
+				"dictOfEn",
+				"dictOfEntity2Coordinates"
+			],
+			[
+				"None",
+				"NoneType"
+			],
+			[
+				"sup",
+				"super"
+			],
+			[
+				"A",
+				"ATTACK"
+			],
+			[
+				"draw",
+				"drawEntities"
+			],
+			[
+				"pla",
+				"playerRow"
+			],
+			[
+				"n",
+				"nTerminalRows"
+			],
+			[
+				"set",
+				"setdefault	(builtin, function)"
+			],
+			[
+				"en",
+				"entity"
+			],
+			[
+				"is",
+				"isinstance	(builtin, function)"
+			],
+			[
+				"class",
+				"classmethod	(builtin, class)"
+			],
+			[
+				"math",
+				"mathbb{text}	latex-document"
+			],
+			[
+				"rightar",
+				"Rightarrow	latex-mathsymbols"
+			],
+			[
+				"K",
+				"KeyboardInterrupt	(builtin, class)"
+			],
+			[
+				"time",
+				"time_step	(global, instance)"
+			],
+			[
+				"file",
+				"file_name	(global, instance)"
+			],
+			[
+				"Boa",
+				"CardBoar"
+			],
+			[
+				"all",
+				"all_targets	(global, instance)"
+			],
+			[
+				"sl",
+				"sleepCheck"
+			],
+			[
+				"nex",
+				"next_game_state	(global, instance)"
+			],
+			[
+				"de",
+				"debug_this(func)	(imported, function)"
+			],
+			[
+				"player",
+				"player_decide"
+			],
+			[
+				"deb",
+				"debug_log	(global, instance)"
+			],
+			[
+				"proper",
+				"properties	(attribute, instance)"
+			],
+			[
+				"o",
+				"outgoing_parameters"
+			],
+			[
+				"lo",
+				"logthis"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "calc1.sublime-project",
+			"settings":
+			{
+				"buffer_size": 341,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Clean up Files"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXing/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Primary Quick Build"
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Choose Quick Build"
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Clean up Files"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXing/LaTeX.sublime-build",
+				"Primary Quick Build"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"last_filter": "project",
+		"selected_items":
+		[
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"subfil",
+				"Snippet: New Subfiles"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"view mark",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"build ",
+				"Build With: Markdown"
+			],
+			[
+				"boldf",
+				"Snippet: Boldface Text"
+			],
+			[
+				"item",
+				"Snippet: Itemize"
+			],
+			[
+				"beg",
+				"Snippet: \\begin{}…\\end{}"
+			],
+			[
+				"\\[",
+				"Snippet: Display Math — \\[ … \\]"
+			],
+			[
+				"subfi",
+				"Snippet: New Subfiles"
+			],
+			[
+				"subfile",
+				"Snippet: New Subfiles"
+			],
+			[
+				"be",
+				"Snippet: \\begin{}…\\end{}"
+			],
+			[
+				"bold",
+				"Snippet: Boldface Text"
+			],
+			[
+				"ital",
+				"Snippet: Italic Shape Text"
+			],
+			[
+				"open brow",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"dec",
+				"Crypto::Decrypt"
+			],
+			[
+				"preview",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"set markd",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"set tasks",
+				"Set Syntax: Tasks"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"package",
+				"Package Control: Disable Package"
+			],
+			[
+				"set mar",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"set mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"se markdi",
+				"Set Syntax: Markdown Light"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"enc",
+				"Crypto::Encrypt"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"lef",
+				"Snippet: latex-left-right-snippet"
+			],
+			[
+				"figu",
+				"Snippet: New figure"
+			],
+			[
+				"inner",
+				"Snippet: latex-innerproduct"
+			],
+			[
+				"inpr",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"left",
+				"Snippet: latex-left-right-snippet"
+			],
+			[
+				"innpr",
+				"Snippet: latex-innerproduct"
+			],
+			[
+				"iner",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"equ",
+				"Snippet: Equation"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"inner ",
+				"Snippet: latex-innerproduct"
+			],
+			[
+				"Snippet: lim",
+				"Snippet: latex-lim"
+			],
+			[
+				"fig",
+				"Snippet: New figure"
+			],
+			[
+				"table",
+				"Snippet: New table"
+			],
+			[
+				"matr",
+				"Snippet: Matrix"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"filedif",
+				"FileDiffs: Menu"
+			],
+			[
+				"equa",
+				"Snippet: Equation"
+			],
+			[
+				"insertgi",
+				"Gist: Insert Gist"
+			],
+			[
+				"todo",
+				"TodoReview: Open Files"
+			],
+			[
+				"new",
+				"Snippet: New Report"
+			],
+			[
+				"set late",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"fold",
+				"BracketHighlighter: Fold Bracket Content"
+			],
+			[
+				"envi",
+				"LaTeXing: New Environment"
+			],
+			[
+				"latexing",
+				"LaTeXing: New Environment"
+			],
+			[
+				"\\",
+				"Snippet: \\begin{}…\\end{}"
+			],
+			[
+				"enumer",
+				"Snippet: Enumerate"
+			],
+			[
+				"artic",
+				"Snippet: New Article"
+			],
+			[
+				"pdf",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"bmatr",
+				"BracketHighlighter: Match Brackets (ignore threshold)"
+			],
+			[
+				"subsec",
+				"Snippet: Sub Section"
+			],
+			[
+				"cases",
+				"Snippet: Cases"
+			],
+			[
+				"arti",
+				"Snippet: New Article"
+			],
+			[
+				"set latexing",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"update",
+				"Gist: Update File"
+			],
+			[
+				"open",
+				"Gist: Open Gist"
+			],
+			[
+				"ins",
+				"Gist: Insert Gist"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"sublime",
+				"Sublimerge"
+			],
+			[
+				"inse",
+				"Gist: Insert Gist"
+			],
+			[
+				"gist",
+				"Gist: Insert Gist"
+			],
+			[
+				"case",
+				"Snippet: Cases"
+			],
+			[
+				"ite",
+				"Snippet: Itemize"
+			],
+			[
+				"mdh2",
+				"Snippet: Markdown_header_(mdh2)"
+			],
+			[
+				"mdh3",
+				"Snippet: Markdown_header_(mdh3)"
+			],
+			[
+				"markdown",
+				"Snippet: Markdown_header_(mdh1)"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"packages",
+				"Package Control: List Packages"
+			],
+			[
+				"UPPER",
+				"Convert Case: Upper Case"
+			],
+			[
+				"\\be",
+				"Snippet: \\begin{}…\\end{}"
+			],
+			[
+				"matlab",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"matla",
+				"SublimeREPL: Matlab"
+			],
+			[
+				"center",
+				"LaTeXing: Clean Temporary Output Dictionary"
+			],
+			[
+				"bo",
+				"Snippet: Boldface Text"
+			],
+			[
+				"ne",
+				"Snippet: New figure"
+			],
+			[
+				"bol",
+				"Snippet: Boldface Text"
+			],
+			[
+				"Tit",
+				"Convert Case: Title Case"
+			],
+			[
+				"aricle",
+				"Snippet: New Article"
+			],
+			[
+				"type",
+				"Snippet: Teletypefont Family Text"
+			],
+			[
+				"figure",
+				"Snippet: New figure"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"ita",
+				"Snippet: Italic Shape Text"
+			],
+			[
+				"typett",
+				"Snippet: Teletypefont Family Text"
+			],
+			[
+				"enum",
+				"Snippet: Enumerate"
+			],
+			[
+				"dias",
+				"Package Control: Disable Package"
+			],
+			[
+				"tabular",
+				"Snippet: Tabular"
+			],
+			[
+				"enumera",
+				"Snippet: Enumerate"
+			],
+			[
+				"enu",
+				"Snippet: Enumerate"
+			],
+			[
+				"vintag",
+				"Vintageous: Open .vintageousrc"
+			],
+			[
+				"vintage",
+				"Vintageous: Toggle Vim Ctrl Keys"
+			],
+			[
+				"vinta",
+				"Vintageous: Toggle Vim Ctrl Keys"
+			],
+			[
+				"set swi",
+				"Set Syntax: Swift"
+			],
+			[
+				"new sub",
+				"Snippet: New Subfiles"
+			],
+			[
+				"new s",
+				"Snippet: New Subfiles"
+			],
+			[
+				"new tab",
+				"Snippet: New table"
+			],
+			[
+				"tabl",
+				"Snippet: Table"
+			],
+			[
+				"tabu",
+				"Snippet: Tabular"
+			],
+			[
+				"latelim",
+				"Snippet: latex-lim"
+			],
+			[
+				"latexconv",
+				"Snippet: latex-conv"
+			],
+			[
+				"dfr",
+				"Snippet: latex-dfrac"
+			],
+			[
+				"conv",
+				"Convert Case: Lower Case"
+			],
+			[
+				"set latex",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"enume",
+				"Snippet: Enumerate"
+			],
+			[
+				"def",
+				"Preferences: Settings - Default"
+			],
+			[
+				"dola",
+				"Snippet: latex-dollar"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"keybin",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"ren",
+				"File: Rename"
+			]
+		],
+		"width": 566.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"cos(2)",
+			"from math import cos",
+			"import math",
+			"3 + 5 ",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes"
+	],
+	"file_history":
+	[
+		"/Users/taylansengul/Dropbox/work/papers/current/pattern formation book/pfb.sublime-project",
+		"/Users/taylansengul/Dropbox/work/papers/current/pattern formation book/pfb.sublime-workspace",
+		"/Users/taylansengul/text/4-yesilpas.txt",
+		"/Users/taylansengul/text/3-birzaman.txt",
+		"/Users/taylansengul/text/1-waiting.txt",
+		"/Users/taylansengul/text/pass.txt",
+		"/Users/taylansengul/Dropbox/work/papers/submitted/poiseuille/cover letter.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/abstract linalg/taylanmacros.sty",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/abstract linalg/src/linfunc.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/abstract linalg/src/linop.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/abstract linalg/src/linvsp.tex",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/poiseuille.tex",
+		"/Users/taylansengul/text/finans.txt",
+		"/Users/taylansengul/text/gereksizpass.txt",
+		"/Users/taylansengul/text/2-done.txt",
+		"/Users/taylansengul/text/4-birzaman.txt",
+		"/Users/taylansengul/text/0-todo.txt",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/PlainTasks/PlainTasks (OSX).sublime-settings",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/PlainTasks.sublime-settings",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/Users/taylansengul/text/mypath.txt",
+		"/Users/taylansengul/Dropbox/todo/docentlik/juriye belgeler.txt",
+		"/Users/taylansengul/text/research.txt",
+		"/Users/taylansengul/text/bela.txt",
+		"/Users/taylansengul/text/old-toDo.txt",
+		"/Users/taylansengul/text/todo.txt",
+		"/Users/taylansengul/Dropbox/work/reviews/dcds-b Discrete and Continuous Dynamical Systems - Series B/2015 ong/ong referee report.tex",
+		"/Users/taylansengul/Dropbox/work/papers/future/abstract marangoni/abstractmaran.tex",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/latex-innerproduct.sublime-snippet",
+		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/poiseuille.bib",
+		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/toDo.tex",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/README.markdown",
+		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/.gitignore",
+		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/poiseuille2.tex",
+		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/poiseuille.sublime-project",
+		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/.dropbox",
+		"/Users/taylansengul/Dropbox/work/teaching/calc2/152 PS adams 7th Edition calc2 spring 2015",
+		"/Users/taylansengul/Dropbox/work/teaching/calc2/notes/src/9-7-applications-Taylor.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/calc2/calc2.tex",
+		"/var/folders/pc/jwdyr58s6kv3tlwzfcyvs0gh0000gn/T/gistfile1",
+		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/latex.sublime-project",
+		"/Users/taylansengul/Dropbox/work/papers/Current/poiseuille/poiseuille.aux",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/old/shear.tex",
+		"/Users/taylansengul/Dropbox/work/papers/Current/poiseuille/poiseuille.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/question bank.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/final.tex",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/shear.tex",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/shear.log",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/shear.bbl",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/master.bib",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/dene.tex",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/notes.tex",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/figures/gamma_fixed_a_026.eps",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/figures/critical_E.eps",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/notes.aux",
+		"/Users/taylansengul/Dropbox/work/papers/Current/shear/shear.aux",
+		"/Users/taylansengul/Dropbox/code/python/scientific/tools/integral2latex.py",
+		"/Users/taylansengul/Dropbox/projects/kitap/0.txt",
+		"/Users/taylansengul/Dropbox/code/python/scientific/tools/double_integral.py",
+		"/Users/taylansengul/Dropbox/work/teaching/calc3/exams/taylanmacros.sty",
+		"/Users/taylansengul/Dropbox/work/teaching/calc3/exams/exam1.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/calc3/2014 Fall - Yeditepe/exam 1- 255 Calculus3 2014 Fall Yeditepe.xlsx",
+		"/Users/taylansengul/Dropbox/work/teaching/calc1/2014 Fall/exams/midterm2.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/calc1/2014 Fall/exams/finalexam.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/calc1/2014 Fall/exams/butunleme.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/calc1/2014 Fall/exams/math151_fall2014MT1.docx",
+		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/exam1_makeup.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/midterm2.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/midterm2.aux",
+		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/midterm1.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/final.aux",
+		"/Users/taylansengul/Dropbox/projects/kitap/buyukPatlama.txt",
+		"/Users/taylansengul/tmp/lyx/shear.lyx",
+		"/Users/taylansengul/Dropbox/work/teaching/calc3/exams/exam2.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/calc3/exams/exam1.aux",
+		"/Users/taylansengul/text/'Divinity: Original Sin' Has the Most Innovative RPG Combat in Years.txt",
+		"/Users/taylansengul/text/oxygen.txt",
+		"/Users/taylansengul/Downloads/2014a/README.txt",
+		"/Users/taylansengul/text/adresler.txt",
+		"/Users/taylansengul/Dropbox/code/matlab/shear/plot_3cr_evecs.m",
+		"/Users/taylansengul/text/done.TODO",
+		"/Users/taylansengul/text/researchtopics.txt",
+		"/Users/taylansengul/text/religion.txt",
+		"/var/folders/pc/jwdyr58s6kv3tlwzfcyvs0gh0000gn/T/jrnl",
+		"/Users/taylansengul/Downloads/fwdpaperonquasigeostrophicchannelflows/shear.tex",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/taylansengul/Dropbox/work/notes/pde/main.tex",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/computations/secant.py",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/studyguide1.tex",
+		"/Users/taylansengul/text/math journals.txt",
+		"/Users/taylansengul/Dropbox/work/teaching/Calculus 3/exams/exam1.tex",
+		"/Users/taylansengul/Dropbox/work/teaching/Calculus 3/exams/exam1.aux",
+		"/Users/taylansengul/Dropbox/work/teaching/Calculus 3/exams/taylanmacros.sty",
+		"/Users/taylansengul/Dropbox/work/talks/2014yeditepe/2014yeditepe.tex",
+		"/Users/taylansengul/Dropbox/work/talks/2014yeditepe/taylanmacros.sty",
+		"/Users/taylansengul/Dropbox/work/talks/2014yeditepe/taylanmacros.aux",
+		"/Users/taylansengul/Dropbox/work/talks/2014yeditepe/2014yeditepe.snm",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/main.tex",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/main.fdb_latexmk",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-6-higher.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-2-derivative.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-10-antider.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-1-tangent.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/1-5-formal.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-4-chain.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/1-4-continuity.tex",
+		"/Users/taylansengul/Dropbox/work/talks/2014yeditepe/abstract.txt",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/3-intro.tex",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/3-intro.tex",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-1-bisection-method.tex",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/computations/bisect.py",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/computations/sec24-ex1.fdb_latexmk",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/computations/sec24-ex1.aux",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-4-error.tex",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-0-root-finding-intro.tex",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/research.bib",
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-4-error.aux",
+		"/Users/taylansengul/tmp/dene.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/taylanmacros.sty",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-3-diffrules.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/3-2-exp.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/3-3-naturallog.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-8-mean.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/main.tex",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/main.toc",
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/main.aux"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"“",
+			"–",
+			"_i",
+			"u_W",
+			"u_V",
+			"operator",
+			"\\",
+			"operator",
+			"_k",
+			"A",
+			"U",
+			"  ",
+			"   ",
+			" ",
+			"   ",
+			"tr",
+			"operator",
+			"x",
+			"-",
+			"”",
+			"“",
+			"’",
+			"7500",
+			"Indiana",
+			"Differen",
+			"Discrete and Continuous Dynamical Systems-Series",
+			"AMERICAN MATHEMATICAL SOCIETY",
+			"Transactions of the American Mathematical Society",
+			"R_m",
+			"equation",
+			"\\cite",
+			"),",
+			"}",
+			"{",
+			" ",
+			"},",
+			"{",
+			"B_N",
+			"{RE",
+			"{dispersion relation}",
+			"dispersion relation",
+			"separated eigenvalue prbolem BC",
+			"seperated eigenvalue problem",
+			"eigensolutions ansatz",
+			"eigensolutions ansatz\neigensolutions ansatz",
+			"main equation. abstract form",
+			"abstract equ",
+			"advection operator",
+			"Lemma",
+			"lemma",
+			"initial",
+			"A0 A6",
+			"= 4.124",
+			"\\cite{",
+			"Ma ",
+			"Ozer",
+			"at",
+			"Poinc",
+			"m",
+			"m_{\\theta}",
+			"j",
+			"R^L",
+			"R^E",
+			"R_E",
+			"R_c",
+			"A_1",
+			"A_N",
+			"unstable",
+			"\\Phi_",
+			"Bessel",
+			"\\eta_1",
+			"equation*",
+			"(w_",
+			"\\quad",
+			"[h]",
+			"_m",
+			"equation",
+			"R_",
+			". ",
+			"R",
+			"\\Omega",
+			"D",
+			"\\lambda_{3,1}",
+			"_k",
+			"i",
+			"j",
+			"i",
+			"\\label",
+			"\\be",
+			"\\ee",
+			"ee",
+			"\\\\ea\\n",
+			"\\\\ba\\n",
+			"\\\\ee\\n",
+			"\\\\be\\n",
+			"\\\\ba\\n",
+			"\\\\be\\n",
+			"\\be\\n",
+			"\\\\be\\n",
+			"\\be",
+			"\\be ",
+			"\\be",
+			"computers",
+			". ",
+			"wave number",
+			"schmid2012stability",
+			"\\lambda_1",
+			"Ozer",
+			"v_",
+			". ",
+			"                ",
+			"               ",
+			"              ",
+			"               ",
+			"azimuthal",
+			"_1",
+			"ht",
+			"angular",
+			". ",
+			".",
+			"x to z",
+			"\\ip",
+			"A_",
+			"A_1",
+			"abs",
+			"\\qquad",
+			"htbp",
+			"Rc"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"transformation",
+			")",
+			"(",
+			")",
+			"(",
+			"B^N",
+			"seperated EVP BC",
+			"seperated EVP",
+			"ansatz",
+			"eigensolutions ansatz",
+			"abstract equ1",
+			"\\approx 4.124",
+			"m_{\\\\theta}",
+			"m_{\\theta}",
+			"m_r",
+			"m_{\\theta}",
+			"R_L",
+			"R_E",
+			"R^E",
+			"R^L",
+			"A^1",
+			"A^N",
+			"\\PPhi",
+			"\\\\end{aligned}\\n",
+			"\\\\begin{aligned}\\n",
+			"\\\\end{equation}\\n",
+			"\\\\begin{equation}\\n",
+			"\\\\begin{aligned}",
+			"\\\\begin{equation}",
+			"\\begin{equation}",
+			"wavenumber",
+			"azimuthal",
+			"Re(A_3)",
+			"Im(\\beta)",
+			"\\Im(\\beta)",
+			"\\Re(A_3)",
+			"\\R",
+			"\\R_E",
+			"Table:Rm RE Rc",
+			"\\eqref{Rc}",
+			"\\R_c",
+			"Hs",
+			"mR",
+			"3",
+			"3,1",
+			"CM coefficients formula",
+			"6",
+			"hat",
+			"k,i",
+			"3,1",
+			"k,j",
+			"1,j",
+			"0,j",
+			"m,1",
+			"n,j",
+			"m,j",
+			"",
+			"3",
+			"m",
+			"\\phi_{",
+			"\\phi_",
+			"x",
+			"\\R",
+			"\\Delta^2",
+			"\\Delta",
+			"align*",
+			"aligned",
+			"",
+			"diag",
+			"J",
+			"J_2",
+			"J_3",
+			"J_2",
+			"J_1",
+			"\\frac{R}{\\pi^3}",
+			"gamma",
+			"3integrals",
+			"\\int_{-1}",
+			"J_{3}",
+			"J_{2}",
+			"a m_0 \\pi",
+			"x_2",
+			"x_1 y",
+			"x_1",
+			"1d linear equation for Y",
+			"m_0",
+			"R_0",
+			"\\Im(\\beta)",
+			"\\Re(\\beta)",
+			"zonal",
+			"m, j",
+			"\\mathcal{L}",
+			"\\frac{\\partial }{\\partial x}",
+			"boldsymbol",
+			"2",
+			"1",
+			"",
+			"M",
+			"E_1",
+			"E_2",
+			"E_1",
+			"\\iff",
+			"\\to",
+			"definition",
+			"definition*",
+			"y",
+			"n",
+			"",
+			"R",
+			"q",
+			"continuous",
+			"M_{n \\times n}",
+			"M_n",
+			"define",
+			"\\\\Gamma",
+			"\\Gamma",
+			"f",
+			"Lyapunov",
+			"\\phi^t x",
+			"\\phi^t x_0",
+			"\\phi^t y",
+			"\\phi^t y_0",
+			"\\phi^t x_0",
+			"\\phi^t(x_0)",
+			"outgoing_parameters",
+			"current_state"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "calc1.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								341
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.autopep8":
+	{
+		"height": 118.0
+	},
+	"output.exec":
+	{
+		"height": 347.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 142.0
+	},
+	"pinned_build_system": "",
+	"project": "calc1.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"calc1.sublime-project"
+			],
+			[
+				"main",
+				"main.tex"
+			],
+			[
+				"sub",
+				"pfb.sublime-project"
+			],
+			[
+				"tex",
+				"poiseuille.tex"
+			],
+			[
+				"joun",
+				"math journals.txt"
+			],
+			[
+				"4",
+				"4-yesilpas.txt"
+			],
+			[
+				"3",
+				"3-birzaman.txt"
+			],
+			[
+				"1",
+				"1-waiting.txt"
+			],
+			[
+				"0",
+				"0-todo.txt"
+			],
+			[
+				"tayl",
+				"taylanmacros.sty"
+			],
+			[
+				"tal",
+				"taylanmacros.sty"
+			],
+			[
+				"lin",
+				"src/linop.tex"
+			],
+			[
+				"eigs",
+				"src/eigs.tex"
+			],
+			[
+				"linfu",
+				"src/linfunc.tex"
+			],
+			[
+				"linv",
+				"src/linvsp.tex"
+			],
+			[
+				"linop",
+				"src/linop.tex"
+			],
+			[
+				"gere",
+				"gereksizpass.txt"
+			],
+			[
+				"2",
+				"2-done.txt"
+			],
+			[
+				"todo",
+				"todo.txt"
+			],
+			[
+				"rese",
+				"research.txt"
+			],
+			[
+				"bib",
+				"poiseuille.bib"
+			],
+			[
+				"pote",
+				"poiseuille.tex"
+			],
+			[
+				"pot",
+				"poiseuille.tex"
+			],
+			[
+				"b",
+				"poiseuille.bib"
+			],
+			[
+				"po",
+				"poiseuille.sublime-project"
+			],
+			[
+				"te",
+				"poiseuille.tex"
+			],
+			[
+				".te",
+				"poiseuille.tex"
+			],
+			[
+				"latex",
+				"latex.sublime-project"
+			],
+			[
+				"po.te",
+				"poiseuille.tex"
+			],
+			[
+				"she",
+				"shear.tex"
+			],
+			[
+				"note.te",
+				"notes.tex"
+			],
+			[
+				"s.te",
+				"shear.tex"
+			],
+			[
+				"taylan",
+				"taylanmacros.sty"
+			],
+			[
+				"exam1",
+				"exam1.tex"
+			],
+			[
+				"exam",
+				"2014 Fall/exams/midterm2.tex"
+			],
+			[
+				"ques",
+				"Fall 2014-Yeditepe/exams/question bank.tex"
+			],
+			[
+				"mid2.te",
+				"Fall 2014-Yeditepe/exams/midterm2.tex"
+			],
+			[
+				"fina.te",
+				"Fall 2014-Yeditepe/exams/final.tex"
+			],
+			[
+				"exam1.te",
+				"exam1.tex"
+			],
+			[
+				"shear.tex",
+				"shear.tex"
+			],
+			[
+				"sh.te",
+				"shear.tex"
+			],
+			[
+				"resear",
+				"researchtopics.txt"
+			],
+			[
+				"d",
+				"done.TODO"
+			],
+			[
+				"tay",
+				"taylanmacros.sty"
+			],
+			[
+				"ma",
+				"main.tex"
+			],
+			[
+				"study",
+				"src/studyguide1.tex"
+			],
+			[
+				"2-2",
+				"src/2-2-derivative.tex"
+			],
+			[
+				"src",
+				"src/2-3-diffrules.tex"
+			],
+			[
+				"rb",
+				"rb2dtalk.tex"
+			],
+			[
+				"bise",
+				"src/bisection-method.tex"
+			],
+			[
+				"roo",
+				"src/root-finding-intro.tex"
+			],
+			[
+				"2-te",
+				"src/2-4-error.tex"
+			],
+			[
+				"tayla",
+				"taylanmacros.sty"
+			],
+			[
+				"3-2",
+				"src/3-2-exp.tex"
+			],
+			[
+				"nat",
+				"src/3-3-naturallog.tex"
+			],
+			[
+				"2-6",
+				"src/2-6-higher.tex"
+			],
+			[
+				"new",
+				"computations/newton.py"
+			],
+			[
+				"25te",
+				"src/2-5-trig.tex"
+			],
+			[
+				"25t",
+				"src/2-5-trig.aux"
+			],
+			[
+				"2-4te",
+				"src/2-4-chain.tex"
+			],
+			[
+				"2-3t",
+				"src/2-3-diffrules.tex"
+			],
+			[
+				"23",
+				"src/2-3-diffrules.aux"
+			],
+			[
+				"main.te",
+				"main.tex"
+			],
+			[
+				"2-3",
+				"src/2-3-diffrules.tex"
+			],
+			[
+				"22",
+				"src/2-2-derivative.tex"
+			],
+			[
+				"con",
+				"src/continuity.tex"
+			],
+			[
+				"taa",
+				"taylanmacros.sty"
+			],
+			[
+				"tange",
+				"src/2-1-tangent.tex"
+			],
+			[
+				"21",
+				"src/2-1-tangent.tex"
+			],
+			[
+				"main.tex",
+				"main.tex"
+			],
+			[
+				"seca",
+				"secant.py"
+			],
+			[
+				"sytex",
+				"syllabus.tex"
+			],
+			[
+				"s",
+				"syllabus.tex"
+			],
+			[
+				"ders",
+				"2014F-ders-programi.txt"
+			],
+			[
+				"ta",
+				"taylanmacros.sty"
+			],
+			[
+				"cons",
+				"constants.py"
+			],
+			[
+				"comp",
+				"components.py"
+			],
+			[
+				"com",
+				"components.py"
+			],
+			[
+				"init",
+				"systems/__init__.py"
+			],
+			[
+				"ent",
+				"entity.py"
+			],
+			[
+				"dunge",
+				"dungeon.py"
+			],
+			[
+				"en",
+				"entityFactory.py"
+			],
+			[
+				"intr",
+				"src/introduction.tex"
+			],
+			[
+				"existe",
+				"src/existence-uniqueness.tex"
+			],
+			[
+				"mai",
+				"main.tex"
+			],
+			[
+				"dun",
+				"dungeon.py"
+			],
+			[
+				"scre",
+				"screens.py"
+			],
+			[
+				"draw",
+				"systems/draw.py"
+			],
+			[
+				"jour",
+				"journal.txt"
+			],
+			[
+				".gi",
+				".gitignore"
+			],
+			[
+				"sta",
+				"src/linearization-lyapunov.tex"
+			],
+			[
+				"dene",
+				"src/dene.tex"
+			],
+			[
+				"dene.te",
+				"src/dene.tex"
+			],
+			[
+				"den.te",
+				"src/dene.tex"
+			],
+			[
+				"main.bb",
+				"main.bbl"
+			],
+			[
+				"aut",
+				"src/autonomousLinearODE.tex"
+			],
+			[
+				"exis",
+				"src/existence-uniqueness.tex"
+			],
+			[
+				"liap",
+				"src/linearization-liapunov.tex"
+			],
+			[
+				"defi",
+				"src/definitions.tex"
+			],
+			[
+				"poin",
+				"src/poincare-map.tex"
+			],
+			[
+				"l",
+				"src/liapunov-functions.tex"
+			],
+			[
+				"exists",
+				"src/existence-uniqueness.tex"
+			],
+			[
+				"linear",
+				"src/linearization-liapunov.tex"
+			],
+			[
+				"linearization-liapunov",
+				"src/linearization-liapunov.tex"
+			],
+			[
+				"exist",
+				"src/existence-uniqueness.tex"
+			],
+			[
+				"tayl.sty",
+				"taylanmacros.sty"
+			],
+			[
+				"fix",
+				"src/fixed-points-nonlinear-systems.tex"
+			],
+			[
+				"stab",
+				"src/stability.tex"
+			],
+			[
+				"stabili",
+				"stability.tex"
+			],
+			[
+				"stabi",
+				"stability/stability.tex"
+			],
+			[
+				"math",
+				"math-notes.tex"
+			],
+			[
+				"ex",
+				"src/existence-uniqueness.tex"
+			],
+			[
+				"mat",
+				"math.txt"
+			],
+			[
+				"cards",
+				"cards.json"
+			],
+			[
+				"card",
+				"hearthstone/card.py"
+			],
+			[
+				"hero",
+				"hero.py"
+			],
+			[
+				"opp",
+				"opponent.py"
+			],
+			[
+				"deck",
+				"deck.py"
+			],
+			[
+				"test",
+				"test.py"
+			],
+			[
+				"data",
+				"~/Dropbox/code/python/game/cardgame/carddata.py"
+			],
+			[
+				"pass",
+				"pass.txt"
+			],
+			[
+				"mp3",
+				"mp3"
+			],
+			[
+				"tur",
+				"Turkiye- (todo).txt"
+			],
+			[
+				"brain",
+				"brain.py"
+			],
+			[
+				"menu",
+				"pyengine/menu.py"
+			],
+			[
+				"utils",
+				"utils.py"
+			],
+			[
+				"bra",
+				"brain.py"
+			],
+			[
+				"statema",
+				"state_main_menu.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"spec",
+				"~/Dropbox/work/notes/spectral theory/spectral.sublime-project"
+			],
+			[
+				"",
+				"~/Dropbox/work/notes/spectral theory/spectral.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"coleman1960"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 324.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

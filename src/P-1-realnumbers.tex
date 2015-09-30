@@ -1,0 +1,129 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+The \textbf{integers} are $\mathbb{Z}= \left\{ \dots, -2, -1, 0,1, 2, \dots \right\}$.
+
+Integers come in a lot varities:
+\begin{itemize}
+  \item[-] even integers that are of the form $2k$, for some $k\in \mathbb{Z}$,
+  \item[-] odd integers that are of the form $2k+1$, for some $k\in \mathbb{Z}$
+  \item[-] positive and negative integers,
+  \item[-] primes, etc...
+\end{itemize}
+
+The \textbf{rational numbers} are $\mathbb{Q=}\left\{ \frac{m}{n}:m,n\in \mathbb{Z}\text{ and }n\neq 0\right\}$.
+
+\textit{Pythagoreans preached that all numbers could be expressed as the ratio of integers, and the discovery of irrational numbers is said to have shocked them.}
+
+\begin{example}
+$\sqrt{2}$ is not a rational number.
+
+Suppose that it is rational. Then $\sqrt{2}=m/n$, where $m,n\in \mathbb{Z}$ \ and $n\neq 0$. Also assume $m$ and $n$ have no common divisor.
+\[
+  m^{2}/n^{2}=2  \implies m^{2}=2n^{2}
+\]
+Thus $m$ is even and we can write $m=2k$, where $k\in \mathbb{Z}$.
+\[
+  4k^{2}=2n^{2} \implies n^{2}=2k^{2}
+\]
+Thus n is also even. But m and n cannot both be even. Accordingly, there can be no rational number whose square is 2.
+\end{example}
+
+The set of irrational numbers is denoted by $\mathbb{I}$.
+
+The set of real numbers is $\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$.
+
+Note that $\mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$.
+
+The real numbers are ordered such that
+\begin{enumerate}
+\item $a<b \implies a+c<b+c$
+
+\item $a<b$ and $c>0$ implies $ac<bc$
+
+\item $a<b$ and $c<0$ implies $ac>bc$
+
+\item $a>0$ implies $\frac{1}{a}>0$
+
+\item $0<a<b$ implies $\frac{1}{b}<\frac{1}{a}$
+\end{enumerate}
+
+\textbf{Intervals}
+
+The open interval $(a,b) = \{x \mid a < x < b\}$, closed interval $([a,b])$, half open intervals $(a, b]$, $[a, b)$. It is possible that $a=-\infty$, $b=\infty$.
+Draw each interval on the real line.
+
+\begin{example}
+  Solve the following inequalities.
+  \begin{enumerate}
+    \item $\frac{2}{x-1} \ge 5$.
+
+    Solution. \textit{It is not right to multiply both sides by $x-1$ and say $5x-5 \le 2$.}
+    \[
+      \frac{2}{x-1} \ge 5 \iff \frac{2}{x-1} - 5 \ge 0
+      \iff \frac{7-5x}{x-1} \ge 0.
+    \]
+    Now make a sign analysis to get interval $(1, 7/5]$
+    \item $3x-1 \le 5x+3 \le 2x+15$.
+
+    Solution. $-2\le x$ and $x \le 4$.
+  \end{enumerate}
+\end{example}
+
+\textbf{The absolute value.}
+\[
+  \abs{x} =
+  \begin{cases}
+    x, &\text{ if } x\ge 0\\
+    -x, &\text{ if } x< 0\\
+  \end{cases}
+\]
+
+ex. $\abs{3} = \abs{-3} = 3$
+
+Geometrically, $\abs{x}$ is the distance between $x$ and $0$ on the real line. And $\abs{x-y}$ is the distance between $x$ and $y$.
+
+Properties \textit{(can be proved from definition)}:
+\begin{enumerate}
+  \item $\abs{-x} = \abs{x}$, (Do not fall into the trap $\abs{-x} = x$, this is not always true!)
+  \item $\abs{ab} = \abs{a} \abs{b}$,
+  \item $\abs{a+b} \le \abs{a} + \abs{b}$, (triangle inequality).
+\end{enumerate}
+From (2), for any $x$, $x^2 = \abs{x^2} = \abs{x}^2$
+
+If D is a nonnegative number
+\[
+  \abs{x}=D \implies x=-D \text{ or } x=D,
+\]
+\[
+  \abs{x}<D \implies -D<x<D
+\]
+\[
+  \abs{x}>D \implies x<-D \text{ or } x>D
+\]
+More generally,
+\[
+  \abs{x-a}=D \implies x=a-D \text{ or } x=a+D,
+\]
+\[
+  \abs{x-a}<D \implies a-D<x<a+D
+\]
+\[
+  \abs{x-a}>D \implies x<a-D \text{ or } x>a+D
+\]
+
+\begin{example}
+  Solve $\abs{3x-2} \le 1$.
+
+  Solution.
+  \[
+    -1 \le 3x-2 \le 1 \implies x \ge 1/3 \text{ and } x \le 1.
+  \]
+\end{example}
+
+\begin{example}
+  Solve the equation $\abs{x+1} > \abs{x-3}$.
+
+  Solution. The distance between $x$ and $-1$ is greater than the distance between $x$ and $3$. So $x>1$.
+\end{example}
+\end{document}

@@ -1,0 +1,143 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+Cartesian plane is $\mathbb{R}\times \mathbb{R} = \{(x,y) \mid x \in \mathbb{R} \text{ and } b \in \mathbb{R} \}$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+  \draw[<->] (-4,0) -- (4,0);
+  \node[above] at (4,0) {$x$};
+  \draw[<->] (0,-4) -- (0,4);
+  \node[right] at (0,4) {$y$};
+  \draw[fill] (0,0) circle [radius=0.1];
+  \node[above right] at (0,0) {$O$};
+  \draw[dashed] (2,0) -- (2,3);
+  \draw[dashed] (0,3) -- (2,3);
+  \node[above right] at (2,3) {$(2,3)$};
+  \draw[fill] (2,3) circle [radius=0.1];
+  \draw[dashed] (-1,0) -- (-1,-2);
+  \draw[dashed] (0,-2) -- (-1,-2);
+  \node[below left] at (-1,-2) {$(-1,-2)$};
+  \draw[fill] (-1,-2) circle [radius=0.1];
+\end{tikzpicture}
+\end{center}
+
+Horizontal axis is usually called the $x$ axis, the vertical axis is called the $y$ axis. Intersection of the axes is called the origin, denoted $O$.
+
+The coordinate axes divide the Cartesian plane into four quadrants.
+
+\begin{center}
+  \begin{tikzpicture}[scale=0.5]
+    \draw[<->] (-4,0) -- (4,0);
+    \node[above] at (4,0) {$x$};
+    \draw[<->] (0,-4) -- (0,4);
+    \node[right] at (0,4) {$y$};
+    \node at (2,2) {I};
+    \node at (-2,2) {II};
+    \node at (-2,-2) {III};
+    \node at (2,-2) {IV};
+  \end{tikzpicture}
+\end{center}
+Distance of two points $(x_1, y_1)$ and $(x_2, y_2)$ in the plane is
+\[
+  \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}
+\]
+\begin{center}
+\begin{tikzpicture}[scale=1]
+  \draw[<->] (-1,0) -- (5,0);
+  \node[above] at (5,0) {$x$};
+  \draw[<->] (0,-1) -- (0,5);
+  \node[right] at (0,5) {$y$};
+  \draw[fill] (0,0) circle [radius=0.1];
+  \node[above right] at (0,0) {$O$};
+  \node[above right] at (3,4) {$(x_2,y_2)$};
+  \draw[fill] (3,4) circle [radius=0.1];
+  \node[above left] at (1.4,1.3) {$(x_1,y_1)$};
+  \draw[fill] (1,1) circle [radius=0.1];
+  \draw[dashed] (1,1) -- (3,1);
+  \draw[dashed] (3,1) -- (3,4);
+  \draw[dashed] (1,1) -- (3,4);
+  \node[below] at (2,1) {$x_2-x_1$};
+  \node[right] at (3,2.5) {$y_2-y_1$};
+\end{tikzpicture}
+\end{center}
+
+The distance of $(x,y)$ to the origin is $\sqrt{x^2+y^2}$.
+\begin{example}
+  Find the distance between $(-1, 1)$ and $(3, -4)$.
+\end{example}
+
+The \textbf{graph} of an equation (or inequality) is the set of all $(x,y)$ satisfying that equation (or inequality).
+
+\textbf{Equations of Lines.}
+For any two points $(x_1, y_1)$ and $(x_2, y_2)$ on a non-vertical line L, the quantity $m=\frac{y_2-y_1}{x_2-x_1}$ is constant and is called the \textbf{slope} of the line L.
+
+Let L be a nonvertical line. Let $m$ be the slope of L and $(x_1, y_1)$ be the coordinates of a point on L. If $(x,y)$ is another point on L, then
+\[
+  \frac{y-y_1}{x-x_1} = m
+\]
+so that an equation for L is
+\[
+  y = m(x-x_1) + y_1
+\]
+
+All points on a \textbf{vertical line} have their $x$ coordinate equal to a constant $a$. So the equation of a vertical line is $x=a$. \textbf{Horizontal lines} have equations of the form $y=a$.
+
+y-intercept of a nonvertical line L is the $y$-coordinate of the point where L intersects the y-axis. x-intercept of a nonhorizontal is defined similarly.
+
+\begin{example}
+Find an equation of the line through the points $(1,-1)$ and $(3,5)$. Draw the line. Find the x and y intercepts.
+\end{example}
+
+\begin{example}
+Find an equation of the line that passes through the point $(-3,-4) $ and has slope $2$. Draw the line.
+\end{example}
+
+\begin{example}
+Find the slope and the two intercepts of the line with equation $8x+5y=20$. Draw the line.
+\end{example}
+
+\textbf{Parallel vs. perpendicular lines;}
+
+\begin{enumerate}
+\item Two nonvertical lines are parallel if and only if their slopes are equal.
+
+\item Two nonvertical lines with slopes $m_1$ and $m_2$ are perpendicular if and only if $m_1 m_2 = -1$. This condition is equivalent to their angle of intersection being $90^{\circ}$.
+
+\begin{tikzpicture}[scale=1.2]
+  \draw[thick, blue] (-1.25,-1.25) -- (1.25,1.25);
+  \draw[thick, red] (1.25,-1.25) -- (-1.25,1.25);
+  \draw[dashed] (1,1) -- (1,-1);
+  \draw[dashed] (0,0) -- (1,0);
+  \node[left] at (0,0) {A};
+  \draw[fill] (0, 0) circle [radius=0.08];
+  \node[right] at (1,1) {B};
+  \draw[fill] (1, 1) circle [radius=0.08];
+  \node[right] at (1,0) {C};
+  \draw[fill] (1, 0) circle [radius=0.08];
+  \node[right] at (1,-1) {D};
+  \draw[fill] (1, -1) circle [radius=0.08];
+  \node[left] at (-1.25,-1.25) {L$_1$};
+  \node[left] at (-1.25,1.25) {L$_2$};
+\end{tikzpicture}
+
+\textit{proof.} Use the similarity of the triangles ABC and DAC to get
+\[
+  \frac{\abs{BC}}{\abs{AC}} = \frac{\abs{AC}}{\abs{CD}} \implies
+  \frac{\abs{BC}\abs{CD}}{\abs{AC}^2} = 1
+\]
+Slope of L$_1$ ($m_1$) is $\abs{BC}/\abs{AC}=1$ and slope of L$_2$ ($m_2$) is $-\abs{CD}/\abs{AC}$. So $m_1 m_2 = -1$.
+\end{enumerate}
+
+\begin{example}
+Find an equation of the line through $(1, -2) $ that is parallel to the line L with equation $3x-2y=1$.
+Draw the lines.
+\end{example}
+
+\begin{example}
+Find an equation of the line through $(2,-3)$ that is perpendicular to the line L with equation $4x+y=3$.
+Draw the lines.
+\end{example}
+
+\end{document}

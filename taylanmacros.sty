@@ -1,0 +1,91 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{taylanmacros}
+\RequirePackage[usenames,dvipsnames,svgnames]{xcolor}
+\RequirePackage{pgfplots}
+\RequirePackage{color}
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+\RequirePackage{tikz}
+\usetikzlibrary{shadows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations}
+\tikzset{>=stealth} %% makes all arrows the same
+\colorlet{penColor}{green!50!black} % Color of a curve in a plot
+\colorlet{background}{Apricot!7} % Color of the page
+\colorlet{gridColor}{gray!30} % Color of grid in a plot
+
+\usetikzlibrary{patterns}
+\RequirePackage{listings}
+\RequirePackage{cool}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{hyperref}
+\RequirePackage{float} % to force figure placement in text. use the [H] option in the figure.
+\RequirePackage{centernot} % usage: $\centernot\implies$ means does not imply.
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+\RequirePackage{graphicx}
+\graphicspath{{./figures/}}
+
+% to use code
+% \begin{lstlisting}
+% !!code!!
+% \end{lstlisting}
+
+% Colors
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+% Operators
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}
+\newcommand{\inpr}[2]{\langle #1, #2 \rangle}
+\newcommand{\integral}[3]{\int_{#1} \! #2 \, \mathrm{d}#3}
+\newcommand{\Lim}[2]{\lim_{#1 \to #2}}
+\renewcommand\Re{\operatorname{Re}}
+\renewcommand\Im{\operatorname{Im}}
+
+% Matrices
+\newcommand{\mat}[1]{\begin{matrix}#1\end{matrix}} % no delimiters
+\newcommand{\pmat}[1]{\begin{pmatrix}#1\end{pmatrix}} % parentheses delimiters
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}} % brackets delimiters
+\newcommand{\vmat}[1]{\begin{vmatrix}#1\end{vmatrix}} % determinant
+
+% Matrices
+\newcommand{\smat}[1]{\begin{smallmatrix}#1\end{smallmatrix}} % small matrix
+\newcommand{\psmat}[1]{\left(\begin{smallmatrix}#1\end{smallmatrix} \right)} % small matrix
+
+% The differential sign in integrals
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+% Derivatives
+\newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\der}[2]{\frac{\diff#1}{\diff#2}}
+
+% ENVIRONMENTS
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgment}{Acknowledgment}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{definition}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}

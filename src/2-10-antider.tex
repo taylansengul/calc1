@@ -1,0 +1,54 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+An \textbf{antiderivative} of a function on an interval $I$ is another function $F$ satisfying
+\[
+    F'(x) = f(x).
+\]
+
+\begin{example}
+    Find an antiderivative of
+    \begin{itemize}
+        \item $f(x) = 1$
+        \item $f(x) = \cos x$
+    \end{itemize}
+\end{example}
+
+\begin{itemize}
+    \item Antiderivatives of continuous functions always exist. We'll see later that $\int_0^x f(x) dx$ is an antiderivative of $f(x)$.
+    \item Antiderivatives are not unique. If $C$ is any constant then $F(x) = x + C$ is an antiderivative of $f(x) = 1$.
+    \item Two antiderivatives of a function differ by a constant. If $F$ and $G$ are two antiderivatives of $f$ then
+    \[
+        \frac{d}{dx} (F(x) - G(x)) = 0.
+    \]
+    Hence by the result in Section 2.8, $F(x) = G(x) + C$ for some constant $C$.
+\end{itemize}
+
+
+The \textbf{indefinite integral} of $f(x)$ is
+\[
+    \int f(x) dx = F(x) + C
+\]
+provided $F'(x) = f(x)$.
+
+The symbol $\int$ is called the \textbf{integral sign}. The constant $C$ is called a \textbf{constant of integration}.
+\begin{example}
+    \[
+        \int x dx = \frac{1}{2}x^2 + C
+    \]
+    \[
+        \int (x^3 - 5x^2 +7) dx = \frac{1}{4}x^4 - \frac{5}{3}x^3 + 7x + C
+    \]
+\end{example}
+
+\begin{example}
+    Find the function $f(x)$ whose derivative is $f'(x) = 6 x^2 - 1$ for all $x$ and $f(2) = 10$.
+\end{example}
+\begin{solution}
+    \[
+        f(x) = \int (6x^2 - 1) dx = 2x^3 - x + C
+    \]
+    Use the condition to find $C = -4$.
+\end{solution}
+\end{document}
