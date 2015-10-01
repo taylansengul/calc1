@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+  \begin{axis}%
+    [
+      grid=major,
+      xmin=-6,
+      xmax=6,
+      xlabel={$x$},
+      axis x line=middle,
+      ymin=-3,
+      ymax=4,
+      ylabel={$y$},
+      axis y line=middle,
+      no markers,
+      samples=100,
+      domain=-6:6,
+      legend pos = south east,
+    ]
+    \addplot[thick] (x,{x^2});
+    \addplot[dotted, very thick, red] (x,{(x-3)^2});
+    \addplot[dashed, very thick, blue] (x,{(x+3)^2});
+    \legend{$f(x)=x^2$,$f(x)=(x-3)^2$,$f(x)=(x+3)^2$}
+  \end{axis}
+\end{tikzpicture}

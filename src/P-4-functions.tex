@@ -3,55 +3,21 @@
 \begin{document}
 A \textbf{function} $f$ on a set $D$ into a set $R$ is a rule that assigns a unique element $f(x)$ in $R$ to each element $x$ in $D$.
 
-$D$ is called the \textbf{domain} of $f$. The \textbf{range} of $f$ is a subset of $R$ containing of all possible values $f(x)$.
+$D$ is called the \textbf{domain} of $f$. $R$ is called the target or \textbf{codomain} of $f$. The \textbf{range} of $f$ is a subset of $R$ containing of all possible values $f(x)$.
 
 \textit{
 This definition is not mathematical as we did not define what a rule is. Formally one defines a function as a relation.}
 
 \begin{figure}[H]
+  \centering
+  \subfloat[a]{
+  \scalebox{.8}{\input{figures/P4-notAfunc.tikz}}
+  }
+  \subfloat[b]{
+  \scalebox{.8}{\input{figures/P4-aFunc.tikz}}
+  }
+  \caption{a) Not a function. b) A Function }
   \label{fig:funcNotfunc}
-  \hfill
-  \subfloat[Not a function]{
-  \begin{tikzpicture}
-  %put some nodes on the left
-  \foreach \x in {1,2,3}{
-  \node[fill,circle,inner sep=2pt] (d\x) at (0,\x) {};
-  }
-  \node (D) at (-0.5,4) {D};
-  \node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm] {};
-  %put some nodes on the center
-  \foreach \x[count=\xi] in {0.5,1.5,...,4}{
-  \node[fill,circle,inner sep=2pt] (r\xi) at (2,\x) {};
-  }
-  \node (S) at (2.8,4) {R};
-  \node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm] {};
-  \draw[-latex] (d1) -- (r2);
-  \draw[-latex] (d2) -- (r2);
-  \draw[-latex] (d3) -- (r4);
-  \draw[-latex] (d3) -- (r4);
-  \end{tikzpicture}
-  }
-  \hfill
-  \subfloat[A Function]{
-  \begin{tikzpicture}
-  %put some nodes on the left
-  \foreach \x in {1,2,3}{
-  \node[fill,circle,inner sep=2pt] (d\x) at (0,\x) {};
-  }
-  \node (D) at (-0.5,4) {D};
-  \node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm] {};
-  %put some nodes on the center
-  \foreach \x[count=\xi] in {0.5,1.5,...,4}{
-  \node[fill,circle,inner sep=2pt] (r\xi) at (2,\x) {};
-  }
-  \node (S) at (2.8,4) {R};
-  \node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm] {};
-  \draw[-latex] (d1) -- (r1);
-  \draw[-latex] (d2) -- (r2);
-  \draw[-latex] (d2) -- (r3);
-  \draw[-latex] (d3) -- (r4);
-  \end{tikzpicture}
-  }
 \end{figure}
 
 \begin{example}
@@ -98,11 +64,7 @@ The \emph{graph of a function} $f$ is the set of all points whose coordinates ar
 
 \begin{figure}[th]
   \centering
-  \input{figures/01graphOFf.tex}
-  \caption{The graph of a function $f$. The domain of $f$ consists
-  of all $x$ values at which the function is defined, and the range consists
-  of all possible values $f$ can have.}
-  \label{fig:01graphOFf}
+  \input{figures/P4-graphOFf.tex}
 \end{figure}
 
 
@@ -143,33 +105,33 @@ The \emph{graph of a function} $f$ is the set of all points whose coordinates ar
 \subsection*{Vertical Line Test}
 \emph{The graph of a function cannot intersect a vertical line ``$x=\text{\em constant}$'' in more than one point}.
 
-The collection of points determined by the equation $x^2+y^2=1$ is a circle.  It
-is not the graph of a function since the vertical line $x=0$ (the $y$-axis)
-intersects the graph in two points $P_1(0,1)$ and $P_2(0,-1)$. See
-Figure~\ref{fig:01circle}.
-
+For example, the circle $x^2+y^2=1$ is not a graph of a function.
 \begin{figure}[H]
   \centering
-  \input{figures/01circle.tex}
-  \caption{The circle determined by $x^2+y^2=1$ is not the graph of a
-  function, but it contains the graphs of the two functions
-  $h_1(x) = \sqrt{1-x^2}$ and $h_2(x)= -\sqrt{1-x^2}$.}
-  \label{fig:01circle}
+  \input{figures/P4-verticalLineTest.tikz}
 \end{figure}
 
 \subsection*{Even and Odd Functions}
 
 \begin{definition}
 We say that $f$ is an \textbf{even function} if $f\left( -x\right) =f\left( x\right) $ for every $x\in D$.
-We say that $f$ is an \textbf{odd function} if $f(-x)=-f(x)$ for every $x\in D$. See Figure~\ref{fig:evenoddfunc}.
+We say that $f$ is an \textbf{odd function} if $f(-x)=-f(x)$ for every $x\in D$.
 \end{definition}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{P4-evenodd.png}
-  \caption{a) An even function, b) an odd function.}
-  \label{fig:evenoddfunc}
+  \subfloat[a]{
+  \input{figures/P5-evenFunc.tikz}
+  }
+  \subfloat[b]{
+  \input{figures/P5-oddFunc.tikz}
+  }
+  \caption{a) An even function,  b) An odd function.}
 \end{figure}
+
+Odd functions are symmetric with respect to origin and even functions are symmetric with respect to the $y$-axis.
+
+
 \begin{example}
 $f(x)=x,f(x)=x^{3}$ are odd and $f(x)=x^{2}$ and $f(x) =x^{4}$ are even and $f(x)=\frac{1}{x+1}$ is neither even or odd.
 \end{example}

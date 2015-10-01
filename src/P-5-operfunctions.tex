@@ -28,24 +28,36 @@ in the domain of $g$ for which $g(x)$ is in the domain of $f$.
 
 
 \begin{example}
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.95\textwidth]{P5-compfunc.png}
-  \end{figure}
+Let $f(x)=\sqrt{x}$ and $g(x) = x+1$. Find $f\circ g$, $g \circ f$, $f \circ f$ and $g \circ g$. State the domains of each function.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c}
+    \hline
+    Function & Formula & Domain \\
+    \hline
+    $f$ & $\sqrt{x}$ & $[0, \infty)$ \\
+    $g$ & $x+1$ & $\mathbb{R}$ \\
+    $f \circ g$ & $\sqrt{x+1}$ & $[-1, \infty)$ \\
+    $g \circ f$ & $\sqrt{x}+1$ & $[0, \infty)$ \\
+    $f \circ f$ & $x^{1/4}$ & $[0, \infty)$ \\
+    $g \circ g$ & $x+2$ & $\mathbb{R}$ \\
+    \hline
+  \end{tabular}
+\end{table}
 \end{example}
+
+
 \subsection*{Piecewise Defined Functions}
-Functions which are defined by different formulas on different intervals are sometimes called \textbf{piecewise defined functions.}
-
-\begin{example}
-  \[
-  g(x) =
-  \begin{cases}
-      2x & \text{for } x<0 \\
-      x^2 & \text{for }x\geq0
-  \end{cases}
-  \]
-\end{example}
-
+Functions such as
+\[
+g(x) =
+\begin{cases}
+    2x & \text{for } x<0 \\
+    x^2 & \text{for }x\geq0
+\end{cases}
+\]
+which are defined by different formulas on different intervals are sometimes called \textbf{piecewise defined functions.}
 
 \subsection*{Inverse Functions}
 Remember that a function is \textbf{one-to-one} if for every value in the range, there is exactly one value in the domain.

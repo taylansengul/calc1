@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=2]
+  \draw[<->] (-1,0)--(1,0);
+  \draw[<->] (0,-1)--(0,1);
+  \draw[domain=-1:1,smooth,variable=\x,blue, thick] plot ({\x},{\x*\x});
+  \draw[<->] (-0.9, -0.25) -- (0.9,-0.25);
+  \draw[dashed] (0.7, 0.49) -- (0.7, -0.25);
+  \draw[dashed] (0.7, 0.49) -- (0, 0.25);
+  \node[below] at (0.9, -0.25) {L};
+  \node[above right] at (0, 0.25) {F};
+  \draw[fill] (0, 0.25) circle [radius=0.025];
+  \draw[fill] (0.7, -0.25) circle [radius=0.025];
+\end{tikzpicture}

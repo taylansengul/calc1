@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=2]
+  \draw [<->] (-1,0) -- (1,0);
+  \draw [<->] (0,-1) -- (0,1);
+  \node[below] (X1) at (0.8, 0) {$x$};
+  \node[above] (X2) at (-0.8, 0) {$-x$};
+  \draw[domain=-1:1] plot (\x, {\x*\x*\x});
+  \draw[dashed] (X1)--(0.8, 0.512);
+  \draw[dashed] (X2)--(-0.8, -0.512);
+  \draw[dashed] (0.8, 0.512)--(0, 0.512);
+  \draw[dashed] (-0.8, -0.512)--(0, -0.512);
+  \node[left] at (0, 0.512) {$f(x)$};
+  \draw[fill] (0, 0.512) circle [radius=.025];
+  \node[right] at (0, -0.512) {$-f(x)$};
+  \draw[fill] (0, -0.512) circle [radius=.025];
+\end{tikzpicture}
