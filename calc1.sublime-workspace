@@ -200,10 +200,18 @@
 	"buffers":
 	[
 		{
-			"file": "calc1.sublime-project",
+			"file": "main.tex",
 			"settings":
 			{
-				"buffer_size": 341,
+				"buffer_size": 2189,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/1-1-limit.tex",
+			"settings":
+			{
+				"buffer_size": 2856,
 				"line_ending": "Unix"
 			}
 		}
@@ -271,16 +279,76 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 207.0,
-		"last_filter": "project",
+		"height": 27.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"mathbb",
+				"Snippet: mathbb"
+			],
+			[
+				"dfr",
+				"Snippet: latex-dfrac"
+			],
+			[
+				"dfra",
+				"Snippet: latex-dfrac"
+			],
+			[
+				"pvr ope",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"pvr",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"snip lim",
+				"Snippet: latex-lim"
+			],
+			[
+				"lim",
+				"LaTeXing: Import Citation(s)"
+			],
+			[
+				"item",
+				"Snippet: Itemize"
+			],
+			[
+				"beg",
+				"Snippet: \\begin{}…\\end{}"
+			],
 			[
 				"project",
 				"Project: Save As"
 			],
 			[
-				"subfil",
+				"gist",
+				"Gist: Insert Gist"
+			],
+			[
+				"\\[",
+				"Snippet: Display Math — \\[ … \\]"
+			],
+			[
+				"boldf",
+				"Snippet: Boldface Text"
+			],
+			[
+				"fig",
+				"Snippet: New figure"
+			],
+			[
+				"figu",
+				"Snippet: New figure"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"subfile",
 				"Snippet: New Subfiles"
 			],
 			[
@@ -296,27 +364,7 @@
 				"Build With: Markdown"
 			],
 			[
-				"boldf",
-				"Snippet: Boldface Text"
-			],
-			[
-				"item",
-				"Snippet: Itemize"
-			],
-			[
-				"beg",
-				"Snippet: \\begin{}…\\end{}"
-			],
-			[
-				"\\[",
-				"Snippet: Display Math — \\[ … \\]"
-			],
-			[
 				"subfi",
-				"Snippet: New Subfiles"
-			],
-			[
-				"subfile",
 				"Snippet: New Subfiles"
 			],
 			[
@@ -350,10 +398,6 @@
 			[
 				"enable",
 				"Package Control: Enable Package"
-			],
-			[
-				"rename",
-				"File: Rename"
 			],
 			[
 				"enabl",
@@ -428,10 +472,6 @@
 				"Snippet: latex-left-right-snippet"
 			],
 			[
-				"figu",
-				"Snippet: New figure"
-			],
-			[
 				"inner",
 				"Snippet: latex-innerproduct"
 			],
@@ -466,10 +506,6 @@
 			[
 				"Snippet: lim",
 				"Snippet: latex-lim"
-			],
-			[
-				"fig",
-				"Snippet: New figure"
 			],
 			[
 				"table",
@@ -588,10 +624,6 @@
 				"Gist: Insert Gist"
 			],
 			[
-				"gist",
-				"Gist: Insert Gist"
-			],
-			[
 				"case",
 				"Snippet: Cases"
 			],
@@ -634,6 +666,10 @@
 			[
 				"matla",
 				"SublimeREPL: Matlab"
+			],
+			[
+				"subfil",
+				"Snippet: New Subfiles"
 			],
 			[
 				"center",
@@ -748,10 +784,6 @@
 				"Snippet: latex-conv"
 			],
 			[
-				"dfr",
-				"Snippet: latex-dfrac"
-			],
-			[
 				"conv",
 				"Convert Case: Lower Case"
 			],
@@ -762,30 +794,6 @@
 			[
 				"disabl",
 				"Package Control: Disable Package"
-			],
-			[
-				"enume",
-				"Snippet: Enumerate"
-			],
-			[
-				"def",
-				"Preferences: Settings - Default"
-			],
-			[
-				"dola",
-				"Snippet: latex-dollar"
-			],
-			[
-				"keyb",
-				"Preferences: Key Bindings - Default"
-			],
-			[
-				"keybin",
-				"Preferences: Key Bindings - User"
-			],
-			[
-				"ren",
-				"File: Rename"
 			]
 		],
 		"width": 566.0
@@ -813,12 +821,28 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes"
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1"
 	],
 	"file_history":
 	[
-		"/Users/taylansengul/Dropbox/work/papers/current/pattern formation book/pfb.sublime-project",
-		"/Users/taylansengul/Dropbox/work/papers/current/pattern formation book/pfb.sublime-workspace",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeX-cwl/scraddr.cwl",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeX-cwl/Readme.md",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeX/Section.sublime-snippet",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/calc1.sublime-project",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/ode/src/dynamical-systems.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/figures/P4-aFunc.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/src/P-4-functions.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/src/P-2-cartesian.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/src/P-3-quadratics.tex",
+		"/Users/taylansengul/text/P3-shiftingGraphs.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/figures/P3-parabola.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/figures/P2-perpLines.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/figures/P2-distance.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/figures/P2-quadrants.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/figures/P4-notAfunc.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1 notes/figures/P2-cartesian.tikz",
+		"/Users/taylansengul/text/bookmarks.txt",
+		"/Users/taylansengul/text/AMS-classifications.txt",
 		"/Users/taylansengul/text/4-yesilpas.txt",
 		"/Users/taylansengul/text/3-birzaman.txt",
 		"/Users/taylansengul/text/1-waiting.txt",
@@ -928,27 +952,11 @@
 		"/Users/taylansengul/Dropbox/work/talks/2014yeditepe/abstract.txt",
 		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/3-intro.tex",
 		"/Users/taylansengul/Dropbox/work/notes/num-anal/3-intro.tex",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-1-bisection-method.tex",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/computations/bisect.py",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/computations/sec24-ex1.fdb_latexmk",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/computations/sec24-ex1.aux",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-4-error.tex",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-0-root-finding-intro.tex",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/research.bib",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-4-error.aux",
-		"/Users/taylansengul/tmp/dene.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/taylanmacros.sty",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-3-diffrules.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/3-2-exp.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/3-3-naturallog.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-8-mean.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/main.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/main.toc",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/main.aux"
+		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-1-bisection-method.tex"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -963,8 +971,16 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Lyapunov",
+			"tikzpicture",
+			"’",
+			"[",
+			"[11",
+			"[",
+			"-",
+			"’",
+			"’’",
 			"“",
-			"–",
 			"_i",
 			"u_W",
 			"u_V",
@@ -1082,15 +1098,7 @@
 			"ht",
 			"angular",
 			". ",
-			".",
-			"x to z",
-			"\\ip",
-			"A_",
-			"A_1",
-			"abs",
-			"\\qquad",
-			"htbp",
-			"Rc"
+			"."
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1234,24 +1242,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "calc1.sublime-project",
+					"file": "main.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 341,
+						"buffer_size": 2189,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								341
+								1108,
+								1108
 							]
 						],
 						"settings":
@@ -1259,26 +1267,16 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -1289,38 +1287,137 @@
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/1-1-limit.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2856,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2840,
+								2840
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
 							],
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1930.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1390,8 +1487,8 @@
 		"selected_items":
 		[
 			[
-				"",
-				"calc1.sublime-project"
+				"11",
+				"src/1-1-limit.tex"
 			],
 			[
 				"main",
@@ -1399,15 +1496,39 @@
 			],
 			[
 				"sub",
-				"pfb.sublime-project"
+				"calc1.sublime-project"
 			],
 			[
-				"tex",
-				"poiseuille.tex"
+				"mainte",
+				"main.tex"
 			],
 			[
-				"joun",
-				"math journals.txt"
+				"p2",
+				"~/Dropbox/work/lecture-notes/calc1 notes/src/P-2-cartesian.tex"
+			],
+			[
+				"tikz",
+				"~/Dropbox/work/lecture-notes/calc1 notes/figures/P4-notAfunc.tikz"
+			],
+			[
+				"bookma",
+				"bookmarks.txt"
+			],
+			[
+				"2",
+				"2-done.txt"
+			],
+			[
+				"",
+				"1-waiting.txt"
+			],
+			[
+				"0",
+				"0-todo.txt"
+			],
+			[
+				"sur",
+				"src/survey.tex"
 			],
 			[
 				"4",
@@ -1420,10 +1541,6 @@
 			[
 				"1",
 				"1-waiting.txt"
-			],
-			[
-				"0",
-				"0-todo.txt"
 			],
 			[
 				"tayl",
@@ -1458,10 +1575,6 @@
 				"gereksizpass.txt"
 			],
 			[
-				"2",
-				"2-done.txt"
-			],
-			[
 				"todo",
 				"todo.txt"
 			],
@@ -1484,6 +1597,10 @@
 			[
 				"b",
 				"poiseuille.bib"
+			],
+			[
+				"tex",
+				"poiseuille.tex"
 			],
 			[
 				"po",
@@ -1880,26 +1997,6 @@
 			[
 				"tur",
 				"Turkiye- (todo).txt"
-			],
-			[
-				"brain",
-				"brain.py"
-			],
-			[
-				"menu",
-				"pyengine/menu.py"
-			],
-			[
-				"utils",
-				"utils.py"
-			],
-			[
-				"bra",
-				"brain.py"
-			],
-			[
-				"statema",
-				"state_main_menu.py"
 			]
 		],
 		"width": 0.0
@@ -1907,7 +2004,7 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "spec",
 		"selected_items":
 		[
 			[

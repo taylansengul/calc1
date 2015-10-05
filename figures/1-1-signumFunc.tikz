@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+  \draw [<->] (-1.5,0) -- (1.5,0);
+  \draw [<->] (0,-1.5) -- (0,1.5);
+  \draw [thick, blue] (-1,-1) -- (0,-1);
+  \draw [thick, blue] (1,1) -- (0,1);
+  \node[left] at (0,1) {$1$};
+  \node[right] at (0,-1) {$-1$};
+  \draw[fill=blue] (0, 0) circle [radius=.1];
+  \draw[fill=white] (0, -1) circle [radius=.1];
+  \draw[fill=white] (0, 1) circle [radius=.1];
+\end{tikzpicture}

@@ -1,37 +1,16 @@
 {
-	"build_systems":
-	[
-		{
-			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-			"name": "Anaconda Python Builder",
-			"selector": "source.python",
-			"shell_cmd": "python -u \"$file\""
-		}
-	],
-	"folders":
-	[
-		{
-			"file_exclude_patterns":
-			[
-				"*.aux",
-				"*.bbl",
-				"*.blg",
-				"*.log",
-				"*.fdb_latexmk",
-				"*.spl",
-				"*.gz",
-				"*.fls",
-				"*.out",
-				"*.toc"
-			],
-			"follow_symlinks": true,
-			"path": "."
-		}
-	],
-	"settings":
-	{
-		"dictionary": "Packages/Language - English/en_US.dic",
-		"spell_check": true,
-		"tab_size": 2
-	}
+  "folders":
+  [
+    {
+      "follow_symlinks": true,
+      "path": ".",
+      "file_exclude_patterns": ["*.aux", "*.bbl", "*.blg", "*.log", "*.fdb_latexmk", "*.spl", "*.gz", "*.fls", "*.out", "*.toc"]
+    }
+  ],
+  "settings":
+  {
+    "dictionary": "Packages/Language - English/en_US.dic",
+    "spell_check": true,
+    "tab_size": 2
+  }
 }

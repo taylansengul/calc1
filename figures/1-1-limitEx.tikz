@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-4:6, xmin=-4, xmax=6, ymin=-3,ymax=10,
+            unit vector ratio*=1 1 1,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={-4,...,6}, ytick={-3,...,10},
+            xticklabels={-4,,-2,,0,,2,,4,,6}, yticklabels={,-2,,0,,2,,4,,6,,8,,10},
+            grid=major,
+            grid style={dashed, gray},
+          ]
+    \addplot [very thick, blue, smooth, domain=(-4:-2)] {6};
+    \addplot [very thick, blue, smooth, domain=(-2:0)] {x^2-2};
+          \addplot [very thick, blue, smooth, domain=(0:2)] {(x-1)^3+3*(x-1)+3};
+          \addplot [very thick, blue, smooth, domain=(2:6)] {(x-4)^3+8};
+          \addplot[color=blue,fill=white,only marks,mark=*] coordinates{(-2,6)};  %% open hole
+          \addplot[color=blue,fill=white,only marks,mark=*] coordinates{(-2,2)};  %% open hole
+          \addplot[color=blue,fill=white,only marks,mark=*] coordinates{(0,-2)};  %% open hole
+          \addplot[color=blue,fill=white,only marks,mark=*] coordinates{(0,-1)};  %% open hole
+          \addplot[color=blue,fill=white,only marks,mark=*] coordinates{(2,0)};  %% open hole
+          \addplot[color=blue,fill=blue,only marks,mark=*] coordinates{(-2,8)};  %% closed hole
+          \addplot[color=blue,fill=blue,only marks,mark=*] coordinates{(0,-1.5)};  %% closed hole
+          \addplot[color=blue,fill=blue,only marks,mark=*] coordinates{(2,7)};  %% closed hole
+        \end{axis}
+\end{tikzpicture}

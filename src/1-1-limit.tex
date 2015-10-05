@@ -8,7 +8,7 @@ Two main problems of calculus are
 \end{enumerate}
 Both are based on the concept of limit.
 
-We say $\lim_{x \to a} f(x) = L$ to mean $f(x)$ is ``close enough'' to $L$ when $x$ is ``close enough'' to \emph{but not equal to} $a$.
+We say $\lim_{x \to a} f(x) = L$ to mean that $f(x)$ is ``close enough'' to $L$ when $x$ is ``close enough'' to \emph{but not equal to} $a$. Hence $f(a)$ is unimportant for $\lim_{x \to a} f(x)$.
 
 \begin{example}
   $\lim_{x \to a} x = a$. $x$ is close enough to $a$ when $x$ is close enough to $a$.
@@ -18,6 +18,7 @@ We say $\lim_{x \to a} f(x) = L$ to mean $f(x)$ is ``close enough'' to $L$ when 
   $\lim_{x \to a} c = c$ if $c$ is a constant.
 \end{example}
 
+The limit $\lim_{x \to a} f(x)$ may be different from $f(a)$ as the next example shows.
 \begin{example}
   \[
     g(x) =
@@ -29,8 +30,8 @@ We say $\lim_{x \to a} f(x) = L$ to mean $f(x)$ is ``close enough'' to $L$ when 
   $\lim_{x \to 2} g(x) = \lim_{x \to 2} x = 2$ although $g(2) = 1$.
 \end{example}
 
-\subsection*{One-sided limits}
-If $f(x)$ is close to $L$ when $x<a$ is close enough to $a$ then we say
+\subsection*{Informal definition of left and right limits}
+If $f(x)$ is close to $L$ when $x<a$ and $x$ is close enough to $a$ then we say
 \[
   \lim_{x \to a^{-}} f(x) = L
 \]
@@ -38,59 +39,43 @@ This is called the \emph{left limit} of $f$ at $x=a$.
 
 Similarly we can define the right limit.
 
+\begin{theorem}
+  $\lim_{x \to a} f(x) = L$ if and only if both $\lim_{x \to a^{-}} f(x) =L$ and $\lim_{x \to a^{+}} f(x) = L$.
+\end{theorem}
+
 \begin{example}
-  \[
-  f(x) =
-  \begin{cases}
-    -1 & \text{for $x<0$}\\ 0 & \text{for $x=0$}\\ 1 & \text{for $x>0$}
-  \end{cases}
-  \]
-  \begin{figure}[ht]
-    \input{figures/03signOFx.tex}
-    \caption{The sign function.}
-  \end{figure}
+Find the left and right limits of the signum function
 
-  \[
-  \lim_{x\to 0} f(x) \text{ does not exist.}
-  \]
+  \begin{minipage}[c]{0.5\textwidth}
+    \[
+    f(x) =
+    \begin{cases}
+      -1 & \text{for $x<0$}\\ 0 & \text{for $x=0$}\\ 1 & \text{for $x>0$}
+    \end{cases}
+    \]
+  \end{minipage}
+  \begin{minipage}[c]{0.2\textwidth}
+    \begin{figure}[H]
+    \centering
+    \input{figures/1-1-signumFunc.tikz}
+    \end{figure}
+  \end{minipage}
 
-  In this example the one-sided limits do exist, namely,
+  In this example the one-sided limits exist, but are not equal
   \[
   \lim_{x\searrow0}f(x) = 1 \text{ and } \lim_{_x\nearrow0}f(x) = -1.
   \]
+  Hence $\lim_{x\to 0} f(x)$ does not exist.
 \end{example}
 
+
 \begin{example} Evaluate the expressions by referencing the plot in Figure~\ref{plot:piecewise-exercise}.
-\begin{figure}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-4:6, xmin=-4, xmax=6, ymin=-3,ymax=10,
-            unit vector ratio*=1 1 1,
-            axis lines =middle, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            xtick={-4,...,6}, ytick={-3,...,10},
-            xticklabels={-4,,-2,,0,,2,,4,,6}, yticklabels={,-2,,0,,2,,4,,6,,8,,10},
-            grid=major,
-            grid style={dashed, gridColor},
-          ]
-    \addplot [very thick, penColor, smooth, domain=(-4:-2)] {6};
-    \addplot [very thick, penColor, smooth, domain=(-2:0)] {x^2-2};
-          \addplot [very thick, penColor, smooth, domain=(0:2)] {(x-1)^3+3*(x-1)+3};
-          \addplot [very thick, penColor, smooth, domain=(2:6)] {(x-4)^3+8};
-          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,6)};  %% open hole
-          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,2)};  %% open hole
-          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(0,-2)};  %% open hole
-          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(0,-1)};  %% open hole
-          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(2,0)};  %% open hole
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,8)};  %% closed hole
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,-1.5)};  %% closed hole
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,7)};  %% closed hole
-        \end{axis}
-\end{tikzpicture}
-\caption{A plot of $f(x)$, a piecewise defined function.}
-\label{plot:piecewise-exercise}
+\begin{figure}[H]
+  \centering
+  \input{figures/1-1-limitEx.tikz}
+  \label{plot:piecewise-exercise}
 \end{figure}
+
 \begin{enumerate}
 \begin{multicols}{3}
 \item $\lim_{x\to 4} f(x)$
@@ -114,4 +99,79 @@ Similarly we can define the right limit.
 (j) $-3/2$, (k) $6$, (l) $2$
 \end{example}
 
+\subsection*{Properties of Limits}
+\begin{theorem}
+  Suppose
+  \[
+  \lim_{x\to a}f(x)=L, \qquad \lim_{x\to a}g(x)=M.
+  \]
+  Then
+  \begin{align}
+    & \lim_{x\to a}\bigl(f(x)+g(x)\bigr)=L+M,  \\
+    & \lim_{x\to a}\bigl(f(x)-g(x)\bigr)= L - M,  \\
+    & \lim_{x\to a}\bigl(f(x)\cdot g(x)\bigr)= L\cdot M \\
+    & \lim_{x\to a}\frac{f(x)}{g(x)}= \frac{L}{M}, \quad \text{if } M \neq 0.
+  \end{align}
+  Finally, if $m$ and $n$ are integers such that $L^{m/n}$ is defined
+  \begin{equation}
+    \lim_{x\to a}(f(x))^{m/n}= L^{m/n}.
+  \end{equation}
+\end{theorem}
+
+Using the above properties we can evaluate the following limits.
+\begin{example}
+  Find $\lim_{x \to 2} x^2 +1$ and $\lim_{x \to 2} \frac{x^2+1}{\sqrt{6-x}}$.
+\end{example}
+
+The above example is a special case of the following theorem.
+\begin{theorem}
+  If $P(x)$ is a polynomial then,
+  \[
+    \lim_{x \to a} P(x) = P(a)
+  \]
+  If $Q(x)$ is another polynomial with $Q(a) \neq 0$ then
+  \[
+    \lim_{x \to a} \frac{P(x)}{Q(x)} = \frac{P(a)}{Q(a)}.
+  \]
+\end{theorem}
+
+\subsection*{The Squeeze Theorem}
+
+\begin{theorem}
+  Suppose that $f(x) \le g(x) \le h(x)$ and $\lim_{x \to a} f(x) = \lim_{x \to a} h(x) = L$. Then $\lim_{x \to a} g(x) = L$.
+  \begin{figure}[H]
+    \centering
+    \input{figures/1-1-squeezethm.tikz}
+    \caption{The Squeeze Theorem.}
+  \end{figure}
+\end{theorem}
+
+\begin{example}
+  If $2-x^2 \le g(x) \le 2 \cos x$ for $-1\le x \le 1$, find $\lim_{x \to 0}f(x)$.
+\end{example}
+
+\subsection*{More examples}
+\begin{example}
+  Let
+  \[
+    f(x) = \frac{\abs{x-2}}{x^2+x-6}.
+  \]
+  Find $\lim_{x \to 2+} f(x)$, $\lim_{x \to 2-} f(x)$. Does $\lim_{x \to 2} f(x)$ exist?
+\end{example}
+
+In these example, we will compute $\lim_{x \to a} f(x)$ even when $f(a)$ does not exist.
+\begin{example}
+  Evaluate
+  \begin{enumerate}
+    \item $\lim_{x \to -2} \dfrac{x^2 + x-2}{x^2 + 5x +6}$,
+    \item $\lim_{x \to 5} \dfrac{\frac{1}{x} - \frac{1}{5}}{x-5}$,
+    \item $\lim_{x \to 4} \dfrac{\sqrt{x}-2}{x^2-16}$.
+    \item $\lim_{x \to -2} \dfrac{x^2 + 2x}{x^2-4}$,
+    \item $\lim_{h \to 0} \dfrac{\sqrt{4+h}-2}{h}$,
+    \item $\lim_{t \to 0} \dfrac{t}{\sqrt{4+t}-\sqrt{4-t}}$,
+    \item $\lim_{x \to -1} \dfrac{x^3+1}{x+1}$,
+    \item $\lim_{x \to 0} \dfrac{\abs{3x-1}-\abs{3x+1}}{x}$,
+    \item $\lim_{x \to 2-} \dfrac{x^2-4}{\abs{x+2}}$.
+  \end{enumerate}
+\end{example}
 \end{document}

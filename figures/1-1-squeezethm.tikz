@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=1]
+  \draw[purple, thick] (-2,-2) .. controls (-1.5,-1) and (-1,0) .. (0,0);
+  \draw[purple, thick] (0,0) .. controls (1.5,-1) and (1,0) .. (2,-1);
+
+  \draw[red, thick] (-2,2) .. controls (-1.5,.5) .. (0,0);
+  \draw[red, thick] (0,0) .. controls (1.5,.5) .. (2,2);
+
+  \draw[black, thick] (-2,0) .. controls (-1.5,-.2) and (-.8, .1) .. (0,0);
+  \draw[black, thick] (0,0) .. controls (1.5,-.4) .. (2,0);
+  \node[right, red]  at (2,2) {$h(x)$};
+  \node[right, purple]  at (2,-1) {$f(x)$};
+  \node[right, black]  at (2,0) {$g(x)$};
+  \node[above] at (0, 0) {$(a, L)$};
+\end{tikzpicture}
