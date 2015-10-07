@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"end",
+				"end{align}	main.tex"
+			],
+			[
 				"operatr",
 				"operatorname{name}	amsmath"
 			],
@@ -26,10 +30,6 @@
 			[
 				"newde",
 				"newenvironment{nam}{begdef}{enddef}	latex-document"
-			],
-			[
-				"end",
-				"end{bmatrix}	poiseuille.tex"
 			],
 			[
 				"disc",
@@ -203,7 +203,7 @@
 			"file": "main.tex",
 			"settings":
 			{
-				"buffer_size": 2189,
+				"buffer_size": 2257,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,12 +211,20 @@
 			"file": "src/1-1-limit.tex",
 			"settings":
 			{
-				"buffer_size": 2856,
+				"buffer_size": 5076,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "figures/1-1-squeezethm.tikz",
+			"settings":
+			{
+				"buffer_size": 608,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/User/LaTeX.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -240,6 +248,38 @@
 			],
 			[
 				"Packages/LaTeXing/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Clean up Files"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/User/LaTeX.sublime-build",
+					"Clean up Files"
+				]
+			],
+			[
+				"Packages/User/LaTeX.sublime-build",
 				""
 			]
 		],
@@ -279,10 +319,58 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 27.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "latexing",
 		"selected_items":
 		[
+			[
+				"latexing",
+				"Preferences: LaTeXing Settings - Default"
+			],
+			[
+				"set late",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"quick",
+				"Build: Custom Quick Build"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"build",
+				"Build With: pdflatex"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"pdfla",
+				"Build With: pdflatex"
+			],
+			[
+				"pdf",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"pdflate",
+				"Build With: pdflatex"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
 			[
 				"mathbb",
 				"Snippet: mathbb"
@@ -350,10 +438,6 @@
 			[
 				"subfile",
 				"Snippet: New Subfiles"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
 			],
 			[
 				"view mark",
@@ -456,10 +540,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"dele",
-				"File: Delete"
-			],
-			[
 				"enc",
 				"Crypto::Encrypt"
 			],
@@ -544,19 +624,11 @@
 				"Snippet: New Report"
 			],
 			[
-				"set late",
-				"Set Syntax: LaTeXing"
-			],
-			[
 				"fold",
 				"BracketHighlighter: Fold Bracket Content"
 			],
 			[
 				"envi",
-				"LaTeXing: New Environment"
-			],
-			[
-				"latexing",
 				"LaTeXing: New Environment"
 			],
 			[
@@ -570,10 +642,6 @@
 			[
 				"artic",
 				"Snippet: New Article"
-			],
-			[
-				"pdf",
-				"LaTeXTools: View PDF"
 			],
 			[
 				"bmatr",
@@ -766,34 +834,6 @@
 			[
 				"new tab",
 				"Snippet: New table"
-			],
-			[
-				"tabl",
-				"Snippet: Table"
-			],
-			[
-				"tabu",
-				"Snippet: Tabular"
-			],
-			[
-				"latelim",
-				"Snippet: latex-lim"
-			],
-			[
-				"latexconv",
-				"Snippet: latex-conv"
-			],
-			[
-				"conv",
-				"Convert Case: Lower Case"
-			],
-			[
-				"set latex",
-				"Set Syntax: LaTeXing"
-			],
-			[
-				"disabl",
-				"Package Control: Disable Package"
 			]
 		],
 		"width": 566.0
@@ -825,6 +865,13 @@
 	],
 	"file_history":
 	[
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeXing/LaTeXing.sublime-settings",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/LaTeXing.sublime-settings",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeXing/LaTeX.sublime-build",
+		"/Users/taylansengul/.zprofile",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/pdflatex.sublime-build",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/1-1-squeezethm.tikz",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeX-cwl/scraddr.cwl",
 		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeX-cwl/Readme.md",
 		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeX/Section.sublime-snippet",
@@ -852,7 +899,6 @@
 		"/Users/taylansengul/Dropbox/work/lecture-notes/abstract linalg/src/linfunc.tex",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/abstract linalg/src/linop.tex",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/abstract linalg/src/linvsp.tex",
-		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/taylansengul/Dropbox/work/papers/current/poiseuille/poiseuille.tex",
 		"/Users/taylansengul/text/finans.txt",
 		"/Users/taylansengul/text/gereksizpass.txt",
@@ -946,13 +992,7 @@
 		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-2-derivative.tex",
 		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-10-antider.tex",
 		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-1-tangent.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/1-5-formal.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/2-4-chain.tex",
-		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/1-4-continuity.tex",
-		"/Users/taylansengul/Dropbox/work/talks/2014yeditepe/abstract.txt",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/3-intro.tex",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/3-intro.tex",
-		"/Users/taylansengul/Dropbox/work/notes/num-anal/src/2-1-bisection-method.tex"
+		"/Users/taylansengul/Dropbox/work/notes/calculusI/src/1-5-formal.tex"
 	],
 	"find":
 	{
@@ -971,6 +1011,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"tag",
 			"Lyapunov",
 			"tikzpicture",
 			"’",
@@ -1097,8 +1138,7 @@
 			"_1",
 			"ht",
 			"angular",
-			". ",
-			"."
+			". "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1251,15 +1291,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2189,
+						"buffer_size": 2257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1108,
-								1108
+								1869,
+								1869
 							]
 						],
 						"settings":
@@ -1267,68 +1307,68 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
+								"bh_single_quote_content"
 							],
 							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 288.0,
+						"translation.y": 852.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1340,15 +1380,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2856,
+						"buffer_size": 5076,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2840,
-								2840
+								4367,
+								4367
 							]
 						],
 						"settings":
@@ -1356,71 +1396,160 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
+								"bh_single_quote_content"
 							],
 							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1930.0,
+						"translation.y": 2236.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "figures/1-1-squeezethm.tikz",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								591,
+								591
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/LaTeXing/support/LaTeX (TikZ).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

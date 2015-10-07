@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\begin{axis}%
+    [
+        title={$f(x) = \dfrac{1}{x^2}$},
+        grid=major,
+        x=2mm,
+        y=2mm,
+        xmin=-10,
+        xmax=10,
+        xlabel={$x$},
+        axis x line=middle,
+        ymin=-10,
+        ymax=10,
+        axis y line=middle,
+        no markers,
+        samples=100,
+        domain=-10:10
+    ]
+    \addplot[thick,samples=400] (x,{1/(x^2)});
+\end{axis}
+\end{tikzpicture}

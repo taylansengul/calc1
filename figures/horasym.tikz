@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+  \begin{axis}[
+    title={$f(x)=\dfrac{x}{\sqrt{x^2+1}}$},
+    grid=major,
+    xlabel={$x$},
+    ylabel={$y$}
+  ]
+  \addplot[domain=-6:6] {x/sqrt(x^2+1)};
+  \end{axis}
+\end{tikzpicture}
