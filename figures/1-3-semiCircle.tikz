@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+  title={$f(x)=\sqrt{4-x^2}$},
+  xtick={-2,2},
+  ytick={2},
+  y tick label style={anchor=south east},
+  axis lines =middle,
+  xmin=-4, xmax=4,
+  ymin=-1, ymax=3,
+  x=8mm,
+  y=8mm
+]
+  \addplot[domain=-2:2,samples=300,thick] {sqrt(4-x^2)};
+\end{axis}
+\end{tikzpicture}

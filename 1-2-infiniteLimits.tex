@@ -138,7 +138,7 @@ We can generalize the above examples.
     \lim_{x \to -\infty} \frac{1}{-\sqrt{1+\frac{1}{x}} + 1}
   \]
 
-  As $x\to -\infty$, $-\sqrt{1+\frac{1}{x}}$ is close to but less than 1. Hence
+  If $x<0$ then $\sqrt{1+\frac{1}{x}}<1$ and $-\sqrt{1+\frac{1}{x}} + 1 >0$. Hence the denominator is positive and approaches to zero. So
   \[
     \lim_{x \to -\infty} \frac{1}{-\sqrt{1+\frac{1}{x}} + 1} = \infty.
   \]
@@ -179,6 +179,13 @@ In general,
     \item $\lim_{x \to 2} \dfrac{x-3}{x^2-4}$ does not exist.
     \item $\lim_{x \to \infty} \dfrac{2x-1}{\sqrt{3x^2+x+1}}$,
     \item $\lim_{x \to 1+} \dfrac{\sqrt{x^2-x}}{x-x^2}$
+    If $x>1$ then $x-x^2 = x(1-x) < 0$. So
+    \[
+      \lim_{x \to 1+} \dfrac{\sqrt{x^2-x}}{x-x^2} =
+      \lim_{x \to 1+} \dfrac{-\sqrt{x^2-x}}{x^2-x} =
+      \lim_{x \to 1+} \dfrac{-\sqrt{x^2-x}}{\sqrt{x^2-x} \sqrt{x^2-x}} =
+      \lim_{x \to 1+} \dfrac{-1}{\sqrt{x^2-x}} = -\infty
+    \]
   \end{enumerate}
 \end{example}
 \end{document}

@@ -29,19 +29,50 @@ you an unknown $\epsilon>0$, and then find a positive $\delta$ for which
 \eqref{eq:03limitdef} holds.  The $\delta$ you find will depend on
 $\epsilon$.
 
-\begin{figure}
+\begin{figure}[ht]
   \input{figures/03epsAndNoDelta.tex}
 
   \input{figures/03epsAndDeltaTooBig.tex}
 
   \input{figures/03epsAndDelta.tex}
 \end{figure}
+When we first discussed the limit, say $\lim_{x \to 5} 2x + 1$, we made a table,
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        $x$ & $f(x) = 2x+1$ \\
+        \hline
+        5.1 & 11.2 \\
+        5.01 & 11.02 \\
+        5.001 & 11.002 \\
+        4.9 & 10.8 \\
+        4.99 & 10.98 \\
+        4.999 & 10.998 \\
+        \hline
+    \end{tabular}
+\end{table}
+This table can be written also in this form.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        $\abs{x-5}$ & $\abs{f(x)-11}$ \\
+        \hline
+        0.1 & 0.2 \\
+        0.01 & 0.02 \\
+        0.001 & 0.002 \\
+        \hline
+    \end{tabular}
+\end{table}
 
+It looks like for any $\epsilon>0$, if $\abs{x-5} < \frac{\epsilon}{2}$ then $\abs{f(x)-11}< \epsilon$. Now let's prove this!
 \begin{example}
     Show that $\lim_{x\to5}2x+1=11$.
-
+\end{example}
+\begin{solution}
     We have $f(x) = 2x+1$, $a=5$ and $L=11$, and the question we must answer is
-    ``how close should $x$ be to $5$ if want to be sure that $f(x)=2x+1$
+    ``how close should $x$ be to $5$ if you want to be sure that $f(x)=2x+1$
     differs less than $\epsilon$ from $L=11$?''
 
     \[
@@ -51,12 +82,12 @@ $\epsilon$.
     \[
     |f(x)-L|<\epsilon \text{ whenever } 0<|x-a|<\frac{\epsilon}{2}.
     \]
-
-\end{example}
+\end{solution}
 
 \begin{example}[``Don't choose $\delta>1$'' trick]
     Show that $\lim_{x\to 3}x^2 = 9$.
-
+\end{example}
+\begin{solution}
     We have $f(x) = x^2$, $a=3$, $L=9$, and again the question is, ``how small
     should $|x-3|$ be to guarantee $|x^2-9|<\epsilon$?''
 
@@ -87,7 +118,7 @@ $\epsilon$.
     \[
         (\delta + 3)^2 < \epsilon + 9 \implies \delta < \sqrt{\epsilon + 9} - 3
     \]
-\end{example}
+\end{solution}
 
 \begin{example}
     Show that $\lim_{x\to 4}1/x = 1/4$.

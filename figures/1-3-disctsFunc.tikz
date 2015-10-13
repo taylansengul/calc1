@@ -1,0 +1,19 @@
+\pgfplotsset{soldot/.style={color=blue,only marks,mark=*}}
+\pgfplotsset{holdot/.style={color=blue,fill=white,only marks,mark=*}}
+
+\begin{tikzpicture}
+\begin{axis}[
+xtick={3,5,7},
+yticklabels={,,},
+xticklabels={$a$, $b$, $c$}
+]
+\addplot[domain=0:3,blue, thick] {x*x};
+\addplot[domain=3:5,blue, thick] {x};
+\addplot[domain=5:9,blue, thick] {5};
+\draw[dotted] (axis cs:3,9) -- (axis cs:3,0);
+\draw[dotted] (axis cs:5,5) -- (axis cs:5,0);
+\draw[dotted] (axis cs:7,5) -- (axis cs:7,0);
+\addplot[holdot] coordinates{(0,0)(3,3)(5,5)};
+\addplot[soldot] coordinates{(3,9)(5,1)(7,5)};
+\end{axis}
+\end{tikzpicture}

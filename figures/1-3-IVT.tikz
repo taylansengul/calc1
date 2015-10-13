@@ -1,0 +1,24 @@
+\pgfplotsset{soldot/.style={color=blue,only marks,mark=*}}
+\pgfplotsset{holdot/.style={color=blue,fill=white,only marks,mark=*}}
+
+\begin{tikzpicture}
+\begin{axis}[
+  x=24mm,
+  y=36mm,
+  xmin=-.2,
+  ymin=0.2,
+  xmax=1.8,
+  xtick={0,1.08,1.3},
+  xticklabels={$a$,$c$,$b$},
+  ytick={0.6},
+  yticklabels={$s$},
+  axis lines = left,
+]
+\addplot[domain=0:1.3,blue,thick] {x^3-x^2+0.5};
+\draw[dotted, thick] (axis cs:-.2,.6) -- (axis cs:1.08,.6);
+\draw[dotted, thick] (axis cs:1.08,.6) -- (axis cs:1.08,0.2);
+\draw[dotted, thick] (axis cs:0,0.2) -- (axis cs:0,0.5);
+\draw[dotted, thick] (axis cs:1.3,0.2) -- (axis cs:1.3,1);
+\addplot[soldot] coordinates{(0,0.5)(1.3,1)};
+\end{axis}
+\end{tikzpicture}

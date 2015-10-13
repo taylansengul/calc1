@@ -1,0 +1,201 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+Let $f(x) = \sqrt{4 - x^2}$. Domain of $f$ is $[-2, 2]$.
+\begin{itemize}
+    \item $x = -2$ is the left end point of Dom($f$).
+    \item $x = 2$ is the right end point of Dom($f$).
+    \item Any $x$ with $-2 < x < 2$ is called an interior point of Dom($f$).
+\end{itemize}
+
+\begin{definition}
+    A function $f$ is \textbf{continuous} at an interior point $c$ of its domain if
+    \[
+        \lim_{x \to c} f(x) = f(c)
+    \]
+    $f$ is continuous at its left endpoint $c$ if
+    \[
+        \lim_{x \to c+} f(x) = f(c)
+    \]
+    $f$ is continuous at its right endpoint $c$ if
+    \[
+        \lim_{x \to c-} f(x) = f(c)
+    \]
+\end{definition}
+Note that $f$ is discontinuous at $c$ if
+\begin{itemize}
+    \item[i)] either $\lim_{x \to c} f(x)$ does not exist.
+    \item[ii)] or $\lim_{x \to c} f(x)$ exists but is not equal to $f(c)$.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \input{figures/1-3-disctsFunc.tikz}
+  \caption{f is discontinuous at $a$ because of (ii) and discontinuous at $b$ because of (i). f is continuous at $c$.}
+\end{figure}
+
+\begin{example}
+    $f(x) = \sqrt{4 - x^2}$ is continuous at every point of its domain.
+    \begin{figure}[H]
+      \centering
+      \input{figures/1-3-semiCircle.tikz}
+    \end{figure}
+\end{example}
+
+\begin{definition}
+    $f$ is called a continuous function if $f$ is continuous at every pt of its domain.
+\end{definition}
+
+According to this definition $f(x) = \frac{1}{x}$ is continuous!!! $0$ is not in domain of $f$. So we say $f$ is undefined rather than discontinuous at $0$.
+
+\textbf{There are lots of continuous functions:}
+\begin{itemize}
+    \item polynomials,
+    \item rational functions,
+    \item rational powers $x^{m/n}$
+    \item trigonometric functions
+    \item absolute value function $\abs{x}$
+\end{itemize}
+
+\begin{theorem}
+    If $f$ and $g$ are continuous at $c$ then
+    \begin{itemize}
+        \item $f + g$, $f - g$, $f g$, are continuous at $c$,
+        \item if $k$ is constant then $k f$ is continuous at $c$,
+        \item $\dfrac{f}{g}$ continuous at $c$ provided that $g(c) \neq 0$.
+        \item $f(x)^{1/n}$ continuous at c provided that $f(c)>0$ if $n$ is even.
+    \end{itemize}
+\end{theorem}
+
+\begin{proof}
+    Let's prove that if $f$ and $g$ are continuous at $c$ then so is $f+g$. If $f$ and $g$ are continuous at $c$ then
+    \[
+        \lim_{x \to c} f(x) = f(c), \qquad
+        \lim_{x \to c} g(x) = g(c), \qquad
+    \]
+    By the limit rule,
+    \[
+        \lim_{x \to c} (f(x) + g(x)) =
+        \lim_{x \to c} f(x) + \lim_{x \to c} g(x) =
+        f(c) + g(c).
+    \]
+    The other proofs are similar.
+\end{proof}
+\textbf{Composites of continuous funcs are continuous}
+
+If $g$ is continuous at $c$ and $f$ is continuous at $g(c)$ then $f \circ g$ is continuous at $c$. In other words,
+\[
+    \lim_{x \to c} f(g(x)) = f(\lim_{x \to c} g(x)) = f(g(c)).
+\]
+
+\begin{example}
+    Find $m$ so that
+    \[
+        g(x) = \begin{cases}
+            x-m, &\text{ if }x < 3,\\
+            1-mx, &\text{ if }x \geq 3\\
+        \end{cases}
+    \]
+    is continuous for all $x$.
+\end{example}
+
+% \textbf{Continuous extensions and removable discontinuities}
+
+% If $f$ is not defined at $c$ but $\lim_{x \to c} f(x) = L$ is defined then we can define a new function
+% \[
+%     F(x) =
+%     \begin{cases}
+%         f(x), &\text{ if } x \neq c\\
+%         L, &\text{ if } x =c\\
+%     \end{cases}
+% \]
+% $F$ is continuous at $c$ and is called \textbf{continuous extension} of $f$ to $x=c$.
+% \begin{example}
+%     The function $f(x) = \dfrac{x^2 - x}{x^2 - 1}$ is not defined at $x=1$ but has a continuous extension $F(x) = \dfrac{x}{x+1}$ to $x=1$.
+% \end{example}
+
+% If a function is undefined or discontinuous at $c$ but can be redefined at $c$ then we say $f$ has a \textbf{removable discontinuity} at $c$.
+
+% \begin{example}
+%     The function $f(x) = \dfrac{1}{x^2}$ is not defined at 0 but there is no way of redefining $f$ at 0 so that $f$ becomes continuous at 0.
+% \end{example}
+
+\subsection*{Continuous Functions on Closed Intervals [a, b] are bounded}
+We call a function $f$ to be \textbf{bounded} if there exists $M$ and $N$ such that $M \le f(x) \le N$ for all $x$ in the domain of $f$.
+
+\begin{theorem}
+    If $f$ is continuous on the closed interval $[a, b]$ then there exist numbers $p$ and $q$ in the interval $[a,b]$ s.t.
+    \[
+        f(p) \leq f(x) \leq f(q)
+    \]
+    for all $x$ in $[a, b]$.
+    $f(p)$ is called the \textbf{aboslute minimum value} and $f(q)$ is called the \textbf{absolute maximum value}.
+\end{theorem}
+
+This theorem is an existence theorem. It only guarantees the existence of $p$ and $q$ but does not tell how to actually find them.
+
+The theorem says that continuous functions on closed intervals must be bounded.
+
+\begin{example}
+    The conclusions of the theorem may fail if the function $f$ is not continuous or the interval is not closed.
+
+    \begin{figure}[H]
+      \centering
+      \begin{subfigure}[t]{0.2\textwidth}
+        \input{figures/1-3-ctsFuncsOnClosedInts0.tikz}
+        \caption{The function $f(x) = 1/x$ on the open interval $(0,1)$ is continuous but unbounded and has no minimum and no maximum.}
+      \end{subfigure}
+      \quad
+      \begin{subfigure}[t]{0.2\textwidth}
+        \input{figures/1-3-ctsFuncsOnClosedInts1.tikz}
+        \caption{The function $f(x) = x$ on $(0,1)$ is discontinuous, bounded and has no minimum and no maximum.}
+      \end{subfigure}
+      \quad
+      \begin{subfigure}[t]{0.2\textwidth}
+        \input{figures/1-3-ctsFuncsOnClosedInts2.tikz}
+        \caption{This function is defined on the closed interval $[0,1]$, discontinuous, has a minimum but no maximum.}
+      \end{subfigure}
+      \quad
+      \begin{subfigure}[t]{0.2\textwidth}
+        \input{figures/1-3-ctsFuncsOnClosedInts3.tikz}
+        \caption{This function is defined on the closed interval $[0,1]$, discontinuous, bounded, has no minimum but no maximum.}
+      \end{subfigure}
+    \end{figure}
+\end{example}
+
+\begin{theorem}[Intermediate Value Theorem]
+    If $f$ is continuous on $[a, b]$ and if $s$ is between $f(a)$ and $f(b)$ then there exists $c$ in $[a, b]$ s.t. $f(c) = s$.
+\end{theorem}
+
+\begin{figure}[H]
+    \centering
+    \input{figures/1-3-IVT.tikz}
+\end{figure}
+
+In particular, a continuous function on a closed interval takes every value between its minimum $m$ and maximum $M$. Hence its range is a closed interval $[m, M]$.
+\begin{example}
+    Show that the equation $x^3 - x - 1 = 0$ has a solution in the interval $[1, 2]$.
+\end{example}
+
+\begin{solution}
+    $f(x) = x^3 - x - 1$ is a polynomial and hence continuous. $f(1) = -1$ and $f(2) = 5$. Since $0$ lies between $-1$ and $5$, the intermediate value theorem assures us that there must be a number $c$ in $[1, 2]$ such that $f(c) = 0$.
+\end{solution}
+
+\subsection*{Bisection Algorithm}
+Intermediate Value Theorem is also an existence theorem. It does not say how to find $c$ in its statement. Let's try to better estimate the root of previous example. Write $f(x) = x^3 - x - 1$ and try to find a smaller interval where a root lies of
+\[
+    f(x) = 0.
+\]
+We know that a root lies in $[1, 2]$, if say that the root is $1.5$ the maximum error will be 0.5.
+
+Now $f(1.5)=0.875 > 0$. So a root lies in $[1, 1.5]$, and if we say the root is $1.25$ then the maximum error will be $0.25$.
+
+If this is not sufficient then compute $f(1.25)=-0.2969$, now if we say the root is $1.375$ then the error is less than $0.125$.
+
+Next step is $f(1.1375) = 0.2246$. So a root must lie in $[1.25, 1375]$. The error is less than $0.0625$ if we say the root is $1.315$.
+
+Going this way, we find the approximations, $1.3438$, $1.3282$, $1.3204$. Hence the root must lie in $[1.3282, 1.3204]$. So the first two decimal digits of the root are $1.32$.
+% 1 is the whole number digit.
+
+In engineering, you almost never get exact results. All you can do is lower your error below an acceptable threshold.
+\end{document}

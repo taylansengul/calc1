@@ -1,0 +1,18 @@
+\pgfplotsset{soldot/.style={color=blue,only marks,mark=*}}
+\pgfplotsset{holdot/.style={color=blue,fill=white,only marks,mark=*}}
+
+\begin{tikzpicture}
+\begin{axis}[
+  x=12mm,
+  y=8mm,
+  ymax=3,
+  xmax= 1.5,
+  xtick={1},
+  ytick={0},
+  axis lines = left,
+]
+\addplot[domain=0.01:1,blue, thick] {1/x};
+\draw[dotted] (axis cs:1,1) -- (axis cs:1,0);
+\addplot[holdot] coordinates{(0,0)(1,1)};
+\end{axis}
+\end{tikzpicture}
