@@ -3,6 +3,9 @@
 
 \begin{tikzpicture}
 \begin{axis}[
+  title={$y=f(x)$},
+  xlabel={$x$},
+  ylabel={$y$},
   x=24mm,
   y=36mm,
   xmin=-.2,

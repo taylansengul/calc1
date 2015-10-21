@@ -3,7 +3,7 @@
   \draw[<->] (0,-1.8) -- (0,1.8);
   \draw[thick] (0,0) circle [radius=1];
   \draw[] (0.6, -1.5) -- (0.6, 1.5);
-  \draw[fill, red] (0.6, 0.8) circle [radius=0.05];
-  \draw[fill, red] (0.6, -0.8) circle [radius=0.05];
+  \draw[fill, black] (0.6, 0.8) circle [radius=0.05];
+  \draw[fill, black] (0.6, -0.8) circle [radius=0.05];
   \node[] at (-1.5, 1.3) {$x^2+y^2=1$};
 \end{tikzpicture}

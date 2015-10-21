@@ -9,6 +9,8 @@
       ymin=-3,
       ymax=4,
       ylabel={$y$},
+      yticklabels={,,},
+      xtick={-3,3},
       axis y line=middle,
       no markers,
       samples=100,
