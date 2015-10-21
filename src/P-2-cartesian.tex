@@ -17,24 +17,26 @@ The coordinate axes divide the Cartesian plane into four quadrants.
   \input{figures/P2-quadrants.tikz}
 \end{figure}
 
-By the Pythogerean Theorem, the distance of two points $(x_1, y_1)$ and $(x_2, y_2)$ in the plane is
-\[
-  \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}.
-\]
+By the Pythogerean Theorem, the distance of two points $(x_1, y_1)$ and $(x_2, y_2)$ is
 \begin{figure}[H]
   \centering
   \input{figures/P2-distance.tikz}
 \end{figure}
 
-The distance of $(x,y)$ to the origin is $\sqrt{x^2+y^2}$.
+The distance of $(x,y)$ to the origin $(0,0)$ is $\sqrt{x^2+y^2}$.
 \begin{example}
   Find the distance between $(-1, 1)$ and $(3, -4)$.
 \end{example}
 
-% The \textbf{graph} of an equation (or inequality) is the set of all $(x,y)$ satisfying that equation (or inequality).
+\subsection*{Graphs of Equations}
+The set of all points $(x,y)$ satisfying an equation in $x$ and $y$ is called the \textbf{graph of that equation}.
+
+\begin{example}
+  The graph of $x^2+y^2=4$ is the set of all $(x,y)$ whose distance to $(0,0)$ is 2, i.e. a circle with center at origin and radius 2.
+\end{example}
 
 \subsection*{Equations of Lines}
-For any two points $(x_1, y_1)$ and $(x_2, y_2)$ on a non-vertical line $L$, the quantity $m=\frac{y_2-y_1}{x_2-x_1}$ is constant and is called the \textbf{slope} of the line $L$.
+For any two points $(x_1, y_1)$ and $(x_2, y_2)$ on a non-vertical line $L$, the quantity $m=\dfrac{y_2-y_1}{x_2-x_1}$ is constant and is called the \textbf{slope} of the line $L$.
 
 Let $L$ be a nonvertical line. Let $m$ be the slope of $L$ and $(x_1, y_1)$ be the coordinates of a point on $L$. If $(x,y)$ is another point on $L$, then
 \[
@@ -62,10 +64,8 @@ Find an equation of the line that passes through the point $(-3,-4) $ and has sl
 Find the slope and the two intercepts of the line with equation $8x+5y=20$. Draw the line.
 \end{example}
 
-\subsubsection*{Parallel vs. perpendicular lines}
-We call two lines \textbf{parallel} if their slopes are equal.
-
-We call two lines \textbf{perpendicular} if they intersect at right angles ($90^{\circ}$).
+\subsection*{Parallel vs. perpendicular lines}
+We call two lines \textbf{parallel} if their slopes are equal. We call two lines \textbf{perpendicular} if they intersect at right angles ($90^{\circ}$).
 
 \begin{theorem}
   Two nonvertical lines with slopes $m_1$ and $m_2$ are perpendicular if and only if $m_1 m_2 = -1$.

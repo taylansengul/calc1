@@ -1,67 +1,81 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-If $f(u)$ is differentiable at $u = g(x)$ and $g(x)$ is differentiable at $x$, then
-\[
-    (f \circ g)'(x) = f'(g(x))g'(x)
-\]
-In Leibniz notation, if $y=f(u)$ where $u=g(x)$ then
-\[
-    y = f(g(x)) = (f \circ g)(x)
-\]
-\[
-    \frac{dy}{dx} = \frac{dy}{du}  \frac{du}{dx}
-\]
-where $\frac{dy}{du}$ is evaluated at $u=g(x)$.
+  The following theorem is known as the chain rule.
+  \begin{theorem}
+    If $f(u)$ is differentiable at $u = g(x)$ and $g(x)$ is differentiable at $x$, then
+    \[
+      (f \circ g)'(x) = f'(g(x))g'(x)
+    \]
+  \end{theorem}
+  Derivative of the composite function = derivative of outer function evaluated at inner function times derivative of inner function.
 
-\begin{example}
+  In Leibniz notation, if $y=f(u)$ where $u=g(x)$ then
+  \[
+    y = f(g(x)) = (f \circ g)(x)
+  \]
+  \[
+    \frac{dy}{dx} = \frac{dy}{du}  \frac{du}{dx}
+  \]
+  where $\frac{dy}{du}$ is evaluated at $u=g(x)$.
+
+  \begin{example}
     Find the derivative of $y=\sqrt{x^2+1}$.
-\end{example}
-\begin{solution}
+  \end{example}
+  \begin{solution}
     Here $y=f(g(x))$ where $f(u) = \sqrt{u}$ and $u=x^2 + 1$.
     \[
-        \frac{dy}{dx} = f'(g(x)) g'(x) = \frac{1}{2\sqrt{g(x)}} g'(x) =
-        \frac{1}{2\sqrt{x^2+1}} 2x = \frac{x}{\sqrt{x^2+1}}.
+      \frac{dy}{dx} = f'(g(x)) g'(x) = \frac{1}{2\sqrt{g(x)}} g'(x) =
+      \frac{1}{2\sqrt{x^2+1}} 2x = \frac{x}{\sqrt{x^2+1}}.
     \]
-\end{solution}
+  \end{solution}
 
-Derivative of the composite function = derivative of outer function evaluated at inner function times derivative of inner function.
+  \begin{example}
+    Differentiate $y=(x^3-1)^{1000}$.
+  \end{example}
+  \begin{solution}
+    Let $u=(x^3-1)$ then $y=u^{1000}$. $y' = 1000 u^{999}u' = 1000 (x^3-1)^{999} 3x^2$.
+  \end{solution}
 
-\begin{example}
-    Differentiate $y=(x^3-1)^{1000}$. Let $u=(x^3-1)$ then $y=u^{1000}$. $y' = 1000 u^{999}u' = 1000 (x^3-1)^{999} 3x^2$.
-\end{example}
-
-\begin{example}
+  \begin{example}
     Take the derivative $f(t) = \abs{t^2-1}$.
+  \end{example}
+  \begin{solution}
     \[
-        f'(t) = (\text{sgn}(t^2-1))(2t) =
-        \begin{cases}
-            2t, &\text{ if } t<-1, t>1 \\
-            -2t, &\text{ if } -1 < t < 1 \\
-            \text{undefined} &\text{ if } t \pm 1
+      f'(t) = (\text{sgn}(t^2-1))(2t) =
+      \begin{cases}
+        2t, &\text{ if } t<-1, t>1 \\
+        -2t, &\text{ if } -1 < t < 1 \\
+        \text{undefined} &\text{ if } t \pm 1
 
-        \end{cases}
+      \end{cases}
     \]
-\end{example}
+  \end{solution}
 
-\begin{example}
-    In terms of derivative $f'$ of $f$, express the derivative of a) $f(x^2)$, b) $[f(\pi - 2 f(x))]^4$.
-
+  \begin{example}
+    Express in terms of $f$ and $f'$.
+    \begin{enumerate}
+      \item[a)] $\frac{d}{dx}f(x^2)$,
+      \item[b)] $\frac{d}{dx}(f(\pi - 2 f(x)))^4$.
+    \end{enumerate}
+  \end{example}
+  \begin{solution}
     For (a)
     \[
-        \frac{d}{dx} f(x^2) = f'(x^2) 2x
+      \frac{d}{dx} f(x^2) = f'(x^2) 2x
     \]
+
     For (b)
     \[
-        \frac{d}{dx} [f(\pi - 2 f(x))]^4 = 4 [f(\pi - 2 f(x))]^3 f'(\pi - 2 f(x))(-2f'(x)).
+      \frac{d}{dx} [f(\pi - 2 f(x))]^4 = 4 [f(\pi - 2 f(x))]^3 f'(\pi - 2 f(x))(-2f'(x)).
     \]
-\end{example}
+  \end{solution}
 
-\begin{example}
+  \begin{example}
     For
     \[
-        f(x) = \left( 1 + \sqrt{x^2-1} \right)^{-4/3}
+      f(x) = \left( 1 + \sqrt{x^2-1} \right)^{-4/3}
     \]
     evaluate $f'(\sqrt{5})$.
-\end{example}
+  \end{example}
 \end{document}

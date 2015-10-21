@@ -1,85 +1,92 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-Two main problems of calculus are
-\begin{enumerate}
-  \item Derivative. Find the rate of change of $f$.
-  \item Integral. Find the area under a given curve.
-\end{enumerate}
-Both are based on the concept of limit.
+  Two main problems of calculus are
+  \begin{enumerate}
+    \item Derivative. Find the rate of change of $f$.
+    \item Integral. Find the area under a given curve.
+  \end{enumerate}
+  Both are based on the concept of limit.
 
-We say $\lim_{x \to a} f(x) = L$ to mean that $f(x)$ is ``close enough'' to $L$ when $x$ is ``close enough'' to \emph{but not equal to} $a$. Hence $f(a)$ is unimportant for $\lim_{x \to a} f(x)$.
+  We say $\lim_{x \to a} f(x) = L$ to mean that $f(x)$ is ``close enough'' to $L$ when $x$ is ``close enough'' to \emph{but not equal to} $a$. Hence $f(a)$ is unimportant for $\lim_{x \to a} f(x)$.
 
-\begin{example}
-  Which value is $x$ close to when $x$ is close to 2? $\lim_{x \to 2} x = 2$.
-\end{example}
-
-\begin{example}
-  Which value is 3 close to when $x$ is close to 2? $\lim_{x \to 2} 3 = 3$.
-\end{example}
-
-We can generalize these examples.
-\begin{theorem}
-\label{basic limit theorems}
-  Let $a$ and $c$ be two real numbers. Then
-  \[
-    \lim_{x \to a} c = c, \qquad
-    \lim_{x \to a} x = x.
-  \]
-\end{theorem}
-
-
-The limit $\lim_{x \to a} f(x)$ may be different from $f(a)$ as the next example shows.
-\begin{example}
-  \[
-    f(x) =
-    \begin{cases}
-      x, &\text{ if } x\neq 2\\
-      1, &\text{ if } x = 2\\
-    \end{cases}
-  \]
-  Which value is $f(x)$ close to when $x$ is close to (but not equal to) 2?
-
-  $\lim_{x \to 2} f(x) = \lim_{x \to 2} x = 2$ although $f(2) = 1$.
-\end{example}
-
-\subsection*{Informal definition of left and right limits}
-If $f(x)$ is close to $L$ when $x<a$ and $x$ is close enough to $a$ then we say
-\[
-  \lim_{x \to a^{-}} f(x) = L
-\]
-This is called the \emph{left limit} of $f$ at $x=a$.
-
-Similarly we can define the right limit.
-
-\begin{theorem}
-  $\lim_{x \to a} f(x) = L$ if and only if both $\lim_{x \to a^{-}} f(x) =L$ and $\lim_{x \to a^{+}} f(x) = L$.
-\end{theorem}
-
-\begin{example}
-Find the left and right limits of the signum function
-
-  \begin{minipage}[c]{0.5\textwidth}
+  \begin{example}
+    Which value is $x$ close to when $x$ is close to 2?
     \[
-    f(x) =
-    \begin{cases}
-      -1 & \text{for $x<0$}\\ 0 & \text{for $x=0$}\\ 1 & \text{for $x>0$}
-    \end{cases}
+      \lim_{x \to 2} x = 2
     \]
-  \end{minipage}
-  \begin{minipage}[c]{0.2\textwidth}
-    \begin{figure}[H]
-    \centering
-    \input{figures/1-1-signumFunc.tikz}
-    \end{figure}
-  \end{minipage}
+  \end{example}
 
-  In this example the one-sided limits exist, but are not equal
+  \begin{example}
+    Which value is 3 close to when $x$ is close to 2?
+    \[
+      \lim_{x \to 2} 3 = 3
+    \]
+  \end{example}
+
+  We can generalize these examples.
+  \begin{theorem}
+    \label{basic limit theorems}
+    Let $a$ and $c$ be two real numbers. Then
+    \[
+      \lim_{x \to a} c = c, \qquad
+      \lim_{x \to a} x = a.
+    \]
+  \end{theorem}
+
+
+  The limit $\lim_{x \to a} f(x)$ may be different from $f(a)$ as the next example shows.
+  \begin{example}
+    \[
+      f(x) =
+      \begin{cases}
+        x, &\text{ if } x\neq 2\\
+        1, &\text{ if } x = 2\\
+      \end{cases}
+    \]
+    Which value is $f(x)$ close to when $x$ is close to (but not equal to) 2?
+
+    $\lim_{x \to 2} f(x) = \lim_{x \to 2} x = 2$ although $f(2) = 1$.
+  \end{example}
+
+  \subsection*{Informal definition of left and right limits}
+  If $f(x)$ is close to $L$ when $x<a$ and $x$ is close enough to $a$ then we say
   \[
-  \lim_{x\searrow0}f(x) = 1 \text{ and } \lim_{_x\nearrow0}f(x) = -1.
+    \lim_{x \to a^{-}} f(x) = L
   \]
-  Hence $\lim_{x\to 0} f(x)$ does not exist.
-\end{example}
+  This is called the \emph{left limit} of $f$ at $x=a$.
+
+  Similarly we can define the right limit.
+
+  \begin{theorem}
+    $\lim_{x \to a} f(x) = L$ if and only if both $\lim_{x \to a^{-}} f(x) =L$ and $\lim_{x \to a^{+}} f(x) = L$.
+  \end{theorem}
+
+  \begin{example}
+    Find the left and right limits of the signum function
+
+    \begin{minipage}[c]{0.5\textwidth}
+      \[
+        f(x) =
+        \begin{cases}
+          -1 & \text{for $x<0$}\\ 0 & \text{for $x=0$}\\ 1 & \text{for $x>0$}
+        \end{cases}
+      \]
+    \end{minipage}
+    \begin{minipage}[c]{0.2\textwidth}
+      \begin{figure}[H]
+        \centering
+        \input{figures/1-1-signumFunc.tikz}
+      \end{figure}
+    \end{minipage}
+  \end{example}
+  \begin{solution}
+    The one-sided limits exist, but are not equal
+    \[
+      \lim_{x\searrow0}f(x) = 1 \text{ and } \lim_{_x\nearrow0}f(x) = -1.
+    \]
+    Hence $\lim_{x\to 0} f(x)$ does not exist.
+  \end{solution}
 
 
 % \begin{example} Evaluate the expressions by referencing the plot in Figure~\ref{plot:piecewise-exercise}.
@@ -116,7 +123,7 @@ Find the left and right limits of the signum function
 \begin{theorem}
   Suppose
   \[
-  \lim_{x\to a}f(x)=L, \qquad \lim_{x\to a}g(x)=M.
+    \lim_{x\to a}f(x)=L, \qquad \lim_{x\to a}g(x)=M.
   \]
   Then
   \begin{align}
@@ -134,8 +141,9 @@ Find the left and right limits of the signum function
 Using the above properties we can evaluate the following limits.
 \begin{example}
   Find $\lim_{x \to 2} x^2 +1$ and $\lim_{x \to 2} \dfrac{x^2+1}{6-x}$.
-
-  Solution. Using the product rule of limits and the Theorem~\ref{basic limit theorems},
+\end{example}
+\begin{solution}
+  Using the product rule of limits and the Theorem~\ref{basic limit theorems},
   \[
     \lim_{x \to 2} x^2 = \lim_{x \to 2} x \cdot \lim_{x \to 2} x = 2 \cdot 2 = 4
   \]
@@ -147,7 +155,7 @@ Using the above properties we can evaluate the following limits.
   \[
     \lim_{x \to 2} \frac{x^2+1}{6-x} = \frac{\lim_{x \to 2} x^2+1}{\lim_{x \to 2} 6-x} = \frac{5}{4}.
   \]
-\end{example}
+\end{solution}
 
 The above example is a special case of the following theorem.
 \begin{theorem}
@@ -178,9 +186,10 @@ The above example is a special case of the following theorem.
 
 \begin{example}
   Show that if $\lim_{x \to a} \abs{f(x)} = 0$ then $\lim_{x \to a} f(x) = 0$.
-
-  Note that $-\abs{f(x)} \le f(x) \le \abs{f(x)}$ and use the Squeeze Theorem.
 \end{example}
+\begin{solution}
+  Note that $-\abs{f(x)} \le f(x) \le \abs{f(x)}$ and use the Squeeze Theorem.
+\end{solution}
 
 \subsection*{More examples}
 \begin{example}
@@ -196,17 +205,16 @@ In these example, we will compute $\lim_{x \to a} f(x)$ even when $f(a)$ does no
   Evaluate
   \begin{enumerate}
     \item $\lim_{x \to -2} \dfrac{x^2 + x-2}{x^2 + 5x +6}$,
-
-    \textit{Remember} that we consider $x$ values close to but not equal to $-2$. Hence $x+2 \neq 0$ and we can make the simplification
-    \[
-      \lim_{x \to -2} \dfrac{x^2 + x-2}{x^2 + 5x +6} =
-      \lim_{x \to -2} \dfrac{(x+2)(x-1)}{(x+2)(x+3)} =
-      \lim_{x \to -2} \dfrac{x-1}{x+3} = \frac{-3}{1} = -3.
-    \]
+    \begin{solution}
+      Remember that we consider $x$ values close to but not equal to $-2$. Hence $x+2 \neq 0$ and we can make the simplification
+      \[
+        \lim_{x \to -2} \dfrac{x^2 + x-2}{x^2 + 5x +6} =
+        \lim_{x \to -2} \dfrac{(x+2)(x-1)}{(x+2)(x+3)} =
+        \lim_{x \to -2} \dfrac{x-1}{x+3} = \frac{-3}{1} = -3.
+      \]
+    \end{solution}
     \item $\lim_{x \to 5} \dfrac{\frac{1}{x} - \frac{1}{5}}{x-5}$,
-    \item $\lim_{x \to 4} \dfrac{\sqrt{x}-2}{x^2-16}$,
-
-    \textit{Trick} is to multiply both sides by the conjugate expression.
+    \item $\lim_{x \to 4} \dfrac{\sqrt{x}-2}{x^2-16}$, \textit{Hint:} multiply both sides by the conjugate expression.
     \item $\lim_{x \to -2} \dfrac{x^2 + 2x}{x^2-4}$,
     \item $\lim_{h \to 0} \dfrac{\sqrt{4+h}-2}{h}$,
     \item $\lim_{t \to 0} \dfrac{t}{\sqrt{4+t}-\sqrt{4-t}}$,

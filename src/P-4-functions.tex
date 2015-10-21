@@ -1,63 +1,60 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-A \textbf{function} $f$ on a set $D$ into a set $R$ is a rule that assigns a unique element $f(x)$ in $R$ to each element $x$ in $D$.
+  A \textbf{function} $f$ on a set $D$ into a set $R$ is a rule that assigns a unique element $f(x)$ in $R$ to each element $x$ in $D$.
 
-$D$ is called the \textbf{domain} of $f$. $R$ is called the target or \textbf{codomain} of $f$. The \textbf{range} of $f$ is a subset of $R$ containing of all possible values $f(x)$.
+  $D$ is called the \textbf{domain} of $f$. $R$ is called the target or \textbf{codomain} of $f$. The \textbf{range} of $f$ is a subset of $R$ containing of all possible values $f(x)$.
 
-\textit{
-This definition is not mathematical as we did not define what a rule is. Formally one defines a function as a relation.}
+  \begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \input{figures/P4-func.tikz}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \input{figures/P4-notfunc.tikz}
+    \end{subfigure}
+  \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \subfloat[a]{
-  \scalebox{.8}{\input{figures/P4-notAfunc.tikz}}
-  }
-  \subfloat[b]{
-  \scalebox{.8}{\input{figures/P4-aFunc.tikz}}
-  }
-  \caption{a) Not a function. b) A Function }
-  \label{fig:funcNotfunc}
-\end{figure}
+  \begin{example}
+    Define a function on the set of all real numbers by $f(x)=x^2+1$. Find $f(0), \, f(2), \, f(x+2)$.
+  \end{example}
 
-\begin{example}
-  Define a function on the set of all real numbers by $f(x)=x^2+1$. Find $f(0), \, f(2), \, f(x+2)$.
-\end{example}
+  When defining a function, its domain should be defined. For example,
+  \[
+    f(x) = \frac{1}{x}, \qquad x > 0
+  \]
+  means that the domain of $f$ is the set $\{x \mid x > 0\}$. This function is different from the function
+  \[
+    f(x) = \frac{1}{x}, \qquad x < 0.
+  \]
 
-\[
-  f(x) = \frac{1}{x}, \qquad x > 0
-\]
-means that the domain of $f$ is the set $\{x \mid x > 0\}$.
+  If we do not specify the domain of a function $f$, then the \textbf{domain convention} is to assume that the domain of $f$ is the set of all real numbers for which $f$ is defined.
 
-Technically, this function is different from the function
-\[
-  f(x) = \frac{1}{x}, \qquad x < 0.
-\]
-
-If we do not specify the domain of a function $f$, then the \textbf{domain convention} is to assume that the domain of $f$ is the set of all real numbers for which $f$ is defined.
-
-So if we write
-\[
-  f(x)=\frac{1}{x},
-\]
-we are assuming $f$ is defined for all real numbers except $0$.
+  So if we write
+  \[
+    f(x)=\frac{1}{x},
+  \]
+  we are assuming $f$ is defined for all real numbers except $0$.
 
 
-\begin{example}
-  Find the domain of $f(x) = \sqrt{2-x}$.
+  \begin{example}
+    Find the domain of $f(x) = \sqrt{2-x}$.
+  \end{example}
+  \begin{solution}
+    Its domain is all $x$ for which $2-x \ge 0$, i.e. the interval $(-\infty, 2]$.
+  \end{solution}
 
-  \textbf{Solution.} Its domain is all $x$ for which $2-x \ge 0$, i.e. the interval $(-\infty, 2]$.
-\end{example}
+  \begin{example}
+    Find the domain of $f(x) = \dfrac{1}{x^2 - x}$.
+  \end{example}
 
-\begin{example}
-    Find the domain of $f(x) = \frac{1}{x^2 - x}$.
-\end{example}
+% A function $f: D \to R$ is \textbf{1-1} if $f(x_1) = f(x_2)$ then $x_1=x_2$. A function $f: D \to R$ is \textbf{onto} if for every $y \in R$, there is an $x \in D$ such that $f(x) = y$.
 
-A function $f: D \to R$ is \textbf{1-1} if $f(x_1) = f(x_2)$ then $x_1=x_2$. A function $f: D \to R$ is \textbf{onto} if for every $y \in R$, there is an $x \in D$ such that $f(x) = y$.
-
-\begin{example}
-  Draw functions which are 1-1, onto, not 1-1 and not onto,  similar to the Figure~\ref{fig:funcNotfunc}.
-\end{example}
+% \begin{example}
+%   Draw functions which are 1-1, onto, not 1-1 and not onto,  similar to the Figure~\ref{fig:funcNotfunc}.
+% \end{example}
 
 \subsection*{Graph of a function}
 The \emph{graph of a function} $f$ is the set of all points whose coordinates are $(x, f(x))$ where $x$ is in the domain of $f$.
@@ -67,78 +64,103 @@ The \emph{graph of a function} $f$ is the set of all points whose coordinates ar
   \input{figures/P4-graphOFf.tex}
 \end{figure}
 
+\subsection*{Some Elementary Functions}
 
+\subsubsection*{Linear Function}
+A function which is given by the formula
+\[
+  f(x) = mx + n
+\]
+where $m$ and $n$ are constants is called a \textbf{linear function}. Its graph is a straight line. The constants $m$ and $n$ are the \emph{slope} and \emph{$y$-intercept} of the line. Its domain is all $x$ and its range is all $x$.
 
-\begin{example}
-  A function which is given by the formula
-  \[
-    f(x) = mx + n
-  \]
-  where $m$ and $n$ are constants is called a \emph{linear function}. Its graph is a straight line. The constants $m$ and $n$ are the \emph{slope} and \emph{$y$-intercept} of the line.
-\end{example}
+\begin{figure}[H]
+  \centering
+  \input{figures/P4-linear.tikz}
+\end{figure}
 
-\begin{example}
-  The square root function $f(x) = \sqrt{x}$ has domain $[0, \infty)$ and takes $x$ to its positive square root. Hence it has range $[0, \infty)$.
-\end{example}
+\subsubsection*{Square Root Function}
+The square root function $f(x) = \sqrt{x}$ has domain $[0, \infty)$ and takes $x$ to its positive square root. Hence it has range $[0, \infty)$.
 
-\begin{example}
-  The absolute value function $f(x) = \abs{x} = \sqrt{x^2}$ has domain $(-\infty, \infty)$ and range $[0, \infty)$.
-\end{example}
+\begin{figure}[H]
+  \centering
+  \input{figures/P4-sqrt.tikz}
+\end{figure}
+
+\subsubsection*{The absolute value function}
+The absolute value function is
+\[
+  \abs{x} =
+  \begin{cases}
+    x, &\text{ if } x \ge 0\\
+    -x, &\text{ if } x < 0
+  \end{cases}
+\]
+Its domain $(-\infty, \infty)$ and range $[0, \infty)$.
+We can only define the absolute value function by
+$f(x) = \abs{x} = \sqrt{x^2}$.
+
+\begin{figure}[H]
+  \centering
+  \input{figures/P4-abs.tikz}
+\end{figure}
 
 \begin{example}
   Draw the graphs of some elementary functions
   \[
-    c, x, x^2, \sqrt{x}, x^3, x^{1/3}, \frac{1}{x}, \frac{1}{x^2}, \sqrt{1-x^2}, \abs{x}.
+    c, x, x^2, x^3, x^{1/3}, \frac{1}{x}, \frac{1}{x^2}, \sqrt{1-x^2}.
   \]
 \end{example}
 \begin{example}
   Sketch the graph of $f(x)=1+\sqrt{x-4}$.
-
-  Solution: Shift the graph of $y=\sqrt{x}$ 1 unit up and 4 units to the right.
 \end{example}
+\begin{solution}
+  Shift the graph of $y=\sqrt{x}$ 1 unit up and 4 units to the right.
+\end{solution}
 \begin{example}
   Sketch the graph of the function $f(x) = \frac{2-x}{x-1}$.
-
-  Solution. $f(x) = \frac{2-x}{x-1} = -1 + \frac{1}{x-1}$. So shift the graph of $y=\frac{1}{x}$ 1 unit down and 1 unit to the right.
 \end{example}
+\begin{solution}
+  $f(x) = \frac{2-x}{x-1} = -1 + \frac{1}{x-1}$. So shift the graph of $y=\frac{1}{x}$ 1 unit down and 1 unit to the right.
+\end{solution}
 
 \subsection*{Vertical Line Test}
 \emph{The graph of a function cannot intersect a vertical line ``$x=\text{\em constant}$'' in more than one point}.
 
-For example, the circle $x^2+y^2=1$ is not a graph of a function.
 \begin{figure}[H]
   \centering
   \input{figures/P4-verticalLineTest.tikz}
+  \caption{The circle $x^2+y^2=1$ is not a graph of a function. It fails the vertical line test.}
 \end{figure}
 
 \subsection*{Even and Odd Functions}
 
 \begin{definition}
-We say that $f$ is an \textbf{even function} if $f\left( -x\right) =f\left( x\right) $ for every $x\in D$.
-We say that $f$ is an \textbf{odd function} if $f(-x)=-f(x)$ for every $x\in D$.
+  We say that $f$ is an \textbf{even function} if $f\left( -x\right) =f\left( x\right) $ for every $x\in D$.
+  We say that $f$ is an \textbf{odd function} if $f(-x)=-f(x)$ for every $x\in D$.
 \end{definition}
 
 \begin{figure}[H]
   \centering
-  \subfloat[a]{
-  \input{figures/P5-evenFunc.tikz}
-  }
-  \subfloat[b]{
-  \input{figures/P5-oddFunc.tikz}
-  }
-  \caption{a) An even function,  b) An odd function.}
+  \begin{subfigure}{0.3\textwidth}
+    \input{figures/P5-evenFunc.tikz}
+    \caption{An even function}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \input{figures/P5-oddFunc.tikz}
+    \caption{An odd function.}
+  \end{subfigure}
 \end{figure}
 
 Odd functions are symmetric with respect to origin and even functions are symmetric with respect to the $y$-axis.
 
 
 \begin{example}
-$f(x)=x,f(x)=x^{3}$ are odd and $f(x)=x^{2}$ and $f(x) =x^{4}$ are even and $f(x)=\frac{1}{x+1}$ is neither even or odd.
+  $f(x)=x,f(x)=x^{3}$ are odd and $f(x)=x^{2}$ and $f(x) =x^{4}$ are even and $f(x)=\frac{1}{x+1}$ is neither even or odd.
 \end{example}
 
 \begin{example}
-$f(x)=x^{3}+x$ is odd and $f(x)=\frac{1}{x^{2}-1}$ is even and $f(x)=x^{2}+x$
-is either even or odd.
+  $f(x)=x^{3}+x$ is odd and $f(x)=\frac{1}{x^{2}-1}$ is even and $f(x)=x^{2}+x$
+  is either even or odd.
 \end{example}
 
 \end{document}

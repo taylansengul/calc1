@@ -1,9 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-The \textbf{integers} are $\mathbb{Z}= \left\{ \dots, -2, -1, 0,1, 2, \dots \right\}$.
-
-Integers come in a lot varieties:
+The \textbf{integers} are $\mathbb{Z}= \left\{ \dots, -2, -1, 0,1, 2, \dots \right\}$. Some important subsets of the set of integers are:
 \begin{itemize}
   \item[-] even integers that are of the form $2k$, for some $k\in \mathbb{Z}$,
   \item[-] odd integers that are of the form $2k+1$, for some $k\in \mathbb{Z}$
@@ -13,7 +11,7 @@ Integers come in a lot varieties:
 
 The \textbf{rational numbers} are $\mathbb{Q=}\left\{ \frac{m}{n}:m,n\in \mathbb{Z}\text{ and }n\neq 0\right\}$.
 
-\textit{Pythagoreans preached that all numbers could be expressed as the ratio of integers, and the discovery of irrational numbers is said to have shocked them.}
+\textit{Pythagoreans thought that all numbers are ratios of integers. The discovery of irrational numbers is said to have shocked them.}
 
 \begin{example}
 $\sqrt{2}$ is not a rational number.
@@ -57,16 +55,19 @@ Draw each interval on the real line.
   Solve the following inequalities.
   \begin{enumerate}
     \item $\frac{2}{x-1} \ge 5$.
+    \begin{solution}
+      \textit{It is not right to multiply both sides by $x-1$ and say $5x-5 \le 2$.}
+      \[
+        \frac{2}{x-1} \ge 5 \iff \frac{2}{x-1} - 5 \ge 0
+        \iff \frac{7-5x}{x-1} \ge 0.
+      \]
+      Now make a sign analysis to get interval $(1, 7/5]$
+    \end{solution}
 
-    Solution. \textit{It is not right to multiply both sides by $x-1$ and say $5x-5 \le 2$.}
-    \[
-      \frac{2}{x-1} \ge 5 \iff \frac{2}{x-1} - 5 \ge 0
-      \iff \frac{7-5x}{x-1} \ge 0.
-    \]
-    Now make a sign analysis to get interval $(1, 7/5]$
     \item $3x-1 \le 5x+3 \le 2x+15$.
-
-    Solution. $-2\le x$ and $x \le 4$.
+    \begin{solution}
+      $-2\le x$ and $x \le 4$.
+    \end{solution}
   \end{enumerate}
 \end{example}
 

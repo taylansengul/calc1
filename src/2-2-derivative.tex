@@ -9,13 +9,18 @@
     \]
     whenever the limit exists. If $f'(x)$ exists, $f$ is called \textbf{differentiable} at $x$.
 \end{definition}
-$f'$ is a function whose domain is those $x$ at which $f$ is differentiable.
+
+\begin{center}
+    \texttt{$f'(x)$ is the slope of the tangent line to the graph of $f$ at $(x, f(x))$.}
+\end{center}
+
+We will regard $f'$ as a function whose domain is those $x$ at which $f$ is differentiable.
 
 Another way of defining derivative is
 \[
     f'(x_0) = \lim_{x \to x_0} \frac{f(x)-f(x_0)}{x-x_0} = \lim_{h \to 0} \frac{f(x_0+h)-f(x_0)}{h}
 \]
-Two limits are equivalent and can be seen by letting $x=x_0 + h$.
+Two limits are equivalent. This can be seen by letting $x=x_0 + h$.
 
 \begin{example}
     Show that the derivative of the linear function $f(x) = ax+b$ is $f'(x) = a$. In particular the derivative of a constant function is zero.
@@ -26,7 +31,7 @@ Two limits are equivalent and can be seen by letting $x=x_0 + h$.
     a) $f(x) = x^2$, b) $f(x) = \frac{1}{x}$, c) $f(x) = \sqrt{x}$.
 \end{example}
 
-The previous three formulas are special cases of the following rule:
+The previous three formulas are special cases of the following \textbf{Power Rule for Derivative}:
 \[
     f(x) = x^r \implies f'(x) = r x^{r-1}
 \]
@@ -52,13 +57,14 @@ whenever $x^{r-1}$ makes sense.
             1, &\text{ if } x>0
         \end{cases}
     \]
-    Note that $f$ is differentiable at $0$.
+    Note that $f$ is not differentiable at $0$.
 \end{example}
 
 \begin{example}
-    How should the function $f(x) = x \text{sgn}(x)$ be defined at $x=0$ so that it is cts there? Is it then differentiable there?
+    How should the function $f(x) = x \text{sgn}(x)$ be defined at $x=0$ so that it is continuous there? Is it then differentiable there?
 \end{example}
 
+\subsection*{Notations for Derivative}
 Let $y = f(x)$. We denote the derivative by
 \[
     y' = f'(x) = \frac{dy}{dx} = \frac{d}{dx} f(x).
@@ -67,8 +73,15 @@ If we want to evaluate the derivative at point $x_0$
 \[
     y' \mid_{x=x_0} = f'(x_0) = \frac{dy}{dx} \mid_{x=x_0} = \frac{d}{dx} f(x) \mid_{x=x_0}.
 \]
-The notations $dy/dx$ and $\frac{d}{dx} f(x) $ are called \textbf{Leibniz notations} for the derivative. The notation $dy/dx$ is suggested by the definition of the derivative. Let $\Delta y = f(x+h) - f(x)$ be the increment in $y$ and $\Delta x = x+h - x = h$ be the increment in $x$. Then
+The notations $y'$ and $f'(x)$ are \textit{Lagrange notations} for the derivative.
+The notations $\dfrac{dy}{dx}$ and $\dfrac{d}{dx} f(x) $ are called \textit{Leibniz notations} for the derivative.
+
+The Leibniz notation is suggested by the definition of the derivative. Let $\Delta y = f(x+h) - f(x)$ be the increment in $y$ and $\Delta x = x+h - x = h$ be the increment in $x$. Then
 \[
     \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}
 \]
+
+% \begin{remark}
+%     Although a derivative need not be continuous, it must have the intermediate value property just as a continuous function. Read: Darboux Theorem.
+% \end{remark}
 \end{document}

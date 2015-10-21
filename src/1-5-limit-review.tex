@@ -10,6 +10,19 @@
     \item $\lim_{x \to \infty} \dfrac{\cos x}{x}$, (Hint: Use Sandwich Theorem)
     \item $\lim_{x \to -\infty} \dfrac{2x^3 + 2x -1}{-3x^3 +x^2}$,
     \item $\lim_{x \to -\infty} x + \sqrt{x^2-4x+1}$,
+    \begin{solution}
+      \[
+        \begin{split}
+          \lim_{x \to -\infty} x + \sqrt{x^2-4x+1} & =
+          \lim_{x \to -\infty} x + \abs{x} \sqrt{1-\frac{4}{x}+\frac{1}{x^2}} =
+          \lim_{x \to -\infty} x \left(1 - \sqrt{1-\frac{4}{x}+\frac{1}{x^2}} \right) \\
+          & = \lim_{x \to -\infty} x \left(1 - \sqrt{1-\frac{4}{x}+\frac{1}{x^2}} \right) \frac{\left(1 + \sqrt{1-\frac{4}{x}+\frac{1}{x^2}} \right)}{\left(1 + \sqrt{1-\frac{4}{x}+\frac{1}{x^2}} \right)} \\
+          & = \lim_{x \to -\infty} x \left(1 - \left( 1-\frac{4}{x}+\frac{1}{x^2} \right)\right) \lim_{x \to -\infty} \frac{1}{\left(1 + \sqrt{1-\frac{4}{x}+\frac{1}{x^2}} \right)} \\
+          & = \lim_{x \to -\infty} x \left(\frac{4}{x} - \frac{1}{x^2} \right) \frac{1}{2}
+          = \lim_{x \to -\infty} \left(4 - \frac{1}{x} \right) \frac{1}{2} = 2.
+        \end{split}
+      \]
+    \end{solution}
     \item $\lim_{x \to 0} \dfrac{x}{\abs{x-1}-\abs{x+1}}$.
   \end{enumerate}
 \end{example}
