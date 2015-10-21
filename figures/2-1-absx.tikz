@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle,
+  xtick={-1,0,1},
+  ytick={1},
+  x=15mm,
+  y=15mm,
+  title={$f(x)=\abs{x}$},
+  xlabel=$x$,
+  ylabel=$y$]
+  \addplot[domain=-1.4:0, very thick] {-x};
+  \addplot[domain=0:1.4, very thick] {x};
+\end{axis}
+\end{tikzpicture}

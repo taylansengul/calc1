@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=center, % left, right, box, center, none
+  x=8mm,
+  y=8mm,
+  title={$f(x)=\sqrt{x}$},
+  xlabel=$x$,
+  ylabel=$y$,
+  xtick={1,4},
+  ytick={1,2}
+  ]
+  \addplot[domain=0:5, very thick, samples=200] {sqrt(x)};
+\end{axis}
+\end{tikzpicture}

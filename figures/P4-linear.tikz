@@ -1,0 +1,20 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=8mm,
+  y=8mm,
+  title={$f(x)=mx+n$},
+  xlabel=$x$,
+  ylabel=$y$,
+  xtick={-2,0},
+  ytick={1},
+  xticklabels={$-\frac{n}{m}$,0},
+  yticklabels={$n$}
+  ]
+  \addplot[domain=-3:3, very thick] {.5*x+1};
+  \addplot[soldot] coordinates{(-2,0)(0,1)};
+\end{axis}
+\end{tikzpicture}

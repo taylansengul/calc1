@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle,
+  x=8mm,
+  y=8mm,
+  title={$f(x)=x^{1/3}$},
+  xlabel=$x$,
+  ylabel=$y$]
+  \addplot[domain=-1.5:1.5, very thick] ({x^3},{x});
+\end{axis}
+\end{tikzpicture}
