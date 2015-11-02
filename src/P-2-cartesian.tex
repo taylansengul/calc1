@@ -1,98 +1,114 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
+  \begin{minipage}[c]{0.5\textwidth}
+    Cartesian plane is $\mathbb{R}\times \mathbb{R} = \{(x,y) \mid x \in \mathbb{R} \text{ and } b \in \mathbb{R} \}$. Horizontal axis is usually called the $x$ axis, the vertical axis is called the $y$ axis. Intersection of the axes is called the origin, denoted $O$.
+  \end{minipage}
+  \begin{minipage}[c]{0.5\textwidth}
+    \begin{figure}[H]
+      \centering
+      \input{figures/P2-cartesian.tikz}
+    \end{figure}
+  \end{minipage}
 
-Cartesian plane is $\mathbb{R}\times \mathbb{R} = \{(x,y) \mid x \in \mathbb{R} \text{ and } b \in \mathbb{R} \}$.
+  \begin{minipage}[c]{0.5\textwidth}
+    The coordinate axes divide the Cartesian plane into four quadrants.
+  \end{minipage}
+  \begin{minipage}[c]{0.5\textwidth}
+    \begin{figure}[H]
+      \centering
+      \input{figures/P2-quadrants.tikz}
+    \end{figure}
+  \end{minipage}
 
-\begin{figure}[H]
-  \centering
-  \input{figures/P2-cartesian.tikz}
-\end{figure}
+  \begin{minipage}[c]{0.5\textwidth}
+    By the Pythagorean Theorem, the distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ is
+    \[
+      \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}
+    \]
+  \end{minipage}
+  \begin{minipage}[c]{0.5\textwidth}
+    \begin{figure}[H]
+      \centering
+      \input{figures/P2-distance.tikz}
+    \end{figure}
+  \end{minipage}
 
-Horizontal axis is usually called the $x$ axis, the vertical axis is called the $y$ axis. Intersection of the axes is called the origin, denoted $O$.
+  The distance of $(x,y)$ to the origin $(0,0)$ is $\sqrt{x^2+y^2}$.
+  \begin{example}
+    Find the distance between $(-1, 1)$ and $(3, -4)$.
+  \end{example}
 
-The coordinate axes divide the Cartesian plane into four quadrants.
-\begin{figure}[H]
-  \centering
-  \input{figures/P2-quadrants.tikz}
-\end{figure}
+  \subsection*{Graphs of Equations}
+  The set of all points $(x,y)$ satisfying an equation in $x$ and $y$ is called the \textbf{graph of that equation}.
 
-By the Pythogerean Theorem, the distance of two points $(x_1, y_1)$ and $(x_2, y_2)$ is
-\begin{figure}[H]
-  \centering
-  \input{figures/P2-distance.tikz}
-\end{figure}
+  \begin{example}
+    The graph of $x^2+y^2=4$ is the set of all $(x,y)$ whose distance to $(0,0)$ is 2, i.e. a circle with center at origin and radius 2.
+  \end{example}
 
-The distance of $(x,y)$ to the origin $(0,0)$ is $\sqrt{x^2+y^2}$.
-\begin{example}
-  Find the distance between $(-1, 1)$ and $(3, -4)$.
-\end{example}
+  \subsection*{Equations of Lines}
+  For any two points $(x_1, y_1)$ and $(x_2, y_2)$ on a non-vertical line $L$, the quantity $m=\dfrac{y_2-y_1}{x_2-x_1}$ is constant and is called the \textbf{slope} of the line $L$.
 
-\subsection*{Graphs of Equations}
-The set of all points $(x,y)$ satisfying an equation in $x$ and $y$ is called the \textbf{graph of that equation}.
+  Let $L$ be a nonvertical line. Let $m$ be the slope of $L$ and $(x_1, y_1)$ be the coordinates of a point on $L$. If $(x,y)$ is another point on $L$, then
+  \[
+    \frac{y-y_1}{x-x_1} = m
+  \]
+  Hence any $(x,y)$ on $L$ satisfies
+  \[
+    y = m(x-x_1) + y_1
+  \]
+  The above is known as an equation for the line $L$.
 
-\begin{example}
-  The graph of $x^2+y^2=4$ is the set of all $(x,y)$ whose distance to $(0,0)$ is 2, i.e. a circle with center at origin and radius 2.
-\end{example}
+  All points on a \textbf{vertical line} have their $x$ coordinate equal to a constant $a$. So the equation of a vertical line is $x=a$. \textbf{Horizontal lines} have equations of the form $y=a$.
 
-\subsection*{Equations of Lines}
-For any two points $(x_1, y_1)$ and $(x_2, y_2)$ on a non-vertical line $L$, the quantity $m=\dfrac{y_2-y_1}{x_2-x_1}$ is constant and is called the \textbf{slope} of the line $L$.
+  \textbf{y-intercept} of a nonvertical line $L$ is the $y$-coordinate of the point where $L$ intersects the y-axis. \textbf{x-intercept} of a nonhorizontal is defined similarly.
 
-Let $L$ be a nonvertical line. Let $m$ be the slope of $L$ and $(x_1, y_1)$ be the coordinates of a point on $L$. If $(x,y)$ is another point on $L$, then
-\[
-  \frac{y-y_1}{x-x_1} = m
-\]
-Hence any $(x,y)$ on $L$ satisfies
-\[
-  y = m(x-x_1) + y_1
-\]
-The above is known as an equation for the line $L$.
-
-All points on a \textbf{vertical line} have their $x$ coordinate equal to a constant $a$. So the equation of a vertical line is $x=a$. \textbf{Horizontal lines} have equations of the form $y=a$.
-
-\textbf{y-intercept} of a nonvertical line $L$ is the $y$-coordinate of the point where $L$ intersects the y-axis. \textbf{x-intercept} of a nonhorizontal is defined similarly.
-
-\begin{example}
-Find an equation of the line through the points $(1,-1)$ and $(3,5)$. Draw the line. Find the x and y intercepts.
-\end{example}
-
-\begin{example}
-Find an equation of the line that passes through the point $(-3,-4) $ and has slope $2$. Draw the line.
-\end{example}
-
-\begin{example}
-Find the slope and the two intercepts of the line with equation $8x+5y=20$. Draw the line.
-\end{example}
-
-\subsection*{Parallel vs. perpendicular lines}
-We call two lines \textbf{parallel} if their slopes are equal. We call two lines \textbf{perpendicular} if they intersect at right angles ($90^{\circ}$).
-
-\begin{theorem}
-  Two nonvertical lines with slopes $m_1$ and $m_2$ are perpendicular if and only if $m_1 m_2 = -1$.
-\end{theorem}
-
-\begin{proof}
   \begin{figure}[H]
     \centering
-    \input{figures/P2-perpLines.tikz}
+    \input{figures/P-2-xyintercept.tikz}
+    \caption{a is the x-intercept, b is the y-intercept.}
   \end{figure}
-  Use the similarity of the triangles ABC and DAC to get
-  \[
-    \frac{\abs{BC}}{\abs{AC}} = \frac{\abs{AC}}{\abs{CD}} \implies
-    \frac{\abs{BC}\abs{CD}}{\abs{AC}^2} = 1
-  \]
-  Slope of $L_1$ ($m_1$) is $\abs{BC}/\abs{AC}=1$ and slope of $L_2$ ($m_2$) is $-\abs{CD}/\abs{AC}$. So $m_1 m_2 = -1$.
-\end{proof}
+  \begin{example}
+    Find an equation of the line through the points $(1,-1)$ and $(3,5)$. Draw the line. Find the x and y intercepts.
+  \end{example}
+
+  \begin{example}
+    Find an equation of the line that passes through the point $(-3,-4) $ and has slope $2$. Draw the line.
+  \end{example}
+
+  \begin{example}
+    Find the slope and the two intercepts of the line with equation $8x+5y=20$. Draw the line.
+  \end{example}
+
+  \subsection*{Parallel vs. perpendicular lines}
+  We call two lines \textbf{parallel} if their slopes are equal. We call two lines \textbf{perpendicular} if they intersect at right angles ($90^{\circ}$).
+
+  \begin{theorem}
+    Two nonvertical lines with slopes $m_1$ and $m_2$ are perpendicular if and only if $m_1 m_2 = -1$.
+  \end{theorem}
+
+  \begin{proof}
+    \begin{figure}[H]
+      \centering
+      \input{figures/P2-perpLines.tikz}
+    \end{figure}
+    Use the similarity of the triangles ABC and DAC to get
+    \[
+      \frac{\abs{BC}}{\abs{AC}} = \frac{\abs{AC}}{\abs{CD}} \implies
+      \frac{\abs{BC}\abs{CD}}{\abs{AC}^2} = 1
+    \]
+    Slope of $L_1$ ($m_1$) is $\abs{BC}/\abs{AC}=1$ and slope of $L_2$ ($m_2$) is $-\abs{CD}/\abs{AC}$. So $m_1 m_2 = -1$.
+  \end{proof}
 
 
-\begin{example}
-Find an equation of the line through $(1, -2) $ that is parallel to the line $L$ with equation $3x-2y=1$.
-Draw the lines.
-\end{example}
+  \begin{example}
+    Find an equation of the line through $(1, -2) $ that is parallel to the line $L$ with equation $3x-2y=1$.
+    Draw the lines.
+  \end{example}
 
-\begin{example}
-Find an equation of the line through $(2,-3)$ that is perpendicular to the line $L$ with equation $4x+y=3$.
-Draw the lines.
-\end{example}
+  \begin{example}
+    Find an equation of the line through $(2,-3)$ that is perpendicular to the line $L$ with equation $4x+y=3$.
+    Draw the lines.
+  \end{example}
 
 \end{document}

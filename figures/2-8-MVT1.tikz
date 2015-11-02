@@ -1,0 +1,14 @@
+\tikzset{point/.style={circle,draw=black,inner sep=0pt,minimum size=3pt}}
+
+\begin{tikzpicture}
+    \draw[thick] (1,1) node[point,fill=black] (a) {} parabola bend (3,3) (4,2.5) node[point,fill=black] (b) {};
+    \draw[thick] (1,1) -- (4,2.5);
+    \draw (1,1+9/8) -- (4,2.5+9/8) coordinate (topright);
+    \node[point,fill=black] (c) at (2.5,2.875) {};
+
+    \coordinate (origin) at (0,0);
+    \draw[<->] (topright -| origin) -- (origin) -- (origin -| topright) -- +(1,0);
+    \draw[dotted,very thick] (a) -- (a|-origin) node[below,black] {$a$};
+    \draw[dotted,very thick] (b) -- (b|-origin) node[below] {$b$};
+    \draw[dashed] (c) -- (c|-origin) node[below] {$c$};
+\end{tikzpicture}

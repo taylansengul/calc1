@@ -2,53 +2,142 @@
 
 \begin{document}
 
-Trigonometric functions are useful for investigating many real-world phenomena where quantities fluctuate in a periodic way. Examples: elastic motions, vibrations and waves.
-
-The radian measure of an angle is defined to be the length of the arc of a unit circle corresponding to that angle.
-\[
+  The radian measure of an angle is defined to be the length of the arc of a unit circle corresponding to that angle.
+  \[
     \text{angle in degrees = angle in radians}\cdot \frac{180^{\circ}}{\pi}.
-\]
+  \]
 
-In calculus all angles are measured in radians. When we talk about the angle $\pi/3$ we mean $\pi/3 = 60^{\circ}$ not $(\pi/3)^{\circ} \approx 1.04^{\circ}$.
+  In calculus all angles are measured in radians. By an angle of $\pi/3$ we mean $\pi/3$ radians or $60^{\circ}$ not $(\pi/3)^{\circ} \approx 1.04^{\circ}$.
 
-In the book, it is proved that
-\[
-    \frac{d}{dx} \sin x = \cos x, \qquad \frac{d}{dx} \cos x = -\sin x.
-\]
-Notice that both $\sin$ and $\cos$ are differentiable for all $x$.
-\begin{example}
+  \begin{theorem}
+    $\lim_{\theta \to 0} \dfrac{\sin \theta}{\theta} = 1$.
+  \end{theorem}
+  \begin{proof}
+    ~\\
+
+    \begin{minipage}{0.5\textwidth}
+      Suppose $0 < \theta < \frac{\pi}{2}$.
+
+      Area of OQP triangle is $\frac{1}{2}\sin \theta \cos \theta$.
+
+      Area of OAP arc is $\frac{\theta}{2\pi}\pi 1^2$.
+
+      Area of OAT triangle is $\frac{1}{2} \tan \theta = \frac{\sin \theta}{2\cos \theta}$.
+      \[
+        \frac{1}{2}\sin \theta \cos \theta \le
+        \frac{\theta}{2} \le
+        \frac{\sin \theta}{2\cos \theta}
+      \]
+      Multiply by $\frac{2}{\sin \theta} > 0$
+      \[
+        \cos \theta \le
+        \frac{\theta}{\sin \theta} \le
+        \frac{1}{\cos \theta}
+      \]
+      Take reciprocal to get
+      \begin{equation} \label{sin x over x inequality}
+        \cos \theta \le
+        \frac{\sin \theta}{\theta} \le
+        \frac{1}{\cos \theta},
+      \end{equation}
+      for $0< \theta < \frac{\pi}{2}$.
+
+      Use the squeeze theorem to show that
+      \[
+        \lim_{\theta \to 0+} \frac{\sin \theta}{\theta} = 1
+      \]
+      Similarly, we can show that \eqref{sin x over x inequality} holds for $-\frac{\pi}{2} < \theta < 0$ and hence
+      \[
+        \lim_{\theta \to 0-} \frac{\sin \theta}{\theta} = 1
+      \]
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+      \begin{figure}[H]
+        \centering
+        \input{figures/2-5-circle.tikz}
+      \end{figure}
+    \end{minipage}
+
+  \end{proof}
+
+  \begin{example}
+    Show that $\lim_{h \to 0} \frac{\cos h - 1}{h} = 0$.
+  \end{example}
+  \begin{solution}
+    \[
+      \begin{split}
+      \lim_{h \to 0} \frac{\cos h - 1}{h} & =
+      \lim_{h \to 0} \frac{(\cos h - 1)(\cos h + 1)}{h(\cos h + 1)} =
+      \lim_{h \to 0} \frac{\cos^2 h - 1}{h(\cos h + 1)} \\
+      &= \lim_{h \to 0} \frac{-\sin^2 h}{h(\cos h + 1)}
+      = -\lim_{h \to 0} \frac{\sin h}{h} \frac{\sin h}{\cos h + 1} = -1 \cdot 0 = 0
+      \end{split}
+    \]
+  \end{solution}
+  \begin{theorem}
+    $\sin x$ is differentiable for every $x$ and
+    \[
+      \frac{d}{dx} \sin x = \cos x
+    \]
+  \end{theorem}
+  \begin{proof}
+    \[
+      \begin{split}
+        \frac{d}{dx} \sin x & =
+        \lim_{h \to 0} \frac{\sin(x+h) + \sin x}{h} =
+        \lim_{h \to 0} \frac{\sin x \cos h + \cos x \sin h - \sin x}{h}\\ &=
+        \lim_{h \to 0} \frac{\sin x (\cos h-1)}{h} + \lim_{h \to 0} \frac{\cos x \sin h}{h} =
+        \sin x \lim_{h \to 0} \frac{(\cos h-1)}{h} + \cos x \lim_{h \to 0} \frac{\sin h}{h} = \cos x
+      \end{split}
+    \]
+  \end{proof}
+
+  \begin{theorem}
+    $\cos x$ is differentiable for every $x$ and
+    \[
+      \frac{d}{dx} \cos x = -\sin x.
+    \]
+  \end{theorem}
+  \begin{proof}
+    \[
+      \frac{d}{dx} \cos x =
+      \frac{d}{dx} \sin\left(\frac{\pi}{2} -x\right) =
+      - \cos\left(\frac{\pi}{2} -x\right) = - \sin x.
+    \]
+  \end{proof}
+  \begin{example}
     Evaluate the derivative of
     \begin{itemize}
-        \item[a)] $\sin(\pi x) + \cos(3x)$,
-        \item[b)] $x^2 \cos(\sqrt{x})$,
-        \item[c)] $\frac{\cos x}{1- \sin x}$,
-        \item[d)] $\sin(\cos(\tan t))$
+      \item[a)] $\sin(\pi x) + \cos(3x)$,
+      \item[b)] $x^2 \cos(\sqrt{x})$,
+      \item[c)] $\dfrac{\cos x}{1- \sin x}$,
+      \item[d)] $\sin(\cos(\tan t))$
     \end{itemize}
-\end{example}
+  \end{example}
 
-\textbf{The derivatives of the other trigonometric functions}
-\[
-    \tan x = \frac{\sin x}{\cos x}, \qquad \sec x = \frac{1}{\cos x},
-\]
-\[
-    \cot x = \frac{\cos x}{\sin x}, \qquad \csc x = \frac{1}{\sin x}.
-\]
-Since $\cos$ and $\sin$ are eveywhere differentiable, the above functions are differentiable everywhere except where their denominators are zero. The derivatives of these functions can be derived by using quotient and reciprocal rules.
+  \subsection*{The derivatives of the other trigonometric functions}
+  \[
+    \tan x = \frac{\sin x}{\cos x}, \quad
+    \sec x = \frac{1}{\cos x}, \quad
+    \cot x = \frac{\cos x}{\sin x}, \quad
+     \csc x = \frac{1}{\sin x}.
+  \]
+  Since $\cos$ and $\sin$ are eveywhere differentiable, the above functions are differentiable everywhere except where their denominators are zero. The derivatives of these functions can be derived by using quotient and reciprocal rules.
 
-\[
-    \frac{d}{dx} \tan x= \sec^2 x, \qquad \frac{d}{dx} \sec x \tan x,
-\]
-\[
-    \frac{d}{dx} \cot x = -\csc^2 x, \qquad \frac{d}{dx} \csc = -\csc x \cot x.
-\]
+  \[
+    \frac{d}{dx} \tan x= \sec^2 x, \quad
+    \frac{d}{dx} \sec x \tan x, \quad
+    \frac{d}{dx} \cot x = -\csc^2 x, \quad
+    \frac{d}{dx} \csc = -\csc x \cot x.
+  \]
 
-\begin{example}
-    Verify the formuals for $\tan x$ and $\sec x$.
-\end{example}
+  \begin{example}
+    Verify the derivative formulas for $\tan x$ and $\sec x$.
+  \end{example}
 
-\begin{example}
+  \begin{example}
     Find the points on the curve $y=\tan(2x)$, $-\pi/4 < x < \pi/4$, where the normal is parallel to the line $y=-x/8$.
-\end{example}
+  \end{example}
 
 
 \end{document}

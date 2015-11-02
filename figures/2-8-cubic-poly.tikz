@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=6mm,
+  y=1mm,
+  title={$f(x)=x^3-12x+1$},
+  xlabel=$x$,
+  ylabel=$y$
+  ]
+  \addplot[domain=-4:4, thick, samples=250] {x^3-12*x+1};
+\end{axis}
+\end{tikzpicture}

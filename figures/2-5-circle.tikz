@@ -1,0 +1,32 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+\begin{tikzpicture}
+  \begin{axis}[
+  ymin=-1.2,
+  ymax=1.5,
+  xmin=-1.2,
+  xmax=2.3,
+  ticks=none,
+  x=20mm,
+  y=20mm,
+  axis lines = middle,
+  disabledatascaling
+  ]
+  \draw[black, thick] (axis cs:0,0) circle [radius=1];
+  \draw[black] (axis cs:0.6,0) -- (axis cs: 0.6,0.8);
+  \draw[black] (axis cs:0,0) -- (axis cs: 1,1.33);
+  \draw[black] (axis cs:1,0) -- (axis cs: 0.6,0.8);
+  \draw[black] (axis cs:1,0) -- (axis cs: 1,1.33);
+  \addplot[soldot] coordinates{(0,0)(0.6,0)(0.6,0.8)(1,0)(1,1.33)};
+  \node[below left] at (axis cs: 0,0) {$O$};
+  \node[above right] at (axis cs: 1,0) {$A$};
+  \node[above] at (axis cs: 1.2,0.8) {$P=(\cos \theta, \sin \theta)$};
+  \node[below] at (axis cs: 0.6,0) {$Q$};
+  \node[right] at (axis cs: 1,1.33) {$T=(1, \tan \theta)$};
+  \node[right] at (axis cs: 0.8,0.6) {$\theta$};
+  \draw [->] (axis cs:.2,0) arc [radius=.2,start angle=0,end angle=53.1];
+  \node[right] at (axis cs: 0.15,0.15) {\tiny$\theta$};
+  \node[above] at (axis cs: 0.25, 0.35) {\tiny 1};
+\end{axis}
+\end{tikzpicture}

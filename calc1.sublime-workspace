@@ -204,34 +204,34 @@
 	"buffers":
 	[
 		{
+			"file": "src/1-1-limit.tex",
+			"settings":
+			{
+				"buffer_size": 6754,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/1-2-infiniteLimits.tex",
+			"settings":
+			{
+				"buffer_size": 6258,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/1-4-formal.tex",
+			"settings":
+			{
+				"buffer_size": 5666,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "main.tex",
 			"settings":
 			{
-				"buffer_size": 2449,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/2-3-diffrules.tex",
-			"settings":
-			{
-				"buffer_size": 3001,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "calc1.sublime-project",
-			"settings":
-			{
-				"buffer_size": 374,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 709,
+				"buffer_size": 2453,
 				"line_ending": "Unix"
 			}
 		},
@@ -239,7 +239,31 @@
 			"file": "src/2-2-derivative.tex",
 			"settings":
 			{
-				"buffer_size": 2707,
+				"buffer_size": 2921,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "readme.txt",
+			"settings":
+			{
+				"buffer_size": 349,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/2-3-diffrules.tex",
+			"settings":
+			{
+				"buffer_size": 4199,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/2-1-tangent.tex",
+			"settings":
+			{
+				"buffer_size": 3052,
 				"line_ending": "Unix"
 			}
 		}
@@ -359,10 +383,54 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 187.0,
-		"last_filter": "",
+		"height": 381.0,
+		"last_filter": "beg",
 		"selected_items":
 		[
+			[
+				"beg",
+				"Snippet: \\begin{}…\\end{}"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"\\[",
+				"Snippet: Display Math — \\[ … \\]"
+			],
+			[
+				"left",
+				"Snippet: left-right-snippet"
+			],
+			[
+				"limit",
+				"Snippet: limit"
+			],
+			[
+				"boldf",
+				"Snippet: Boldface Text"
+			],
+			[
+				"item",
+				"Snippet: Itemize"
+			],
+			[
+				"enumer",
+				"Snippet: Enumerate"
+			],
+			[
+				"minima",
+				"View: Toggle Minimap"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
 			[
 				"latxing set",
 				"Preferences: LaTeXing Settings - User"
@@ -372,32 +440,12 @@
 				"Project: Edit"
 			],
 			[
-				"reind",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"project",
 				"Project: Edit"
 			],
 			[
-				"rein",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"boldf",
-				"Snippet: Boldface Text"
-			],
-			[
-				"beg",
-				"Snippet: \\begin{}…\\end{}"
-			],
-			[
 				"type",
 				"Snippet: Teletypefont Family Text"
-			],
-			[
-				"\\[",
-				"Snippet: Display Math — \\[ … \\]"
 			],
 			[
 				"figure",
@@ -498,10 +546,6 @@
 			[
 				"lim",
 				"LaTeXing: Import Citation(s)"
-			],
-			[
-				"item",
-				"Snippet: Itemize"
 			],
 			[
 				"gist",
@@ -640,10 +684,6 @@
 				"File: Open In Browser - Production Server"
 			],
 			[
-				"left",
-				"Snippet: latex-left-right-snippet"
-			],
-			[
 				"innpr",
 				"Snippet: latex-innerproduct"
 			],
@@ -714,10 +754,6 @@
 			[
 				"\\",
 				"Snippet: \\begin{}…\\end{}"
-			],
-			[
-				"enumer",
-				"Snippet: Enumerate"
 			],
 			[
 				"artic",
@@ -862,18 +898,6 @@
 			[
 				"dias",
 				"Package Control: Disable Package"
-			],
-			[
-				"tabular",
-				"Snippet: Tabular"
-			],
-			[
-				"enumera",
-				"Snippet: Enumerate"
-			],
-			[
-				"enu",
-				"Snippet: Enumerate"
 			]
 		],
 		"width": 566.0
@@ -905,16 +929,35 @@
 	],
 	"file_history":
 	[
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/P-5-operfunctions.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/P-4-functions.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/2-4-chain.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/2-3-diffrules.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/1-3-ctsFuncsOnClosedInts0.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/main.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/1-2-infiniteLimits.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/1-3-continuity.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/2-1-tangent.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/taylanmacros.sty",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/2-1-xto1over3.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/1-3-ctsFuncsOnClosedInts1.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/1-2-1overx.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/1-2-infiniteLimits.tex",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/1-1-signumFunc.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P5-evenFunc.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P4-sqrt.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P4-func.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P4-verticalLineTest.tikz",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/calc1.sublime-project",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/2-2-derivative.tex",
+		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/calc1.sublime-workspace",
 		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/LaTeXing.sublime-settings",
 		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/LaTeX.sublime-build",
 		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeXing/LaTeX.sublime-build",
 		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/LaTeXing/LaTeXing.sublime-settings",
-		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/calc1.sublime-project",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/P-2-cartesian.tex",
-		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/P-4-functions.tex",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P-4-abs.tikz",
-		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P4-sqrt.tikz",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/1-1-limit.tex",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/P-0-sets.tex",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/src/P-3-quadratics.tex",
@@ -926,7 +969,6 @@
 		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P3-shiftingGraphs.tikz",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/2-1-tangent.tikz",
 		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P4-notfunc.tikz",
-		"/Users/taylansengul/Dropbox/work/lecture-notes/calc1/figures/P4-func.tikz",
 		"/var/folders/pc/jwdyr58s6kv3tlwzfcyvs0gh0000gn/T/tikzpicture.tikz",
 		"/Users/taylansengul/.zprofile",
 		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/pdflatex.sublime-build",
@@ -1014,25 +1056,7 @@
 		"/Users/taylansengul/Dropbox/work/teaching/calc1/2014 Fall/exams/math151_fall2014MT1.docx",
 		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/exam1_makeup.tex",
 		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/midterm2.tex",
-		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/midterm2.aux",
-		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/midterm1.tex",
-		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/final.aux",
-		"/Users/taylansengul/Dropbox/projects/kitap/buyukPatlama.txt",
-		"/Users/taylansengul/tmp/lyx/shear.lyx",
-		"/Users/taylansengul/Dropbox/work/teaching/calc3/exams/exam2.tex",
-		"/Users/taylansengul/Dropbox/work/teaching/calc3/exams/exam1.aux",
-		"/Users/taylansengul/text/'Divinity: Original Sin' Has the Most Innovative RPG Combat in Years.txt",
-		"/Users/taylansengul/text/oxygen.txt",
-		"/Users/taylansengul/Downloads/2014a/README.txt",
-		"/Users/taylansengul/text/adresler.txt",
-		"/Users/taylansengul/Dropbox/code/matlab/shear/plot_3cr_evecs.m",
-		"/Users/taylansengul/text/done.TODO",
-		"/Users/taylansengul/text/researchtopics.txt",
-		"/Users/taylansengul/text/religion.txt",
-		"/var/folders/pc/jwdyr58s6kv3tlwzfcyvs0gh0000gn/T/jrnl",
-		"/Users/taylansengul/Downloads/fwdpaperonquasigeostrophicchannelflows/shear.tex",
-		"/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/taylansengul/Dropbox/work/notes/pde/main.tex"
+		"/Users/taylansengul/Dropbox/work/teaching/num-anal/Fall 2014-Yeditepe/exams/midterm2.aux"
 	],
 	"find":
 	{
@@ -1051,6 +1075,12 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"theorem",
+			"hskip",
+			"\\hspace",
+			"\\hfill",
+			"grid",
+			"tab_size",
 			"tab",
 			"indent",
 			"textbf",
@@ -1172,13 +1202,7 @@
 			"\\be\\n",
 			"\\\\be\\n",
 			"\\be",
-			"\\be ",
-			"\\be",
-			"computers",
-			". ",
-			"wave number",
-			"schmid2012stability",
-			"\\lambda_1"
+			"\\be "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1322,24 +1346,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main.tex",
+					"file": "src/1-1-limit.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2449,
+						"buffer_size": 6754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1676,
-								1743
+								6315,
+								6315
 							]
 						],
 						"settings":
@@ -1408,7 +1432,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1425.0,
+						"translation.y": 6492.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -1416,19 +1440,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/2-3-diffrules.tex",
+					"file": "src/1-2-infiniteLimits.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3001,
+						"buffer_size": 6258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								643,
-								643
+								2086,
+								2086
 							]
 						],
 						"settings":
@@ -1497,27 +1521,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 237.0,
+						"translation.y": 1400.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "calc1.sublime-project",
+					"file": "src/1-4-formal.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 374,
+						"buffer_size": 5666,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								367,
-								367
+								5528,
+								5528
 							]
 						],
 						"settings":
@@ -1581,13 +1605,12 @@
 								"bh_unmatched_close",
 								"bh_unmatched_content"
 							],
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4849.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1595,19 +1618,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/Users/taylansengul/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+					"file": "main.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 709,
+						"buffer_size": 2453,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								706,
-								706
+								1748,
+								1804
 							]
 						],
 						"settings":
@@ -1671,13 +1694,15 @@
 								"bh_unmatched_close",
 								"bh_unmatched_content"
 							],
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 143.0,
+						"translation.y": 1360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1686,15 +1711,191 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2707,
+						"buffer_size": 2921,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2692,
-								2692
+								2906,
+								2726
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2374.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "readme.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/2-3-diffrules.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								216,
+								216
 							]
 						],
 						"settings":
@@ -1766,7 +1967,96 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/2-1-tangent.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3052,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2015,
+								2015
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1487.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1833,6 +2123,42 @@
 		"selected_items":
 		[
 			[
+				"readme",
+				"readme.txt"
+			],
+			[
+				"main.",
+				"main.tex"
+			],
+			[
+				"22",
+				"src/2-2-derivative.tex"
+			],
+			[
+				"main",
+				"main.tex"
+			],
+			[
+				"taylan",
+				"taylanmacros.sty"
+			],
+			[
+				"12tex",
+				"src/1-2-infiniteLimits.tex"
+			],
+			[
+				"1-2",
+				"figures/1-2-1overx.tikz"
+			],
+			[
+				"24",
+				"src/2-4-chain.tex"
+			],
+			[
+				"23",
+				"src/2-3-diffrules.tex"
+			],
+			[
 				"2-3",
 				"src/2-3-diffrules.tex"
 			],
@@ -1847,10 +2173,6 @@
 			[
 				"p2",
 				"src/P-2-cartesian.tex"
-			],
-			[
-				"main",
-				"main.tex"
 			],
 			[
 				"sub",
@@ -1989,10 +2311,6 @@
 				"shear.tex"
 			],
 			[
-				"taylan",
-				"taylanmacros.sty"
-			],
-			[
 				"exam1",
 				"exam1.tex"
 			],
@@ -2105,16 +2423,8 @@
 				"src/2-3-diffrules.tex"
 			],
 			[
-				"23",
-				"src/2-3-diffrules.aux"
-			],
-			[
 				"main.te",
 				"main.tex"
-			],
-			[
-				"22",
-				"src/2-2-derivative.tex"
 			],
 			[
 				"con",
@@ -2323,26 +2633,6 @@
 			[
 				"opp",
 				"opponent.py"
-			],
-			[
-				"deck",
-				"deck.py"
-			],
-			[
-				"test",
-				"test.py"
-			],
-			[
-				"data",
-				"~/Dropbox/code/python/game/cardgame/carddata.py"
-			],
-			[
-				"pass",
-				"pass.txt"
-			],
-			[
-				"mp3",
-				"mp3"
 			]
 		],
 		"width": 0.0
@@ -2381,7 +2671,7 @@
 	"settings":
 	{
 	},
-	"show_minimap": false,
+	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": false,

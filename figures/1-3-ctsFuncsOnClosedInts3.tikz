@@ -10,8 +10,8 @@
   ytick={0},
   axis lines = left,
 ]
-\addplot[domain=0:0.5,blue, thick] {x+0.5};
-\addplot[domain=0.5:1,blue, thick] {x-0.5};
+\addplot[domain=0:0.5, thick] {x+0.5};
+\addplot[domain=0.5:1, thick] {x-0.5};
 \draw[dotted] (axis cs:0.5,1) -- (axis cs:0.5,0);
 \addplot[holdot] coordinates{(0.5,1)(0.5,0)};
 \addplot[soldot] coordinates{(0.5,0.5)(1,0.5)};

@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle,
+  width=6cm,
+  xlabel=$x$,
+  ylabel=$y$,
+  xmax=3,
+  ymax=1.5,
+  xtick={2},
+  ytick={1},
+  xticklabels={$b$},
+  yticklabels={$a$}
+  ]
+  \addplot[domain=-1:3, very thick] {-0.5*x+1};
+\end{axis}
+\end{tikzpicture}

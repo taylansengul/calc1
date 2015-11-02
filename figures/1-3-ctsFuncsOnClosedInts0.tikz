@@ -13,7 +13,7 @@
   ytick={0},
   axis lines = left,
 ]
-\addplot[domain=.1:1,blue, thick] {1/x};
+\addplot[domain=.1:1, thick] {1/x};
 \draw[dotted] (axis cs:1,1) -- (axis cs:1,0);
 \addplot[holdot] coordinates{(1,1)};
 \end{axis}

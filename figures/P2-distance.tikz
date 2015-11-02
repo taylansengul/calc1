@@ -9,7 +9,7 @@
   \node[below] at (2,1) {$x_2-x_1$};
   \node[right] at (3,2.5) {$y_2-y_1$};
   \node (s) at (2,2.5) {};
-  \node (t) at (-2,5) {distance$=\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$};
+  \node (t) at (-2,4) {$\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$};
   \path
   (s) edge node [right] {} (t);
 \end{tikzpicture}

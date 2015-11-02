@@ -10,7 +10,7 @@
   ytick={0},
   axis lines = left,
 ]
-\addplot[domain=0:1,blue, thick] {x};
+\addplot[domain=0:1, thick] {x};
 \draw[dotted] (axis cs:1,1) -- (axis cs:1,0);
 \addplot[holdot] coordinates{(0,0)(1,1)};
 \end{axis}

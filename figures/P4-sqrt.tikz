@@ -6,8 +6,9 @@
   title={$f(x)=\sqrt{x}$},
   xlabel=$x$,
   ylabel=$y$,
-  xtick={1,4},
-  ytick={1,2}
+  xtick={1,2,3,4},
+  ytick={1,2},
+  grid=major,
   ]
   \addplot[domain=0:5, very thick, samples=200] {sqrt(x)};
 \end{axis}

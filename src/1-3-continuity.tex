@@ -22,81 +22,100 @@
 			\lim_{x \to c-} f(x) = f(c)
 		\]
 	\end{definition}
-	Note that $f$ is discontinuous at $c$ if
-	\begin{itemize}
-		\item[i)] either $\lim_{x \to c} f(x)$ does not exist.
-		\item[ii)] or $\lim_{x \to c} f(x)$ exists but is not equal to $f(c)$.
-	\end{itemize}
 
+	The following theorem gives an alternative definition of continuity which is sometimes useful.
+	\begin{theorem}\label{alternative continuity}
+	A function $f$ is \textbf{continuous} at an interior point $c$ of its domain if and only if
+	\[
+		\lim_{h \to 0} f(c+h) = f(c)
+	\]
+	$f$ is continuous at its left endpoint $c$ if
+	\[
+		\lim_{h \to 0+} f(c+h) = f(c)
+	\]
+	$f$ is continuous at its right endpoint $c$ if
+	\[
+		\lim_{h \to 0-} f(c+h) = f(c)
+	\]
+\end{theorem}
+\begin{proof}
+	Let $h=x-c$. Then $x \to c$ if and only if $h \to 0$. So $\lim_{h \to 0} f(c+h) = f(c)$ is the same as $\lim_{h \to 0} f(c+h) = f(c)$.
+\end{proof}
+Note that $f$ is discontinuous at $c$ if
+\begin{itemize}
+	\item[i)] either $\lim_{x \to c} f(x)$ does not exist.
+	\item[ii)] or $\lim_{x \to c} f(x)$ exists but is not equal to $f(c)$.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\input{figures/1-3-disctsFunc.tikz}
+	\caption{f is discontinuous at $a$ because of (ii) and discontinuous at $b$ because of (i). f is continuous at $c$.}
+\end{figure}
+
+\begin{example}
+	$f(x) = \sqrt{4 - x^2}$ is continuous at every point of its domain.
 	\begin{figure}[H]
 		\centering
-		\input{figures/1-3-disctsFunc.tikz}
-		\caption{f is discontinuous at $a$ because of (ii) and discontinuous at $b$ because of (i). f is continuous at $c$.}
+		\input{figures/1-3-semiCircle.tikz}
 	\end{figure}
+\end{example}
 
-	\begin{example}
-		$f(x) = \sqrt{4 - x^2}$ is continuous at every point of its domain.
-		\begin{figure}[H]
-			\centering
-			\input{figures/1-3-semiCircle.tikz}
-		\end{figure}
-	\end{example}
+\begin{definition}
+	$f$ is called a continuous function if $f$ is continuous at every pt of its domain.
+\end{definition}
 
-	\begin{definition}
-		$f$ is called a continuous function if $f$ is continuous at every pt of its domain.
-	\end{definition}
+According to this definition $f(x) = \frac{1}{x}$ is continuous!!! $0$ is not in domain of $f$. So we say $f$ is undefined rather than discontinuous at $0$.
 
-	According to this definition $f(x) = \frac{1}{x}$ is continuous!!! $0$ is not in domain of $f$. So we say $f$ is undefined rather than discontinuous at $0$.
+\textbf{There are lots of continuous functions:}
+\begin{itemize}
+	\item polynomials,
+	\item rational functions,
+	\item rational powers $x^{m/n}$
+	\item trigonometric functions
+	\item absolute value function $\abs{x}$
+\end{itemize}
 
-	\textbf{There are lots of continuous functions:}
+\begin{theorem}
+	If $f$ and $g$ are continuous at $c$ then
 	\begin{itemize}
-		\item polynomials,
-		\item rational functions,
-		\item rational powers $x^{m/n}$
-		\item trigonometric functions
-		\item absolute value function $\abs{x}$
+		\item $f + g$, $f - g$, $f g$, are continuous at $c$,
+		\item if $k$ is constant then $k f$ is continuous at $c$,
+		\item $\dfrac{f}{g}$ continuous at $c$ provided that $g(c) \neq 0$.
+		\item $f(x)^{1/n}$ continuous at c provided that $f(c)>0$ if $n$ is even.
 	\end{itemize}
+\end{theorem}
 
-	\begin{theorem}
-		If $f$ and $g$ are continuous at $c$ then
-		\begin{itemize}
-			\item $f + g$, $f - g$, $f g$, are continuous at $c$,
-			\item if $k$ is constant then $k f$ is continuous at $c$,
-			\item $\dfrac{f}{g}$ continuous at $c$ provided that $g(c) \neq 0$.
-			\item $f(x)^{1/n}$ continuous at c provided that $f(c)>0$ if $n$ is even.
-		\end{itemize}
-	\end{theorem}
-
-	\begin{proof}
-		Let's prove that if $f$ and $g$ are continuous at $c$ then so is $f+g$. If $f$ and $g$ are continuous at $c$ then
-		\[
-			\lim_{x \to c} f(x) = f(c), \qquad
-			\lim_{x \to c} g(x) = g(c), \qquad
-		\]
-		By the limit rule,
-		\[
-			\lim_{x \to c} (f(x) + g(x)) =
-			\lim_{x \to c} f(x) + \lim_{x \to c} g(x) =
-			f(c) + g(c).
-		\]
-		The other proofs are similar.
-	\end{proof}
-	\textbf{Composites of continuous functions are continuous}
-
-	If $g$ is continuous at $c$ and $f$ is continuous at $g(c)$ then $f \circ g$ is continuous at $c$. In other words,
+\begin{proof}
+	Let's prove that if $f$ and $g$ are continuous at $c$ then so is $f+g$. If $f$ and $g$ are continuous at $c$ then
 	\[
-		\lim_{x \to c} f(g(x)) = f(\lim_{x \to c} g(x)) = f(g(c)).
+		\lim_{x \to c} f(x) = f(c), \qquad
+		\lim_{x \to c} g(x) = g(c), \qquad
 	\]
+	By the limit rule,
+	\[
+		\lim_{x \to c} (f(x) + g(x)) =
+		\lim_{x \to c} f(x) + \lim_{x \to c} g(x) =
+		f(c) + g(c).
+	\]
+	The other proofs are similar.
+\end{proof}
+\textbf{Composites of continuous functions are continuous}
 
-	\begin{example}
-		Find $m$ so that
-		\[
-			g(x) = \begin{cases}
-			x-m, &\text{ if }x < 3,\\
-			1-mx, &\text{ if }x \geq 3\\
-		\end{cases}
-	\]
-	is continuous for all $x$.
+If $g$ is continuous at $c$ and $f$ is continuous at $g(c)$ then $f \circ g$ is continuous at $c$. In other words,
+\[
+	\lim_{x \to c} f(g(x)) = f(\lim_{x \to c} g(x)) = f(g(c)).
+\]
+
+\begin{example}
+	Find $m$ so that
+	\[
+		g(x) = \begin{cases}
+		x-m, &\text{ if }x < 3,\\
+		1-mx, &\text{ if }x \geq 3\\
+	\end{cases}
+\]
+is continuous for all $x$.
 \end{example}
 
 % \textbf{Continuous extensions and removable discontinuities}
@@ -119,7 +138,43 @@
 % \begin{example}
 %     The function $f(x) = \dfrac{1}{x^2}$ is not defined at 0 but there is no way of redefining $f$ at 0 so that $f$ becomes continuous at 0.
 % \end{example}
+\subsection*{Continuity of Trigonometric Functions}
+\begin{theorem}
+	$\sin x$ and $\cos x$ are continuous at $x=0$, i.e.
+	\[
+		\lim_{x \to 0} \sin x = \sin 0 = 0, \qquad
+		\lim_{x \to 0} \cos x = \cos 0 = 1.
+	\]
+\end{theorem}
+\begin{proof}
+	~\newline
+	\begin{minipage}{0.3\textwidth}
+		\begin{align*}
+			& \abs{1-\cos \theta}=\abs{AQ} \le \abs{AP} \le \theta, \\
+			& \abs{\sin \theta} = \abs{PQ} \le \abs{AP} \le \theta
+		\end{align*}
+		In other words, $-\theta \le \sin \theta \le \theta$ and using the squeeze theorem we get $\lim_{\theta \to 0}  \sin \theta=0$. Similarly, we get $\lim_{\theta \to 0} 1-\cos \theta = 0$ or $\lim_{\theta \to 0} \cos \theta = 1$.
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\begin{figure}[H]
+			\centering
+			\input{figures/1-3-circle.tikz}
+		\end{figure}
+	\end{minipage}
+\end{proof}
 
+\begin{theorem}
+	$\sin x$ and $\cos x$ are continuous for all $x$.
+\end{theorem}
+\begin{proof}
+	By Theorem~\ref{alternative continuity}, we need to prove $\lim_{h \to 0} \sin (x+h) = \sin x$ for any $x$.
+	\[
+		\lim_{h \to 0} \sin(x+h) =
+		\lim_{h \to 0} \sin x \cos h + \cos x \sin h =
+		\sin x \lim_{h \to 0} \cos h + \cos x \lim_{h \to 0} \sin h = \sin x.
+	\]
+	Prove the continuity of $\cos x$ as an exercise.
+\end{proof}
 \subsection*{Continuous Functions on Closed Intervals [a, b] are bounded}
 We say a function $f$ is \textbf{bounded} if there exists $M$ and $N$ such that $M \le f(x) \le N$ for all $x$ in the domain of $f$.
 
@@ -129,7 +184,7 @@ We say a function $f$ is \textbf{bounded} if there exists $M$ and $N$ such that 
 		f(p) \leq f(x) \leq f(q)
 	\]
 	for all $x$ in $[a, b]$.
-	$f(p)$ is called the \textbf{aboslute minimum value} and $f(q)$ is called the \textbf{absolute maximum value}.
+	$f(p)$ is called the \textbf{absolute minimum value} and $f(q)$ is called the \textbf{absolute maximum value}.
 \end{theorem}
 
 This theorem is an existence theorem. It only guarantees the existence of $p$ and $q$ but does not tell how to actually find them.

@@ -74,8 +74,37 @@
   \begin{example}
     For
     \[
-      f(x) = \left( 1 + \sqrt{x^2-1} \right)^{-4/3}
+      f(x) = \left( 1 + \sqrt{2x+1} \right)^{-4/3}
     \]
-    evaluate $f'(\sqrt{5})$.
+    evaluate $f'(0)$.
   \end{example}
+  \begin{solution}
+    \[
+      \begin{split}
+        f'(x) & = \frac{-4}{3}(1+\sqrt{2x+1})^{-7/3}\frac{d}{dx} \sqrt{2x+1}
+        = \frac{-4}{3}(1+\sqrt{2x+1})^{-7/3} \frac{1}{2 \sqrt{2x+1}} \frac{d}{dx} (2x+1) \\
+        & = \frac{-4}{3}(1+\sqrt{2x+1})^{-7/3} \frac{1}{2 \sqrt{2x+1}} 2
+      \end{split}
+    \]
+    Hence
+    \[
+      f'(0) = -\frac{1}{2^{1/3}3}.
+    \]
+  \end{solution}
+
+  \begin{example}
+    Find an equation of the tangent line to the graph of
+    \[
+      y=(1+x^{2/3})^{3/2}
+    \]
+    at $x=-1$.
+  \end{example}
+  \begin{solution}
+    \[
+      y'=\frac{3}{2} (1+x^{2/3})^{1/2} \frac{2}{3} x^{-1/3}.
+    \]
+    \[
+      y'(-1) = \frac{3}{2} (1+1)^{1/2} \frac{2}{3} (-1) = -\sqrt{2}.
+    \]
+  \end{solution}
 \end{document}
