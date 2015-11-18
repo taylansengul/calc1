@@ -39,22 +39,18 @@
     \lim_{x \to \infty} \frac{1}{x^n} =
     \lim_{x \to -\infty} \frac{1}{x^n} = 0.
   \]
-
-  \begin{figure}[H]
-    \centering
-    \input{figures/horasym.tikz}
-  \end{figure}
   \begin{example}
     Let $f(x)=\dfrac{x}{\sqrt{x^2+1}}$. Find $\lim_{x \to \infty} f(x)$, $\lim_{x \to -\infty} f(x)$.
   \end{example}
+  \begin{minipage}{0.6\textwidth}
   \begin{solution}
     \[
       \begin{split}
         \lim_{x \to \infty} \dfrac{x}{\sqrt{x^2+1}} & =
-        \lim_{x \to \infty} \dfrac{x}{\abs{x}\sqrt{1+1/x^2}} =
-        \lim_{x \to \infty} \dfrac{x}{x \sqrt{1+1/x^2}} =
-        \lim_{x \to \infty} \dfrac{1}{\sqrt{1+1/x^2}} =
-        \dfrac{\lim_{x \to \infty} 1}{\lim_{x \to \infty} \sqrt{1+1/x^2}} \\
+        \lim_{x \to \infty} \dfrac{x}{\abs{x}\sqrt{1+1/x^2}} \\
+        & = \lim_{x \to \infty} \dfrac{x}{x \sqrt{1+1/x^2}} \\
+        & = \lim_{x \to \infty} \dfrac{1}{\sqrt{1+1/x^2}} \\
+        & = \dfrac{\lim_{x \to \infty} 1}{\lim_{x \to \infty} \sqrt{1+1/x^2}} \\
         & = \dfrac{1}{\sqrt{\lim_{x \to \infty} (1+1/x^2)}} =
         \dfrac{1}{1} = 1.
       \end{split}
@@ -64,6 +60,13 @@
       \lim_{x \to -\infty} \dfrac{x}{\sqrt{x^2+1}} = -1
     \]
   \end{solution}
+\end{minipage}
+  \begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+      \centering
+      \input{figures/horasym.tikz}
+    \end{figure}
+  \end{minipage}
 
   \subsection*{Limits of Rational Functions at Infinity}
   Recall that a rational function is a ratio of two polynomials.

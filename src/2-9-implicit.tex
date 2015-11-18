@@ -2,33 +2,60 @@
 
 \begin{document}
 
-We learned to find the slope of a curve that is the graph of a function. But not all curves are graphs of functions such as the graph of the equation $x^2 + y^2 = 1$.
+  We learned to find the slope of a curve that is the graph of a function. But not all curves are graphs of functions, for example the circle $x^2 + y^2 = 1$.
 
-Curves are graphs of equations in two variables
-\[
+  Curves are graphs of equations in two variables
+  \[
     F(x, y) = 0.
-\]
+  \]
 
-For the circle $F(x, y) = x^2 + y^2 -1$.
+  For the circle $F(x, y) = x^2 + y^2 -1$.
 
 
-\begin{example}
+  \begin{example}
     Find the slope of the circle $x^2 + y^2 = 25$ at the point $(3, -4)$.
+  \end{example}
+  \begin{solution}
+    1st method. Solve the equation $x^2+y^2=1$ for $y$. There are two solutions $y_{1, 2} = \pm \sqrt{25 - x^2}$. The point lies on the graph of $y_2$. Take derivative of $y_2$.
 
-    1st method: solve for $y$ explicitly. $y_{1, 2} = \pm \sqrt{25 - x^2}$. The point lies on the graph of $y_2$. Take derivative of $y_2$.
-
-    Second use \textbf{implicit differentiation}. To diff w.r.t $x$ treat $y$ as a function of $x$.
+    2nd method. To differentiate with respect to $x$ treat $y$ as a function of $x$ and use Chain Rule.
     \[
-        2x + 2y \frac{dy}{dx} = 0
+      \frac{d}{d x}\left( x^2 + y(x)^2 \right) = \frac{d}{d x} 0 = 0.
     \]
-    Plug in the point to find $dy/dx$.
-\end{example}
+    This gives
+    \[
+      2x + 2 y(x) \frac{d y(x)}{dx} = 0
+    \]
+    or
+    \[
+      \frac{dy}{dx} = -\frac{2x}{2y}
+    \]
+    Plug in $x=3$, $y=-4$ to find $\frac{dy}{dx} = 3/4$.
 
-\begin{example}
+    This second method is known as the \textbf{implicit differentiation}.
+  \end{solution}
+
+  \begin{example}
     Find an equation of the tangent line to the curve $x \sin(xy - y^2) = 0$ at $(1, 1)$
-\end{example}
+  \end{example}
 
-\begin{example}
-    Find $y''$ in terms of $x$ and $y$ if $x y + y^2 = 2x$. The answer is $y'' = -\frac{8}{(x+2y)^3}$
-\end{example}
+  \begin{example}
+    Find $y''$ in terms of $x$ and $y$ if $x y + y^2 = 2x$.
+  \end{example}
+
+  \subsection*{The General Power Rule for Derivative}
+  So far, we proved the following rule
+  \[
+    \frac{d x^r}{dx} = r x^{r-1}
+  \]
+  for integer exponents $r$ and a few special exponents such as $r=1/2$. Using the implicit differentiation, we can give a proof for any rational exponent $r=m/n$ where $n\neq0$.
+
+  If $y=x^{m/n}$ then $y^n = x^m$. Differentiating implicitly
+  \[
+    n y^{n-1} \frac{dy}{dx} = \frac{d y^n}{dx} = \frac{dx^m}{dx} = m x^{m-1}
+  \]
+  Hence
+  \[
+    \frac{dy}{dx} = \frac{m}{n} x^{m-1} y^{1-n} = r x^{m-1} x^{(1-n) m/n} = r x^{m-1 + r -m} = r x^r.
+  \]
 \end{document}
