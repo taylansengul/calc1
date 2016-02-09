@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  xlabel=$x$, ylabel=$y$,
+  xmin=-3, xmax=12, ymax=12, ymin=-3,
+  ticks=none,
+  axis lines=middle]
+  \addplot[red, domain=-2:3]  {pow(2,x)} node[above]{$y=a^x$};
+  \addplot[black, domain=-5:10]  {x} node[above]{$y=x$};
+  \addplot[purple, domain=1/2^6:10,samples=100]  {log2(x)} node[above left] {$y=\log_a x$};
+\end{axis}
+\end{tikzpicture}

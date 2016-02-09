@@ -1,0 +1,105 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+  We say $f$ is \textbf{concave up} on an interval $I$ if $f'$ is increasing on $I$ and \textbf{concave down} on $I$ if $f'$ decreasing on $I$.
+
+  Note that if $f$ is concave up then $f$ lies above its tangents and below its chords while if $f$ is concave down then $f$ lies below its tangents and above its chords.
+
+  If $f$ changes its concavity at $x_0$ then we call $x_0$ and \textbf{inflection point}.
+
+  \begin{theorem}
+    Assume $f$ is twice differentiable.
+    \begin{enumerate}
+      \item[a)] If $f''>0$ on an interval $I$ then $f$ is concave up on $I$,
+      \item [b)] If $f''<0$ on an interval $I$ then $f$ is concave down on $I$,
+      \item [c)] If $f$ has an inflection point at $x_0$ then $f''(x_0)=0$.
+    \end{enumerate}
+  \end{theorem}
+  Note $f''(x_0) = 0$ does not necessarily mean $x_0$ is an inflection point, for example for $f(x) = x^4$ $f''(0)=0$ while $f$ does not change concavity at $x=0$.
+
+  \begin{minipage}{0.5\textwidth}
+    \begin{example}
+      Determine the intervals of concavity of $f(x) = x^6 - 10x^4$ and the inflection points of its graph.
+    \end{example}
+    \begin{solution}
+      $f'(x) = 2x^3 (3x^2-20)$, $f''(x) = 30x^2(x-2)(x+2)$. So possible inflection points are $0$, $\pm 2$.
+
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{c||ccccccc}
+          x & & -2 & & 0 & & 2 & \\
+          \hline
+          $f''$ & + & 0 & - & 0 & - & 0 & + \\
+          $f$ & c.up & infl. & c.down & & c.down & infl & c.up
+        \end{tabular}
+      \end{table}
+      The inflection points are $\pm 2$.
+    \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/4-4-ex1.tikz}
+  \end{figure}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+  \begin{example}
+    Determine the intervals of increase, decrease , the local extreme values and the concavity of $f(x) = x^4-2x^3+1$. Sketch the graph of $f$.
+  \end{example}
+  \begin{solution}
+    $f'(x) = 4x^3 - 6x^2 = 2x^2 (2x-3)$, critical points are $x=0$, $x=3/2$.
+
+    $f''(x) = 12x (x-1)$, possible inflection points are $x=0$, $x=1$.
+
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{c||ccccccc}
+        x & & 0 & & 1 & & 3/2 & \\
+        \hline
+        $f'$ & - & 0 & - & & - & 0 & + \\
+        \hline
+        $f''$ & + & 0 & - & 0 & + & & + \\
+        \hline
+        $f$ & $\searrow$ & & $\searrow$ & & $\searrow$ & min & $\nearrow$ \\
+        & c.up & infl & c.down & infl & c.up & & c.up \\
+        \hline
+      \end{tabular}
+    \end{table}
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/4-4-ex2.tikz}
+  \end{figure}
+\end{minipage}
+
+\subsection*{The Second Derivative Test}
+\begin{theorem}
+  \begin{enumerate}
+    \item[a)] If $f'(x_0) = 0$ and $f''(x_0) < 0$, then $f$ has a local max at $x_0$.
+    \item[b)] If $f'(x_0) = 0$ and $f''(x_0) > 0$, then $f$ has a local min at $x_0$.
+    \item[c)] If $f'(x_0)= f''(x_0)$, then no conclusion can be drawn.
+  \end{enumerate}
+\end{theorem}
+
+\begin{minipage}{0.5\textwidth}
+  \begin{example}
+    Find an classify the critical points of $f(x) = x^2 e^{-x}$.
+  \end{example}
+  \begin{solution}
+    $f'(x) = x(2-x)e^{-x} = 0$, at $x=0$, $x=2$.
+    $f''(x) = (2-4x+x^2)e^{-x}$. $f''(0) = 2 >0$ and $f''(2) = -2e^{-2} < 0$.
+    Thus $f$ has a local min at $x=0$ and local max at $x=2$.
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/4-4-ex3.tikz}
+  \end{figure}
+\end{minipage}
+
+\end{document}

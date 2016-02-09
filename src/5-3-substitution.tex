@@ -1,0 +1,119 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+The following should be memorized.
+
+\begin{minipage}{0.5\textwidth}
+  \begin{enumerate}
+    \item $\displaystyle \int x^n dx = \frac{1}{n+1} x^{n+1} + C$, if $n\neq 1$
+    \item $\displaystyle \int 1 dx = x + C$
+    \item $\displaystyle \int x dx = \frac{1}{2}x^2 + C$
+    \item $\displaystyle \int x^2 dx = \frac{1}{3}x^3 + C$
+    \item $\displaystyle \int \sqrt{x} dx = \frac{2}{3} x^{3/2} + C$
+    \item $\displaystyle \int \frac{1}{x} dx = \ln\abs{x} + C$
+    \item $\displaystyle \int \sin x dx = -\cos x + C$
+    \item $\displaystyle \int \cos x dx = \sin x + C$
+  \end{enumerate}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \setcounter{enumi}{8}
+  \begin{enumerate}
+    \item $\displaystyle \int \sec^2 x dx = \tan x + C$
+    \item $\displaystyle \int \csc^2 x dx = -\cot x + C$
+    \item $\displaystyle \int \sec x \tan x dx = \sec x + C$
+    \item $\displaystyle \int \csc x \cot x dx = -\csc x + C$
+    \item $\displaystyle \int \frac{1}{\sqrt{1-x^2}} dx = \arcsin x + C$
+    \item $\displaystyle \int \frac{1}{1+x^2} dx = \arctan x + C$
+    \item $\displaystyle \int e^{x} dx = e^x + C$
+    \item $\displaystyle \int a^x dx = \frac{1}{\ln a} a^x + C$
+  \end{enumerate}
+\end{minipage}
+
+\begin{example}
+  ~
+
+\begin{enumerate}
+  \item $\displaystyle \int (x^3 - 3 x^2 + 6x -9) dx = \frac{x^4}{4} - x^3 + 3x^2 - 9x + C$
+  \item $\displaystyle \int (5 x^{3/4} - \frac{1}{\sqrt{x}}) dx$
+  \item $\displaystyle \int \frac{(x+1)^3}{x} dx$
+\end{enumerate}
+\end{example}
+
+The Chain Rule says
+\[
+  \frac{d}{dx} f(g(x)) = f'(g(x))g'(x).
+\]
+So we have,
+\[
+  \int f'(g(x))g'(x) dx = f(g(x)) + C
+\]
+
+To see this another way, let $u=g(x)$. Then $du/dx = g'(x)$. In differential form $du = g'(x) dx$
+\[
+  \int f'(g(x))g'(x) dx = \int f'(u) du = f(u) + C = f(g(x)) + C
+\]
+
+\begin{example}
+Compute the following integrals.
+\begin{enumerate}
+\item $I = \displaystyle \int x \sin(2x^2) dx$.
+
+Let $2 x^2 = u$ then $4x dx = du$.
+\[
+  I =
+  \frac{1}{4} \int \sin u du= 
+  -\frac{\cos u}{4} + C = 
+  -\frac{\cos 2x^2}{4} + C
+\]
+\item $I = \displaystyle \int \sec^2(3x+2) dx$
+
+Let $3x+2 = u$ then $3dx = du$.
+\[
+  I = \int \sec^2 u \frac{du}{3} = 
+  \frac{\tan u}{3} + C = 
+  \frac{1}{3}\tan(3x+2) + C
+\]
+\item $I = \displaystyle \int \frac{x}{(x-4)^3} dx$
+
+Let $x-4 = u$.
+\[
+  I = \int \frac{u+4}{u^3} du =
+  \int (u^{-2} + 4u^{-3}) du =
+  -u^{-1} -2 u^{-2} =
+  \frac{-1}{x-4} - \frac{2}{(x-4)^2} + C
+\]
+\item $I = \displaystyle \int \tan^2 \theta \sec^2 \theta d\theta$.
+
+Let $\tan \theta = u$. Then $\sec^2 d\theta = du$.
+\[
+  I = \int u^2 du = \frac{u^3}{3} + C = \frac{\tan^3 \theta}{3} + C
+\]
+\item $I = \displaystyle \int \sqrt{\frac{x^4}{x^3-1}} dx = \int \frac{x^2}{\sqrt{x^3-1}} dx$.
+
+Let $x^3-1 = u$. Then $x^2 dx = \frac{du}{3}$.
+\[
+  I = \int \frac{du/3}{\sqrt{u}} =
+  \frac{1}{3} \frac{u^{1/2}}{1/2} + C =
+  \frac{2}{3}\sqrt{x^3-1} + C
+\]
+\item Let $y = x \displaystyle \int_2^{x^2} \sin(t^3) dt$.
+Find $y'$
+
+\[
+  y' = \int_2^{x^2} \sin(t^3) dt + x \sin(x^6) 2x
+\]
+\item $I = \displaystyle \int \sec x dx$.
+
+There is an interesting trick to evaluate this integral!
+\[
+  I = \int \sec x \frac{(\sec x + \tan x)}{\sec x + \tan x} dx = \int \frac{\sec^2 x + \sec x \tan x}{\sec x + \tan x} dx
+\]
+Let $u = \sec x + \tan x$, then
+\[
+  I = \int \frac{du}{u} = \ln\abs{u} + C = \ln \abs{\sec x + \tan x} + C.
+\]
+\end{enumerate}
+\end{example}
+
+\end{document}

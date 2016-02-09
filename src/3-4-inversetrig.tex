@@ -1,0 +1,125 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+The six trigonometric functions are periodic and hence not 1-1. However we can restrict their domains in such a way that the restricted functions are 1-1.
+
+\begin{minipage}{0.5\textwidth}
+  The $\sin^{-1}x$ or $\arcsin x$ is the inverse of the $\sin x$ restricted to $[-\pi/2, \pi/2]$,
+
+  \begin{align*}
+    & \sin (\sin^{-1} y) = y, \qquad -1 \le y \le 1, \\
+    & \sin^{-1} (\sin x) = x, \qquad -\pi/2 \le x \le \pi/2.
+  \end{align*}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/3-4-arcsin.tikz}
+    \caption{$f(x) = \arcsin x$.}
+  \end{figure}
+\end{minipage}
+
+\begin{example}
+  Simplify
+  \begin{enumerate}
+    \item $\sin^{-1} \frac{1}{2} = \frac{\pi}{6}$,
+    \item $\sin^{-1} \frac{-\sqrt{2}}{2} = -\frac{\pi}{4}$,
+    \item $\sin^{-1} 2$ is undefined since $2$ is not in the range of sine.
+  \end{enumerate}
+\end{example}
+
+\begin{example}
+  Simplify
+  \begin{enumerate}
+    \item $\sin(\sin^{-1} 0.7) = 0.7$,
+    \item $\sin^{-1}(\sin 3 \pi/4) = \pi/4$,
+    \item $\cos (\sin^{-1} 0.6)$.
+    \begin{solution}
+      Let $\theta=\sin^{-1} 0.6$. By the Pythagorean Theorem, $\cos \theta = 0.8$.
+    \end{solution}
+    \item Similarly $\cos (\sin^{-1} x) = \frac{1}{1-x^2}$.
+  \end{enumerate}
+\end{example}
+
+Let $y = \sin^{-1} x$ so that $x = \sin y$. Then
+\[
+  \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} = \frac{1}{\cos y} = \frac{1}{\sqrt{1-x^2}}.
+\]
+
+Thus
+\[
+  \frac{d }{dx} \sin^{-1} x = \frac{1}{\sqrt{1-x^2}}.
+\]
+
+\subsection*{The Inverse Tangent (or Arctangent) Function}
+
+Define the $\tan^{-1} x = \arctan x$ to be the inverse of $(-\pi/2, \pi/2)$.
+
+\begin{align*}
+  & \tan (\tan^{-1} x) = x, \qquad -\infty < x < \infty, \\
+  & \tan^{-1} (\tan x) = x, \qquad -\pi/2 \le x \le \pi/2.
+\end{align*}
+
+\begin{figure}[H]
+  \centering
+  \input{figures/3-4-arctan.tikz}
+  \caption{$f(x) = \arcsin x$.}
+\end{figure}
+
+\begin{example}
+  \begin{enumerate}
+    \item $\tan (\tan^{-1} 3) = 3$,
+    \item $\tan^{-1} (\tan \frac{3\pi}{4}) = \tan^{-1} -1 = -\frac{\pi}{4}$
+    \item $\cos (\tan^{-1} x) = \frac{1}{\sqrt{1+x^2}}$
+  \end{enumerate}
+\end{example}
+
+Let $y=\tan^{-1} x$ so that $x = \tan y$,
+\[
+  \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} = \frac{1}{\sec^2 y} = \frac{1}{1+ \tan^2 y} = \frac{1}{1+x^2}.
+\]
+
+\begin{example}
+  Find the slope of the curve $\tan^{-1}\left( \frac{2x}{y} \right) = \frac{\pi x}{y^2}$ at the point $(1, 2)$.
+\end{example}
+\begin{solution}
+  Taking $\frac{d}{dx}$ of both sides
+  \[
+    \frac{1}{1+\left( \frac{2x}{y} \right)^2} 2\left( \frac{y-x y'}{y^2} \right) = \pi \left( \frac{y^2 - 2x y y'}{y^4} \right)
+  \]
+  Plugging $x=1$, $y=2$,
+  \[
+    2- y' = \pi (1- y') \implies y' = \frac{\pi-2}{\pi-1}.
+  \]
+\end{solution}
+\subsection*{Other inverse trigonometric functions}
+$\cos x$ is 1-1 on $[0, \pi]$ so we define $\cos^{-1} x$ for $\cos x$ restricted to $[0, \pi]$.
+\[
+  y = \cos^{-1} x \iff x = \cos y \qquad 0 \le y \le \pi.
+\]
+
+Note that $\sin(\cos^{-1} x) $
+For the derivative,
+\[
+  \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} = \frac{1}{-\sin y} = -\frac{1}{\sqrt{1-x^2}}
+\]
+Note that
+\[
+  \frac{d}{dx} \cos^{-1}x = -\frac{d}{dx} \sin^{-1}x
+\]
+
+The inverse and the derivative of other trigonometric functions can be defined similarly.
+
+\subsection*{Quiz Problems}
+\begin{example}
+  Simplify
+  \begin{enumerate}
+    \item $\cos(\tan^{-1} \frac{1}{2})$
+    \item $\tan (\cos^{-1} x)$
+  \end{enumerate}
+\end{example}
+\begin{example}
+  Differentiate $(\sin^{-1} x^2)^{1/2}$.
+\end{example}
+\end{document}

@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  xmax=12, ymax=12,
+  ticks=none,
+  axis lines=middle]
+  \addplot[blue, domain=-5:3]  {pow(2,x)} node[above]{$y=f(x)$};
+  \addplot[black, domain=-5:10]  {x} node[above]{$y=x$};
+  \addplot[blue,domain=1/2^6:10,samples=100]  {log2(x)} node[above left] {$y=f^{-1}(x)$};
+  \node [left] at (2,4) {$(a, b)$};
+  \draw[fill] (2, 4) circle [radius =0.25];
+  \node [below right] at (4,2) {$(b, a)$};
+  \draw[fill] (4, 2) circle [radius =0.25];
+  \draw[dashed] (2,4) -- (4,2);
+\end{axis}
+\end{tikzpicture}

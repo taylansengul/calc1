@@ -1,0 +1,19 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=30mm,
+  y=6mm,
+  xmin= -1.2, ymax = 6,
+  title={$h(x)=x^{2/3}-2x$},
+  xlabel=$x$,
+  ylabel=$y$,
+  ticks=none
+  ]
+  \addplot[domain=-1:1, samples=300, very thick] {3*abs(x)^(2/3)-2*x};
+  \addplot[soldot] coordinates{(-1,5)(0,0)(1,1)};
+  \node[right] at (-.7,5) {$(-1, 5)$};
+  \node[below] at (0,0) {$0$};
+  \node[above left] at (1,1) {$(1, 1)$};
+\end{axis}
+\end{tikzpicture}

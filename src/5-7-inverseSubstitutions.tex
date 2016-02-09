@@ -1,0 +1,52 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\subsection*{The Inverse Sine Substitution}
+If an integral involves $\sqrt{a^2-x^2}$, try the substitution $x = a \sin \theta$ or $\theta = \sin^{-1}\frac{x}{a}$.
+
+We can assume $a>0$. Notice that $\sqrt{a^2-x^2}$ makes sense only when $-a \le x \le a$ which corresponds to $-\pi/2 \le \theta \le \pi/2$ so that $\cos \theta \ge 0$. Hence
+\[
+	\sqrt{a^2-x^2} = \sqrt{a^2(1-\sin^2\theta)} = a \sqrt{\cos^2 \theta}= a \abs{\cos \theta} = a \cos \theta.
+\]
+
+\begin{example}
+	Evaluate $I = \displaystyle \int \frac{dx}{(5-x^2)^{3/2}}$.
+\end{example}
+\begin{solution}
+	Let $x=\sqrt{5}\sin\theta$, $dx = \sqrt{5} \cos \theta d\theta$. 
+	\[
+		(5-x^2)^{3/2} = (5 - 5 \sin^2\theta)^{3/2} = 5^{3/2} \abs{\cos\theta}^3 = 5^{3/2} \cos^3 \theta.
+	\]
+	since $\cos \theta \ge 0$.
+	So
+	\[
+		I = \int \frac{\sqrt{5} \cos \theta d\theta}{5^{3/2} \cos^3\theta} = \frac{1}{5}\int \sec^2\theta d\theta = \frac{1}{5} \tan \theta + C = \frac{1}{5} \frac{x}{\sqrt{5-x^2}} + C
+	\]
+	The last equality can be found using $\sin \theta = \frac{x}{\sqrt{5}}$.
+\end{solution}	
+\subsection*{The inverse Tangent Substitution}
+If an integral involves $\sqrt{a^2+x^2}$ or $\dfrac{1}{x^2 + a^2}$, try the substitution $x = a \tan \theta$ or $ \theta = \tan^{-1} \frac{x}{a}$. 
+
+Since $x$ can take any real value, we have $-\pi/2 < \theta < \pi/2$ so that $\sec \theta > 0$. Assuming $a>0$,
+\[
+	\sqrt{a^2+x^2} = \sqrt{a^2(1+\tan^2\theta)} = a \sqrt{\sec^2 \theta}= a \abs{\sec \theta} = a \sec \theta.
+\]
+\begin{example}
+	Evaluate $I = \displaystyle \int \frac{dx}{\sqrt{4+x^2}}$.
+\end{example}
+\begin{solution}
+	Let $x= 2 \tan \theta$, $dx = 2 \sec^2 \theta d\theta$.
+	\[
+		\sqrt{4+x^2} = 2 \sqrt{\sec^2 \theta} = 2 \abs{\sec \theta} = 2 \sec \theta
+	\]
+	since $\sec \theta > 0$. Using $\tan \theta = x/2$ we can find $\sec \theta = \frac{\sqrt{4+x^2}}{2}$ and 
+	\[
+		I = \int \sec \theta d\theta = \ln \abs{\sec \theta + \tan \theta} + C = \ln \abs{\frac{\sqrt{4+x^2}}{2} + \frac{x}{2}} + C 
+	\]
+\end{solution}
+
+You are not responsible for the inverse secant transformation which can be used to solve integrals involving $\sqrt{x^2-a^2}$.
+% \subsection*{The Inverse Secant Substitution}
+% If an integral involves $\sqrt{x^2-a^2}$, try the substitution $x = a \sec \theta$. We have to be more careful with this substitution.
+\end{document}

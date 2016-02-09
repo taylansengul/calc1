@@ -33,11 +33,6 @@
     \input{figures/3-3-ln.tikz}
   \end{figure}
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics[scale=.5]{3-3-1}
-  \end{figure}
-
 
   \begin{multicols}{2}
     \begin{itemize}
@@ -53,25 +48,28 @@
   \end{theorem}
 
   \begin{proof}
-    For $h >0$, $\ln(x+h) - \ln x$ is the area under $1/t$ between $t = x$ and $t = x+h$. Thus
-    \[
-      \frac{h}{x+h} < \ln(x+h) - \ln x < \frac{h}{x}
-    \]
-    \begin{figure}[H]
-      \centering
-      \includegraphics[scale=.7]{3-3-2}
-      \label{fig:ddxln}
-    \end{figure}
-    Thus
-    \[
-      \frac{1}{x+h} < \frac{\ln(x+h) - \ln x}{h} < \frac{1}{x}
-    \]
-    Now use Squeeze Theorem to get
-    \[
-      \lim_{h \to 0+} \frac{\ln(x+h) - \ln x}{h} = \frac{1}{x}
-    \]
-    Similar argument holds for $h<0$.
+    \begin{minipage}{0.4\textwidth}
+      For $h >0$, $\ln(x+h) - \ln x$ is the area under $1/t$ between $t = x$ and $t = x+h$. Thus
+      \[
+        \frac{h}{x+h} < \ln(x+h) - \ln x < \frac{h}{x}
+      \]
 
+      Thus
+      \[
+        \frac{1}{x+h} < \frac{\ln(x+h) - \ln x}{h} < \frac{1}{x}
+      \]
+      Now use Squeeze Theorem to get
+      \[
+        \lim_{h \to 0+} \frac{\ln(x+h) - \ln x}{h} = \frac{1}{x}
+      \]
+      Similar argument holds for $h<0$.
+    \end{minipage}%
+    \begin{minipage}{0.6\textwidth}
+      \begin{figure}[H]
+        \centering
+        \input{figures/3-3-ln2.tikz}
+      \end{figure}
+    \end{minipage}
   \end{proof}
 
   \begin{theorem}
@@ -84,7 +82,14 @@
       \int \frac{1}{x} dx = \ln \abs{x} + C.
     \]
   \end{theorem}
+  \begin{proof}
+    If $x<0$, then by Chain Rule,
+    \[
+      \frac{d}{dx} \ln\abs{x} = \frac{d}{dx} \ln (-x) = \frac{1}{-x} (-1) = \frac{1}{x}.
+    \]
+  \end{proof}
 
+  This also shows that $\ln x$ is an \textbf{increasing} function for all $x>0$.
   \begin{example}
     Find the derivatives of
     \begin{enumerate}
@@ -94,7 +99,7 @@
   \end{example}
 
   \begin{solution}
-    For (1) use the previous theorem to get
+    For (1),
     \[
       y' = \frac{1}{\cos x} (-\sin x) = -\tan x.
     \]
@@ -104,22 +109,39 @@
     \]
   \end{solution}
 
-  The natural logarithm function $\ln x$ satisfies all the rules that the regular logarithms satisfy.
+  The natural logarithm function $\ln x$ satisfies all the rules that the regular logarithms satisfy, that's why we call it natural log after all!
+  \begin{theorem}
+    \begin{enumerate}
+      \item $\ln (xy) = \ln x + \ln y$.
+      \item $\ln (1/x) = -\ln x$.
+      \item $\ln (x/y) = \ln x - \ln y$.
+      \item $\ln x^r = r \ln x$.
+    \end{enumerate}
+  \end{theorem}
 
-  Note that
+  \begin{proof}
+    For (i), if $y$ is constant, then for all $x>0$
+    \[
+      \frac{d}{dx} (\ln(xy)-\ln x) = \frac{y}{xy} - \frac{1}{x} = 0
+    \]
+    Thus for each $y>0$, $\ln(xy)-\ln x=C$ (a constant depending on $y$) for $x>0$. Setting $x=1$ we get $C=\ln y$. The others can be done similarly (homework).
+  \end{proof}
+
+
+  Also note that
   \[
     \ln 2^n = n \ln 2 \to \infty \text{ as } n\to \infty.
   \]
   \[
     \ln 2^{-n} = -n \ln 2 \to -\infty \text{ as } n\to \infty.
   \]
-  This shows that
+  This, combined with $\ln x$ is increasing shows that
   \[
     \lim_{x \to \infty} \ln x = \infty, \qquad
     \lim_{x \to 0+} \ln x = -\infty.
   \]
 
-  Domain of $\ln x$ is $(0, \infty)$ and the range of $\ln x$ is $(-\infty, \infty)$.
+  Thus domain of $\ln x$ is $(0, \infty)$ and the range of $\ln x$ is $(-\infty, \infty)$.
 
   \subsection*{The Exponential Function}
 
@@ -130,24 +152,25 @@
 
   \begin{itemize}
     \item $\exp 0 = 1$ (since $\ln 1 = 0$),
-    \item Domain of $\exp$ is $(-\infty, \infty)$ (since range of $\ln$ is),
+    \item Domain of $\exp$ is $(-\infty, \infty)$ (since range of $\ln$ is $(-\infty, \infty)$),
     \item Range of $\exp$ = Domain of $\ln$ = $(0, \infty)$,
     \item Cancellation identities
-    \[
-      \exp \ln x = x, \qquad \ln \exp x = x, \qquad x > 0
-    \]
+    \begin{align*}
+      & \exp \ln x = x, \quad x>0 \\
+      & \ln \exp x = x, \quad -\infty<x<\infty.
+    \end{align*}
   \end{itemize}
 
   \begin{definition}
     $e = \exp(1) \approx 2.718 \dots$.
   \end{definition}
+  Thus $\ln e = 1$. Hence $e$ is the number for which the area bounded by $y=1/x$, the x-axis and the lines $x=1$, $x=e$ is 1.
 
-  It turns out that
   \[
-    \exp x = e^x
+    e^x = \exp(\ln(e^x)) = \exp(x \ln e) = \exp(x).
   \]
 
-  \textit{To be rigorous, this holds when $x$ is rational. When $x$ is irrational we use $\exp x$ to define $e^x$.}
+  % \textit{To be rigorous, this holds when $x$ is rational. When $x$ is irrational we use $\exp x$ to define $e^x$.}
 
   Since $\exp$ is actually an exponential function, its inverse must be a logarithm
   \[

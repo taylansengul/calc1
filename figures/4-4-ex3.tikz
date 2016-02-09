@@ -1,0 +1,17 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=12mm,
+  y=12mm,
+  xmin=-1.5, xmax=4.5,
+  title={$f(x)=x^2 e^{-x}$},
+  xlabel=$x$,
+  ylabel=$y$,
+  ticks=none
+  ]
+  \addplot[domain=-1:3.8, samples=300, very thick] {x^2*exp(-x)};
+  \addplot[soldot] coordinates{(0,0)(2,0.54)};
+  \node[above ] at (2,0.54) {$(2, 4 e^{-2})$};
+\end{axis}
+\end{tikzpicture}

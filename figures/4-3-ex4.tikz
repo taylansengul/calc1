@@ -1,0 +1,20 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=12mm,
+  y=12mm,
+  ymin=-1.8, ymax=1.8, xmin=-1.5, xmax=2,
+  title={$f(x)=x\sqrt{2-x^2}$},
+  xlabel=$x$,
+  ylabel=$y$,
+  ticks=none
+  ]
+  \addplot[domain=-1.414:1.414, samples=100, very thick] {x*sqrt(2-x^2)};
+  \addplot[soldot] coordinates{(-1.41,0)(1.41,0)(-1,-1)(1,1)};
+  \node[above] at (-1.41,0) {$-\sqrt{2}$};
+  \node[below left] at (1.41,0) {$\sqrt{2}$};
+  \node[below] at (-1,-1) {$(-1, 1)$};
+  \node[above] at (1,1) {$(1, 1)$};
+\end{axis}
+\end{tikzpicture}

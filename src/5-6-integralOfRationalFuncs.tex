@@ -1,0 +1,129 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+In this section we are concerned with integrals of the form
+\[
+	\int \frac{P(x)}{Q(x)} dx
+\]
+where $P(x)$ and $Q(x)$ are both polynomials.
+
+We will look at methods to deal with such integrals when deg$(P(x)) <$deg$(Q(x))$. 
+
+\subsection*{The case deg$(Q(x)) = 1$ and deg$(P(x)) = 0$}
+\begin{example}
+	$\displaystyle \int \frac{1}{ax + b} dx = \frac{1}{a} \ln{ax+b} + C$.
+\end{example}
+\begin{solution}
+	Let $u= ax+b$ then $du = adx$ and the integral becomes $\frac{1}{a}\int \frac{du}{u}$.
+\end{solution}
+
+\subsection*{The case deg$(Q(x)) = 2$ and deg$(P(x)) = 0$}
+First let's look at two examples where $Q(x)$ does not have real roots.
+\begin{example}
+	$\displaystyle \int \frac{dx}{x^2+a^2} = \frac{1}{a} \tan^{-1} \frac{x}{a} + C$.
+\end{example}
+\begin{solution}
+	Let $x=a\tan \theta$ (We will talk about these types of transformations in the next section in detail!), then $dx = a \sec^2 \theta d\theta$ and $x^2+a^2 = a^2(\sec^2\theta + 1) = a^2 \tan^2 \theta$.
+\end{solution}
+
+If $Q(x) = a x^2 + bx + c$ has no real roots, we have to \textbf{complete to squares}.
+\begin{example}
+	$ \displaystyle \int \frac{dx}{x^2 + 3x + 3}$
+\end{example}
+\begin{solution}
+	Notice that $x^2 + 3x + 3$ has no real roots. So we complete to squares
+	\[
+		x^2 + 3x + 3 = (x + \frac{3}{2})^2 + \frac{3}{4}
+	\]
+	Letting $u = (x+3/2)$ and $du = dx$,
+	\[
+		\int \frac{dx}{(x + \frac{3}{2})^2 + \frac{3}{4}} = 
+		\int \frac{du}{u^2 + \frac{3}{4}} = \frac{2}{\sqrt{3}} \tan^{-1} \frac{2x}{\sqrt{3}}  + C
+	\]
+	The last part follows from the last example.
+\end{solution}
+
+If $Q(x)$ has real roots then we use \textbf{partial fractions}.
+\subsection*{Partial Fractions}
+Let us still assume that deg$(P(x)) <$deg$(Q(x))$. The Fundamental Theorem of Algebra tells that every polynomial can be factored (over the real numbers) into a product of real linear factors $(x-a_i)$ and real quadratic factors $x^2 + b_i x + c_i$ having no real roots.
+\[
+	Q(x) = (x-a_1)^{m_1}(x-a_2)^{m_2}\cdots(x-a_j)^{m_j}(x^2+b_1x+c_1)^{n_1}\cdots(x^2+b_kx+c_k)^{n_k}
+\]
+
+To each factor of the form $(x-a)^m$, the partial fraction decomposition contains a sum
+\[
+	\frac{A_1}{(x-a)} + \frac{A_2}{(x-a)^2} + \cdots + \frac{A_m}{(x-a)^m}
+\]
+To each factor of the form $(x^2+bx+c)^{n}$, the partial fraction decomposition contains a sum
+\[
+	\frac{B_1x+C_1}{(x^2+bx+c)} + \frac{B_2x+C_2}{(x^2+bx+c)^2} + \cdots + \frac{B_nx+C_n}{(x^2+bx+c)^n}
+\]
+
+\begin{example}
+	$\displaystyle \int \frac{(x+4)}{x^2-5x+6}dx$
+\end{example}
+\begin{solution}
+	\[
+		\frac{x+4}{x^2-5x+6} = \frac{A}{x-2} + \frac{B}{x-3}
+	\]
+	\[
+		x+4 = A(x-3) + B(x-2)
+	\]
+	Plugging $x=2$ gives $A=-6$ and plugging $x=3$ gives $B=7$. So
+	\[
+		\int \frac{(x+4)}{x^2-5x+6}dx = -6 \int \frac{dx}{x-2} + 7 \int \frac{dx}{x-3} = -6 \ln(x-2) + 7 \ln(x-3) + C
+	\]
+\end{solution}
+
+
+\begin{example}
+	$\displaystyle \int \frac{2+3x+x^2}{x(x^2+1)}dx.$
+\end{example}
+\begin{solution}
+	The partial fraction decomposition is
+	\[
+		\frac{2+3x+x^2}{x(x^2+1)} = \frac{A}{x} + \frac{Bx+C}{x^2+1} \implies A(x^2+1) + x(Bx+C) = 2+ 3x +x^2
+	\]
+	Since this equation holds for every $x$, we have $A+B = 1$ (coefficient of $x^2$ term), $C=3$ (coefficient of $x$ term), $A=2$ (coefficient of constant term) and $B=-1$.
+	\[
+		\int \frac{2+3x+x^2}{x(x^2+1)} dx  = \int \frac{2}{x} dx + \int \frac{-x+3}{x^2+1} dx = 2\ln x -\frac{1}{2}\ln(x^2+1) + 3 \tan^{-1}x + C.
+	\]
+\end{solution}
+
+\begin{example}
+	Evaluate $\displaystyle \int \frac{1}{x(x-1)^2} dx$.
+\end{example}
+\begin{solution}
+	\[
+		\frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{(x-1)} + \frac{C}{(x-1)^2}
+	\]
+	\[
+		1 = A(x-1)^2 + B x (x-1) + C x
+	\]
+	Letting $x=0$ gives $A=1$, $x=1$ gives $C=1$. The coefficient of $x^2$ is $A+B$ which must be zero. So $B=-1$.
+	\[
+		\int \frac{1}{x(x-1)^2} dx = \int \frac{1}{x} dx - \int \frac{1}{x-1} dx + \int \frac{1}{(x-1)^2} dx = \ln \abs{x} - \ln\abs{x-1} - \frac{1}{x-1} + C.
+	\]
+	The last integral can be found by letting $u=x-1$.
+\end{solution}
+
+\subsection*{The Case deg$(P(x)) \ge $deg$(Q(x))$}
+If deg$(P(x)) \ge $deg$(Q(x))$ then we divide $P(x)$ to $Q(x)$ and get a rational function with the degree of numerator less than the degree of denominator.
+
+\begin{example}
+	Evaluate $\displaystyle \int \frac{x^3+3x^2}{x^2+1}dx$
+\end{example}
+\begin{solution}
+	\[
+		\frac{x^3+3x^2}{x^2+1} = x + 3 - \frac{x+3}{x^2+1}
+	\]
+	\[
+		\int \frac{x+3}{x^2+1} dx = \int \frac{x}{x^2+1} dx  + \int \frac{3}{x^2+1} dx
+	\]
+	\[
+		\frac{x^3+3x^2}{x^2+1} = \frac{x^2}{2} + 3x - \frac{1}{2} \ln(x^2+1) - 3 \tan^{-1}x + C
+	\]
+\end{solution}
+
+\end{document}

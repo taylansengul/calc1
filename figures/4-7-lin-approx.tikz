@@ -1,0 +1,14 @@
+\tikzset{point/.style={circle,draw=black,inner sep=0pt,minimum size=3pt}}
+\begin{tikzpicture}
+    \begin{scope}
+    \clip (-3,-2) rectangle (3,2);
+    \draw[thick,smooth,domain=-3:3] plot (\x,{\x^3/3 - \x});
+    \end{scope}
+    \coordinate (origin) at (-4,-3);
+    \coordinate (topright) at (4,2);
+    \draw[<->] (topright -| origin) -- (origin) -- (origin -| topright);
+
+    \node[point,fill=black] (c0) at ({-2/sqrt(3)},{(1/3)*(-2/sqrt(3))^3+2/sqrt(3)}) {};
+    \draw (c0) +(-1,-1/3) -- +(1,1/3);
+    \draw[dashed] (c0) -- (c0 |- origin) node[below]{$a$};
+\end{tikzpicture}

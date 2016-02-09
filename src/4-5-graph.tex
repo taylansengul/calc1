@@ -1,0 +1,86 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{definition}
+  The graph of $y=f(x)$ has a \textbf{vertical asymptote} at $x=a$ if either $\lim_{x \to a-} f(x) = \pm \infty$ or $\lim_{x \to a+} f(x) = \pm \infty$.
+\end{definition}
+
+\begin{definition}
+  The graph of $y=f(x)$ has a \textbf{horizontal asymptote} at $y=L$ if either $\lim_{x \to \infty}f(x) = L$ or $\lim_{x \to -\infty}f(x)=L $.
+\end{definition}
+
+\begin{minipage}{0.5\textwidth}
+  \begin{example}
+    Find the vertical and the horizontal asymptotes of $f(x) = \frac{1}{x^2-x}$.
+  \end{example}
+  \begin{solution}
+    The vertical asymptotes are $x=0$, $x=1$.
+    \[
+      \lim_{x \to 0-} \frac{1}{x^2-x} = \infty, \qquad
+      \lim_{x \to 0+} \frac{1}{x^2-x} = -\infty,
+    \]
+    \[
+      \lim_{x \to 1-} \frac{1}{x^2-x} = -\infty, \qquad
+      \lim_{x \to 1+} \frac{1}{x^2-x} = \infty,
+    \]
+
+    The function has a horizontal asymptote, $\lim_{x \to \infty} \frac{1}{x^2-x} = \lim_{x \to -\infty} \frac{1}{x^2-x} = 0$. This is a two-sided horizontal asymptote.
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/4-5-ex1.tikz}
+  \end{figure}
+\end{minipage}
+
+\begin{example}
+  $f(x) = e^x$ has a left horizontal asymptote $y=0$, $\lim_{x \to -\infty} e^x = 0$.
+\end{example}
+
+\begin{example}
+  $f(x) = \tan^{-1} x$ has a two one sided limits, $\lim_{x \to \infty} \tan^{-1} x = \pi/2$ and $\lim_{x \to -\infty} \tan^{-1} x = -\pi/2$.
+\end{example}
+
+\begin{definition}
+  The straight line $y=ax + b$ ($a\neq 0$) is an oblique asymptote of the graph $y=f(x)$ if either $\lim_{x \to \infty} (f(x) - (ax+b)) = 0$ or $\lim_{x \to -\infty} (f(x) - (ax+b)) = 0$.
+\end{definition}
+
+\begin{minipage}{0.5\textwidth}
+  \begin{example}
+    Let $f(x) = \frac{x^2+1}{x} = x+\frac{1}{x}$. Then $\lim_{x \to \pm \infty} (f(x) - x) = 0$. Hence $f$ has a two-sided oblique asymptote.
+  \end{example}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/4-5-ex2.tikz}
+  \end{figure}
+\end{minipage}
+
+\subsection*{Asymptotes of rational function}
+
+Let $f(x) = \frac{P_m(x)}{Q_n(x)}$, where $P_m$ and $Q_n$ are polynomials of degree $m$ and $n$ respectively. Suppose that $P_m$ and $Q_n$ have no common linear factors. The graph of $f$ has
+\begin{enumerate}
+  \item a vertical asymptote at every position at every $x$ for which $Q_n(x) = 0$.
+  \item a two-sided horizontal asymptote $y=0$ only if $m<n$.
+  \item a two-sided horizontal asymptote $y=L$ only if $m=n$. $L$ is the ratio of the coefficients of the  highest degree terms in $P_m$ and $Q_n$.
+  \item a two sided oblique asymptote only if $m=n+1$.
+\end{enumerate}
+
+\begin{example}
+  Find the oblique asymptote of $y= \frac{x^3}{x^2+x+1}$.
+\end{example}
+\begin{solution}
+  Bu polynomial division, we get $y = x-1 + \frac{1}{x^2+x+1}$. $y=x-1$ is the oblique asymptote.
+\end{solution}
+
+\subsection*{Checklist For Curve Sketching}
+\begin{enumerate}
+  \item Examine $f(x)$ to find the domain, intercepts, asymptotes and even/odd symmetries.
+  \item Find points where $f'(x)=0$ (critical points of $f$) and where $f'(x)$ is undefined (singular points of $f$).
+  \item Find points where $f''(x)=0$ (critical points of $f$) and where $f''(x)$ is undefined (singular points of $f$).
+  \item Make a table to investigate the signs of $f'(x)$ and $f''(x)$ to find the intervals where $f$ is increasing or decreasing and the intervals where $f$ is concave up and down. Find also the extreme points and inflection points of the graph.
+\end{enumerate}
+\end{document}

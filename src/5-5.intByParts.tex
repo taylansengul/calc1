@@ -1,0 +1,118 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+Integrating both sides of 
+\[
+	\frac{d}{dx} (u(x) v(x)) = \frac{du}{dx} v + u \frac{dv}{dx}
+\]
+we get
+\[
+	\int \frac{d}{dx} (u(x) v(x)) dx = \int \frac{du}{dx} v dx + \int u \frac{dv}{dx} dx
+\]
+Since $\int \frac{d}{dx} (u(x) v(x)) dx = u(x) v(x)$, in differential notation, we get
+\[
+	u v = \int du \, v + \int u \, dv
+\]
+Another way to write this is
+\[
+	\int u \, dv = u\, v - \int v \, du
+\]
+This is one of the most powerful method to integrate, known as the \textbf{integration by parts}. 
+
+\begin{example}
+	$\displaystyle \int x e^x dx$.
+\end{example}
+\begin{solution}
+	Let $u = x$ and $dv = e^x dx$. Then $du = dx$ and $v = e^x$.
+	\[
+		\int x e^x dx = x e^x - \int e^x dx = x e^x - e^x + C
+	\]
+\end{solution}
+
+\begin{example}
+	$\displaystyle \int \ln x dx$.
+\end{example}
+\begin{solution}
+	Let $u = \ln x$ and $dv = dx$. Then $du = dx/x$ and $v = x$.
+	\[
+		\int \ln x dx = x \ln x - \int x \frac{dx}{x} = x \ln x - x + C
+	\]
+\end{solution}
+
+\begin{example}
+	$I=\displaystyle \int x^2 \sin x dx$
+\end{example}
+\begin{solution}
+	We have to integrate by parts twice. Let $u = x^2$ and $dv = \sin x dx$. Then $du = 2x dx$ and $v = -\cos x$.
+	\[
+		I = x^2 (-\cos x) - \int (-\cos x) 2x dx = - x^2 \cos x + \int 2x \cos x dx
+	\]
+	Now let $u = 2x$ and $dv = \cos x dx$. Then $du = 2 dx$ and $v = \sin x$. And
+	\[
+		\int 2x \cos x dx = 2x \sin x - \int 2 \sin x dx
+	\]
+	Hence
+	\[
+		I = -x^2 \cos x + 2x \sin x +2 \cos x + C
+	\]
+\end{solution}
+
+\begin{example}
+	$I = \displaystyle \int x \tan^{-1} x dx$
+\end{example}
+\begin{solution}
+	Let $u=\tan^{-1}x, dv = x dx$. Then $du = dx/(1+x^2)$ and $v = x^2/2$.
+
+	\[
+		I = \frac{1}{2} x^2 \tan^{-1}x -\frac{1}{2} \int \frac{x^2}{1+x^2} dx
+		= \frac{1}{2} x^2 \tan^{-1}x -\frac{1}{2} \int \left( 1- \frac{1}{1+x^2} \right) dx
+	\]
+	And
+	\[
+		I = \frac{1}{2} x^2 \tan^{-1}x - \frac{1}{2} (x - \tan^{-1}x) + C
+	\]
+\end{solution}
+
+\begin{example}
+	Find $I = \displaystyle \int e^x \sin x dx$.
+\end{example}
+\begin{solution}
+	There is a circular argument here. We will integrate by parts twice to return the same integral. Let $u = \sin x$ and $dv = e^x dx$. Then $du = \cos x dx$, $v = e^x$.
+
+	\[
+		\int e^x \sin x dx = e^x  \sin x - \int \cos x e^x dx
+	\]
+	Now let $u = \cos x$ and $dv = e^x dx$.
+	\[
+		\int \cos x e^x dx = \cos x e^x - \int (-\sin x) e^x = \cos x e^x + I
+	\]
+	So
+	\[
+		I = e^x \sin x - e^x \cos x - I
+	\]
+	Hence
+	\[
+		2 I = e^x (\sin x - \cos x) + C \implies 
+		I = \frac{e^x}{2} (\sin x - \cos x) + C.
+	\]
+\end{solution}
+
+\begin{example}
+	$I = \displaystyle \int \sec^3 x dx$.
+\end{example}
+\begin{solution}
+	Let $u = \sec x$ and $dv = \sec^2 x dx$. Then $du = \sec x \tan x dx$ and $v = \tan x$ 
+	\[
+		I = \sec x \tan x - \int \sec x \tan^2 x dx
+	\]
+	Using $\tan^2 x = \sec^2 x - 1$,
+	\[
+		I = \sec x \tan x + \int \sec x dx - I
+	\]
+	Using $\int sec x dx = \ln \abs{\sec x + \tan x}$, (see the section on ``The Method of Substitution'') we get
+	\[
+		I = \frac{1}{2} \sec x \tan x + \frac{1}{2} \ln \abs{\sec x + \tan x}  + C
+	\]
+\end{solution}
+\end{document}

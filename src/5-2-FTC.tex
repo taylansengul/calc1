@@ -1,0 +1,153 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+In this section we develop the relation between the integral and the derivative.
+
+\subsection*{Antiderivative}
+We will call $F(x)$ as an antiderivative of $f(x)$ if $F'(x) = f(x)$. For example $x$ is an antiderivative of $1$. Note that $x+1$ is also an antiderivative of $1$. So antiderivatives are not unique.
+
+If $F$ and $G$ are antiderivatives of $f$ on an interval, so that $F'(x) = G'(x) = f(x)$ then
+\[
+  \frac{d}{dx} (F(x) - G(x)) = 0.
+\]
+But Theorem~\ref{THM: functions with zero derivative are constant} tells that $F(x) - G(x)$ must be a constant. Hence if $F(x)$ is an antiderivative of $f(x)$ then for any $C$, $F(x) + C$ is also an antiderivative of $f(x)$. Also any antiderivative of $f(x)$ is of  the form $F(x) + C$ for some $c$.
+
+\begin{definition}
+  The \textbf{indefinite integral} of $f(x)$ on interval $I$ is
+  \[
+    \int f(x) dx = F(x) + C
+  \]
+  provided $F'(x) = f(x)$ on $I$.
+\end{definition}
+
+\subsection*{The Fundamental Theorem of Calculus}
+\begin{theorem}
+~
+
+  \textbf{PART I}. Suppose $f$ is continuous.
+  \[
+    \frac{d}{dx} \int_a^x f(t) dt = f(x)
+  \]
+
+  \textbf{PART II}. Suppose $f$ is differentiable.
+  \[
+    \int_a^b f'(x) dx = f(b) - f(a)
+  \]
+\end{theorem}
+
+\begin{proof}
+  For the first part, let
+  \[
+    F(x) = \int_a^x f(x) dx.
+  \]
+  Then
+  \[
+    F'(x) = \lim_{h \to 0} \frac{F(x+h) - F(x)}{h}
+    = \lim_{h \to 0} \frac{1}{h} \left( \int_a^{x+h} f(t) dt - \int_a^{x} f(t) dt \right)
+    = \lim_{h \to 0} \frac{1}{h} \int_x^{x+h} f(t) dt
+  \]
+Let $m(h)$ be the minimum, $M(h)$ be the maximum of $f$ on $[x, x+h]$. Then $m(h) \le f(t) \le M(h)$ on $x\le t \le x+h$. Thus
+\[
+  m(h) h = \int_x^{x+h} m(h) dx \le \int_x^{x+h} f(t) dt \le \int_x^{x+h} M(h) dx = M(h) h.
+\]
+Or
+\[
+  m(h) \le \frac{1}{h} \int_x^{x+h} f(t) dt \le M(h)
+\]
+Since $\lim_{h \to 0} m(h) = \lim_{h \to 0} M(h) = f(x)$, by Sandwich Theorem,
+\[
+  F'(x) = \lim_{h \to 0} \frac{1}{h} \int_x^{x+h} f(t) dt = f(x).
+\]
+
+Proof of the second part. Let
+\[
+  F(x) = \int_a^x f'(t) dt.
+\]
+Then by part I, $F'(x) = f'(x)$. We have seen that the only function whose derivative is zero on an interval is the constant function. Thus $F'(x) - f'(x) = 0$. Hence $F(x) - f(x) = c$, a constant. Since $0=F(a)$, $c= -f(a)$. And
+\[
+  \int_a^b f'(t) dt = F(b) = f(b) + c = f(b) - f(a).
+\]
+\end{proof}
+
+Second part gives a method to evaluate definite integrals. To compute $\int_a^b f(x) dx$, find a function $F(x)$ whose derivative is $f(x)$. Then the value of $\int_a^b f(x) dx = F(b) - F(a)$.
+
+We will use the evaluation symbol
+\[
+  F(x) \mid_a^b = F(b) - F(a).
+\]
+\begin{example}
+  Evaluate
+  \begin{enumerate}
+    \item $\bigint_0^a x^2 dx = \frac{a^3}{3}$
+    \item $\bigint_{-1}^2 (x^2-3x+2) dx = \frac{9}{2}$
+  \end{enumerate}
+\end{example}
+
+\begin{example}
+  Find the area of the region lying above the x-axis and under the curve $y=3x-x^2$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+    The points where the graph intersects the x-axis are $y=0$ which gives $x=0$, $x=$.
+
+    The area is
+    \[
+      \int_0^3 (3x-x^2) dx = \left. \left( \frac{3}{2}x^2 - \frac{1}{3}x^3 \right) \right\vert_0^3 = \frac{9}{2}.
+    \]
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/5-2-ex1.tikz}
+  \end{figure}
+\end{minipage}
+
+\begin{example}
+  Find the are under of the region lying above the line $y=1$ and below the curve $y=\frac{5}{x^2+1}$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+    The curves $y=1$ and $y=\frac{5}{x^2+1}$ intersect at $x=\pm 2$. The area
+
+    The area is
+    \[
+      \int_{-2}^2 \frac{5}{x^2+1} dx - \int_{-2}^2 1 dx = 5 \tan^{-1}x \mid_0^2 - 4 = 10\tan^.
+    \]
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/5-2-ex2.tikz}
+  \end{figure}
+\end{minipage}
+
+\begin{example}
+  Find the derivatives of the following functions.
+  \begin{enumerate}
+    \item $F(x) = \bigint_x^3 e^{-t^2} dt$
+    \item $G(x) = \bigint_{-4}^{5x} e^{-t^2} dt$
+    \item $H(x) = \bigint_{x^2}^{x^3} e^{-t^2} dt$
+  \end{enumerate}
+\end{example}
+\begin{solution}
+  By the Fundamental Theorem of Calculus Part I,
+  \[
+    F(x) = -\int_3^x e^{-t^2} \implies F'(x) = -e^{x^2}.
+  \]
+  Let $g(x) = \int_{-4}^x e^{-t^2} dt$. Then $G(x) = g(5x)$ and
+  \[
+    G'(x) = g'(5x) 5 = 5 e^{-(5x)^2}
+  \]
+  $H(x) = \int_{x^2}^a e^{-t^2} dt + \int_a^{x^3} e^{-t^2} dt$. Then
+  \[
+    H'(x) = e^{-x^6} 3x^2 - e^{x^4} 2x.
+  \]
+\end{solution}
+
+In general
+\[
+  \frac{d}{dx} \int_{f(x)}^{g(x)} h(t) dt = h(f(x)) f'(x) - h(g(x))g'(x).
+\]
+\end{document}

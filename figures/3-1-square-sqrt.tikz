@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  width=6cm,
+  xmax=3,ymax=5,
+  ticks=none,
+  axis lines=middle]
+  \addplot[blue, domain=0:2]  {x^2} node[above]{$y=x^2$};
+  \addplot[red, domain=0:2, samples=100]  {sqrt(x)} node[below]{$y=\sqrt{x}$};
+  \addplot[black, dashed, domain=0:2]  {x} node[above]{$y=x$};
+\end{axis}
+\end{tikzpicture}

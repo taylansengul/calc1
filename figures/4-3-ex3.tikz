@@ -1,0 +1,22 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  ticks=none,
+  x=12mm,
+  y=5mm,
+  ymin=-5, xmax=2.5,
+  title={$f(x)=x^4-2x^2-3$},
+  xlabel=$x$,
+  ylabel=$y$,
+  ]
+  \addplot[domain=-2:2, samples=300, very thick] {x^4-2*x^2-3};
+  \addplot[soldot] coordinates{(-1,-4)(1,-4)(-2,5)(2,5)(0,-3)};
+  \node[below] at (-1,-4) {$(-1, -4)$};
+  \node[below] at (1,-4) {$(1, -4)$};
+  \node[above] at (-2,5) {$(-2, 5)$};
+  \node[above] at (2,5) {$(2, 5)$};
+  \node[above right] at (0, -3) {$-3$};
+\end{axis}
+\end{tikzpicture}

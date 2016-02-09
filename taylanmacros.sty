@@ -7,8 +7,9 @@
 \RequirePackage{amsthm}
 \RequirePackage{amsfonts}
 \RequirePackage{subcaption}
-
+\RequirePackage{xfrac}
 \RequirePackage{hyperref}
+\RequirePackage{bigints} % for big integrals
 
 \RequirePackage{tikz}
 \usetikzlibrary{shadows}
@@ -47,7 +48,7 @@
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
 
 % Operators
-\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\norm}[1]{\left \lVert #1 \right \rVert}
 \newcommand{\inpr}[2]{\langle #1, #2 \rangle}
 \newcommand{\integral}[3]{\int_{#1} \! #2 \, \mathrm{d}#3}
@@ -85,7 +86,7 @@
 \newtheorem{corollary}{Corollary}
 \newtheorem{criterion}{Criterion}
 \newtheorem{definition}{Definition}
-\newtheorem{example}{Example}
+\newtheorem*{example}{Example}
 \newtheorem{exercise}{Exercise}
 \newtheorem{lemma}{Lemma}
 \newtheorem{notation}{Notation}

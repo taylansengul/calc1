@@ -1,0 +1,19 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=10mm,
+  y=1.5mm,
+  xmin=-2.5, ymax= 12, ymin=-24,
+  title={$f(x)=x^3-3x^2-9x+2$},
+  xlabel=$x$,
+  ylabel=$y$,
+  ticks=none
+  ]
+  \addplot[domain=-2:2, very thick] {x^3-3*x^2-9*x+2};
+  \addplot[soldot] coordinates{(-2,0)(-1,7)(2,-20)};
+  \node[below] at (-2,0) {$-2$};
+  \node[above] at (-1,7) {$(-1, 7)$};
+  \node[left] at (2,-20) {$(2, -20)$};
+\end{axis}
+\end{tikzpicture}

@@ -15,5 +15,4 @@
   \draw[-latex] (d1) -- (r2);
   \draw[-latex] (d2) -- (r2);
   \draw[-latex] (d3) -- (r4);
-  \draw[-latex] (d3) -- (r4);
 \end{tikzpicture}

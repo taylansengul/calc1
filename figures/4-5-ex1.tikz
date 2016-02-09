@@ -1,0 +1,19 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=8mm,
+  y=4mm,
+  xmin=-4, xmax=4, ymin=-8, ymax=4,
+  title={$f(x)=\frac{1}{x^2-x}$},
+  xlabel=$x$,
+  ylabel=$y$,
+  xtick={1},
+  ytick={0},
+  grid=major
+  ]
+  \addplot[domain=-3:-0.1, very thick] {1/(x^2-x)};
+  \addplot[domain=0.1:0.9, very thick] {1/(x^2-x)};
+  \addplot[domain=1.1:3, very thick] {1/(x^2-x)};
+\end{axis}
+\end{tikzpicture}

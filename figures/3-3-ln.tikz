@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  xmin=0, xmax= 3, ymin=0, ymax=6,
+  xlabel=$t$, ylabel=$y$,
+  xtick={1, 2},
+  xticklabels={1, $x$},
+  yticklabels={,,},
+  axis lines=left]
+  \addplot[blue, domain=.2:3, samples=100]  {1/x} node[above left]{$y=1/t$};
+  \draw[dashed] (1,0) -- (1,1);
+  \draw[dashed] (2,0) -- (2,.5);
+  \addplot+[mark=none,
+          domain=1:2,
+          samples=100,
+          pattern=north west lines,
+          draw=blue,
+          pattern color=blue,
+          area legend] {1/x} \closedcycle;
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \begin{axis}[
+    xmin=-2, xmax= 1.6, ymin=-.5, ymax=.6,
+    xlabel=$x$, ylabel=$y$,
+    xtick = {-1, 1},
+    xticklabels={$a$, $b$},
+    yticklabels={,,},
+    axis lines=middle]
+    \addplot[domain=-1.4:1.4, samples=100]  {x^3-x+0.1};
+    \addplot+[mark=none,
+            domain=-1.05:0.95,
+            samples=100,
+            pattern=north west lines,
+            draw=blue,
+            pattern color=blue,
+            fill opacity=0.2,
+            samples=200,
+            area legend] {x^3-x+0.1} \closedcycle;
+    \node at (axis cs: -.6, .2) {$A_1$};
+    \node at (axis cs: .6, -.1) {$A_2$};
+    \end{axis}
+
+
+\end{tikzpicture}

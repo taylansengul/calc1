@@ -1,0 +1,19 @@
+
+\begin{tikzpicture}
+    \begin{axis}[
+            axis x line=middle,
+            axis y line=middle,
+            xlabel={$x$},
+            ylabel={$y$},
+            axis line style={<->},
+            xmin=-13,xmax=5,
+            ymin=-4,ymax=6,
+            grid=both,
+            ytick={-3,4},
+            samples=100,
+        ]
+        \addplot[blue, name path=A,domain=-4:4]({x^2-12},{x});
+        \addplot[name path=B,domain=-5:5] ({x},{x});
+        \addplot[pattern=north west lines, pattern color=brown!50] fill between[of=A and B, soft clip={domain y=-3:4}, reverse=true];
+    \end{axis}
+\end{tikzpicture}

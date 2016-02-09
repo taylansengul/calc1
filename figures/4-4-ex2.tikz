@@ -1,0 +1,19 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=8mm,
+  y=8mm,
+  xmin=-2.5, xmax=2.5, ymax=4, ymin=-2,
+  title={$f(x)=x^4-2x^3+1$},
+  xlabel=$x$,
+  ylabel=$y$,
+  ticks=none
+  ]
+  \addplot[domain=-2:2, samples=300, very thick] {x^4-2*x^3+1};
+  \addplot[soldot] coordinates{(0,1)(1,0)(3/2,-11/16)};
+  \node[above right] at (0,1) {$1$};
+  \node[above right] at (1,0) {$1$};
+  \node[below] at (3/2,-11/16) {$(\frac{3}{2},-\frac{11}{16})$};
+\end{axis}
+\end{tikzpicture}

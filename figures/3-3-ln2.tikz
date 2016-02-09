@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  width=6cm,
+  grid=major,
+  xmin=0, xmax= 3, ymin=0, ymax=6,
+  xlabel=$t$, ylabel=$y$,
+  xtick={.5, 1},
+  xticklabels={$x$, $x+h$},
+  ytick={1, 2},
+  yticklabels={$\frac{1}{x+h}$,$\frac{1}{x}$},
+  axis lines=left]
+  \addplot[blue, domain=.2:3, samples=100]  {1/x} node[above left]{$y=1/t$};
+\end{axis}
+\end{tikzpicture}

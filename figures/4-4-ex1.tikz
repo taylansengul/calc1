@@ -1,0 +1,19 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=8mm,
+  y=0.25mm,
+  xmin=-4, xmax=4, ymax= 50,
+  title={$f(x)=x^6-10x^4$},
+  xlabel=$x$,
+  ylabel=$y$,
+  xtick={-2, 2},
+  ytick={-96},
+  grid=major,
+  grid style={dashed, gray}
+  ]
+  \addplot[domain=-3.2:3.2, samples=300,very thick] {x^6-10*x^4};
+  \addplot[soldot] coordinates{(-2,-96)(2,-96)(0,0)};
+\end{axis}
+\end{tikzpicture}

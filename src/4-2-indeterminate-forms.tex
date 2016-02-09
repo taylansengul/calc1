@@ -1,0 +1,136 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+To evaluate the limit $\lim_{x \to 0} \frac{\sin x}{x}$ we can not plug in $x=0$.
+We call $\sin x/ x$ an \textbf{indeterminate form} of $[0/0]$ at $x=0$.
+
+The limit of such an indeterminate form can be any number.
+\[
+  \lim_{x \to 0} \frac{x}{x} = 1, \qquad
+  \lim_{x \to 0} \frac{x}{x^3} = \infty, \qquad
+  \lim_{x \to 0} \frac{x^3}{x^2} = 0.
+\]
+
+There are other types of indeterminate forms $[\infty/\infty]$, $[0 \cdot \infty]$, $[\infty - \infty]$, $[0^{\infty}]$, $[\infty^0]$, $[1^{\infty}]$.
+
+Indeterminate forms can usually be brought to the form $[0/0]$ or $[\infty/\infty]$. To evaluate limits of the form $[0/0]$ a very useful method is the following.
+\begin{theorem}[l'Hopital's Rules]
+  Suppose that $f$ and $g$ are differentiable on an interval containing $a$. Suppose also that
+  $\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0$ and $\lim_{x \to a} \frac{f'(x)}{g'(x)} = L$. Then
+  \[
+    \lim_{x \to a} \frac{f(x)}{g(x)} = L.
+  \]
+  Similar results hold for $\lim_{x \to a+}$ and $\lim_{x \to a-}$ and for the cases $a= \pm \infty$.
+\end{theorem}
+\begin{proof}
+  Proof follows from generalized mean value theorem.
+\end{proof}
+
+\texttt{Note that in applying l'Hopital's rule we calculate the quotient of the derivatives, not the derivative of the quotients.}
+
+\begin{example}
+  Evaluate
+  \[
+    \lim_{x \to 1} \frac{\ln x}{x^2-1}
+  \]
+\end{example}
+\begin{solution}
+  \[
+    \lim_{x \to 1} \frac{\ln x}{x^2-1} \quad \left[ \frac{0}{0} \right]
+  \]
+  \[
+    \lim_{x \to 1} \frac{\ln x}{x^2-1} =
+    \lim_{x \to 1} \frac{\frac{1}{x}}{2x} =
+    \lim_{x \to 1} \frac{1}{2x^2} = \frac{1}{2}.
+  \]
+\end{solution}
+
+If one application of the l'Hopital's rule again gives an indeterminate form, we can apply it again.
+
+\begin{example}
+  Evaluate
+  \[
+    \lim_{x \to 0} \frac{2\sin x-\sin(2x)}{2e^x-2-2x-x^2}
+  \]
+\end{example}
+\begin{solution}
+  Applying l'Hopital's rule three times we get the answer $3$.
+\end{solution}
+
+\begin{example}
+  \[
+    \lim_{x \to 1+} \frac{x}{\ln x}
+  \]
+\end{example}
+\begin{solution}
+  If you apply the l'Hopital's rule, you get the wrong answer of 1. This is not an indeterminate form, and you can't use l'Hopital's rule. The real answer is $\infty$.
+\end{solution}
+
+\begin{example}
+  \[
+    \lim_{x \to 0+} \frac{1}{x} - \frac{1}{\sin x}
+  \]
+\end{example}
+\begin{solution}
+  This is an indeterminate form of type $[ \infty - \infty]$ which can be brought to the form $[0/0]$.
+  \[
+    \lim_{x \to 0+} \frac{1}{x} - \frac{1}{\sin x} =
+    \lim_{x \to 0+} \frac{\sin x - x}{x \sin x} =
+    \lim_{x \to 0+} \frac{\cos x - 1}{\sin x + x \cos x} =
+    \lim_{x \to 0+} \frac{-\sin x}{\cos x + \cos x - x \sin x} = \frac{0}{-2} =0.
+  \]
+  where we use l'Hopital's rule twice.
+\end{solution}
+
+The l'Hopital's rule can also be applied to indeterminate forms of type $[\infty/\infty]$.
+
+\begin{example}
+  \[
+    \lim_{x \to \infty} \frac{x^2}{e^x}.
+  \]
+\end{example}
+\begin{solution}
+  The answer is 0.
+\end{solution}
+
+To deal with indeterminate forms of types $[0^0]$, $[\infty^0]$ and $[1^{\infty}]$, we take logarithms.
+
+\begin{example}
+  \[
+    \lim_{x \to 0+} x^x.
+  \]
+\end{example}
+\begin{solution}
+  This is of the form $[0^0]$. Let $y= x^x$. Then
+  \[
+    \lim_{x \to 0+} \ln y = \lim_{x \to 0+} x \ln x = \lim_{x \to 0+} \frac{\ln x}{1/x}
+    = \lim_{x \to 0+} \frac{1/x}{-1/x^2} = 0
+  \]
+  Since $\ln$ is a continuous function
+  \[
+    \ln \lim_{x \to 0+} \ln y = \lim_{x \to 0+} \ln y = 0,
+  \]
+  \[
+    \lim_{x \to 0+} x^x = e^0 = 1.
+  \]
+\end{solution}
+
+\begin{example}
+  Evaluate
+  \[
+    \lim_{x \to \infty} \left( 1+ \sin \frac{3}{x} \right)^x
+  \]
+\end{example}
+\begin{example}
+  This is of the form $[1^{\infty}]$. Again first evaluate the limit of the logarithm. $y=\left( 1+ \sin \frac{3}{x} \right)^x$.
+  \[
+    \lim_{x \to \infty} \ln y =
+    \lim_{x \to \infty} \frac{\ln \left( 1+ \sin \frac{3}{x} \right)}{1/x} = 3
+  \]
+  Hence
+  \[
+    \lim_{x \to \infty} \left( 1+ \sin \frac{3}{x} \right)^x = e^3.
+  \]
+\end{example}
+\end{document}

@@ -31,6 +31,7 @@
 \end{definition}
 If $f$ is not 1-1 then it is not invertible.
 
+Given $y=f(x)$, to find the inverse function, we solve $x$ in terms of $y$.
 \begin{example}
   Show that $f(x) = 2x -1$ is one-to-one and find its inverse $f^{-1}(x)$.
 \end{example}
@@ -41,6 +42,7 @@ If $f$ is not 1-1 then it is not invertible.
   \]
 \end{solution}
 
+Usually, we can not solve $y=f(x)$, for example for $y=x+x^3$.
 
 \subsection*{Properties of inverse functions}
 \begin{enumerate}
@@ -65,29 +67,41 @@ If $f$ is not 1-1 then it is not invertible.
   \caption{The graph of the inverse function is a reflection along $y=x$.}
 \end{figure}
 
-\subsection*{Inverting Non One-to-one Functions}
-The function $f(x) = x^2$ is not one-to-one because $(-a)^2 = a^2$ for any $a$. Hence $f$ is not invertible. Let us define a new function by restricting the domain of $f$
-\[
-  F(x) = x^2, \quad x \geq 0
-\]
-Then $F^{-1}(x) = \sqrt{x}$.
-\begin{figure}[H]
-  \centering
-  \input{3-1-square-sqrt.tikz}
-  \caption{The restriction of $x^2$ to $[0, \infty)$ and its inverse.}
-\end{figure}
+\subsection*{Inverting Non One-to-one Functions by Restricting the Domain of Definition}
+\begin{minipage}{0.5\textwidth}
+  The function $f(x) = x^2$ is not one-to-one because $(-a)^2 = a^2$ for any $a$. Hence $f$ is not invertible. Let us define a new function $F$ by restricting the domain of $f$,
+  \[
+    F(x) = x^2, \quad x \geq 0.
+  \]
+  Then $F^{-1}(x) = \sqrt{x}$.
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/3-1-square-sqrt.tikz}
+    \caption{The restriction of $x^2$ to $[0, \infty)$ and its inverse.}
+  \end{figure}
+\end{minipage}
 
+Conversely, since the range of the 1-1 function $\sqrt{x}$ is $[0, \infty)$, the domain of its inverse $g(x) = x^2$ is $x\ge0$.
 \subsection*{Derivatives of Inverse Functions}
 
 Let $y = f^{-1}(x)$. Then $f(y)=x$. Considering $y$ as a function of $x$ and using implicit differentiation,
 \[
   \frac{d}{dx} f(y) = \frac{d}{dx} x \implies f'(y) \frac{dy}{dx} = 1 \implies \frac{dy}{dx} = \frac{1}{f'(y)}
 \]
-Thus
+In short if $y=f^{-1}(x)$ then
 \[
-  (f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}
+  (f^{-1})'(x) = \frac{1}{f'(y)} = \frac{1}{f'(f^{-1}(x))}
 \]
 This formula says if $f'(y) \neq 0$ then $f^{-1}$ is differentiable at $x$.
+
+\begin{figure}[H]
+  \centering
+  \input{figures/3-1-inversefunc-derivative.tikz}
+\end{figure}
+
+% A geometric proof that $\tan \theta \tan \beta = 1$. figures/3-1-inversederGeo.eps
 
 In Leibniz notation, $\frac{dy}{dx} = (f^{-1})'(x)$ while $\frac{dx}{dy} = f'(y)$, the above formula reads
 \[
@@ -118,6 +132,10 @@ For example, if $y=x^2, x\ge 0$, then $x=\sqrt{y}$ and $\frac{dy}{dx} = 2x$ and 
     (f^{-1})'(10) = \frac{1}{3\times2^2 + 1} = \frac{1}{13}.
   \]
 \end{solution}
+
+\begin{example}
+  If $f(x) = 3x + x^3$, show that $f$ has an inverse and find the slope of $y=f^{-1}(x)$ at $x=0$.
+\end{example}
 
 % \begin{example}[OPTIONAL]
 %   Show that

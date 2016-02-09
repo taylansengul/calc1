@@ -1,0 +1,141 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+A function has an \textbf{absolute maximum value} $f(x_0)$ if $f(x) < f(x_0)$ holds for every $x$ in its domain.
+
+Similarly, define \textbf{absolute minimum value}.
+
+If it has an absolute min/max, then that value may be achieved at more than one point. For example the function $\cos x$ attains its absolute max at $x = 2 n \pi $ for any integer $n$.
+
+A function may or may not have an absolute min/max value. For example the function $f(x) = x$, $0<x<1$ does not have an absolute maximum or minimum.
+
+Recall from the section on continuous functions that,
+
+\texttt{A continuous function defined on a closed and bounded interval must have an absolute maximum and an absolute minimum.}
+
+Maximum and minimum values of a function are collectively referred to as \textbf{extreme values}.
+
+Function $f$ has a \textbf{local maximum} value $f(x_0)$ if there exists $h > 0$ such that $f(x) \le f(x_0)$ whenever $x$ is in the domain of $f$ and $\abs{x-x_0}<h$.
+
+Similarly we define \textbf{local minimum}.
+
+We define \textbf{critical points} of $f$ where $f'(x)=0$, \textbf{singular points} of $f$ where $x$ is in domain of $f$ and $f'(x)$ does not exist.
+
+Following theorem says where the extreme values are located.
+\begin{theorem}
+  If the function $f$ is defined on an interval $I$ and has a local max or local min at $x=x_0$ then $x_0$ \textbf{must} be either a critical point, a singular point or an endpoint of the interval.
+\end{theorem}
+
+\begin{proof}
+  If $f(x_0)$ is a local extrema and $x_0$ is not an endpoint or singular point, then $f'(x_0) =0$. Otherwise, either $f'(x_0)>0$ which means $f$ is increasing at $x_0$ or $f'(x_0)<0$ which means $f$ is decreasing at $x_0$ so that $f(x_0)$ is neither a local min nor local max.
+\end{proof}
+
+This theorem does not say $f$ must have a local min/max at at every singular, critical or endpoint. For example for $f(x) = x^3$, $f'(0) = 0$ but $f(0)$ is not an extremum value.
+
+\begin{example}
+  Find the maximum and minimum values of the function
+  $g(x) = x^3 - 3x^2 - 9x +2$ on the interval $-2 \le x \le 2$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+  $g$ is a continuous function defined on a closed and bounded interval so it must have an absolute minimum and absolute maximum.
+
+  Since $g$ is a polynomial, it can't have singular points.
+
+  $g'(x) = 3(x^2-2x-3)=3(x+1)(x-3)$. $g'(x)=0$ if $x=-1$ or $x=3$. $x=3$ is not in the domain, so we ignore it.
+
+  We check the values of $g(x)$ at endpoints and critical points, $g(-2) = 0$, $g(-1)=7$, $g(2)=-20$. The maximum value is 7, the minimum value is -20.
+\end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/4-3-ex1.tikz}
+  \end{figure}
+\end{minipage}
+
+\begin{example}
+  Find the maximum and minimum values of $h(x)=3x^{2/3}-2x$ on the inteval $[-1,1]$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+  $h'(x) = 2(x^{-1/3} - 1)$. $h'(0)$ is undefined, $0$ is a singular point of $h$. $h$ has a critical point at $x=1$ which is also an endpoint.
+
+  $h(-1) = 5$, $h(0)=0$, $h(1) = 1$.
+  $h$ has maximum value $5$ and minimum value $0$.
+\end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/4-3-ex2.tikz}
+  \end{figure}
+\end{minipage}
+
+\subsection*{The first derivative test}
+By investigating the sign of the first derivative we can determine whether an extrema is a local minimum or local maximum.
+
+\begin{example}
+  Find the local and absolute extreme values of $f(x) = x^4-2x^2-3$ on the interval $[-2, 2]$. Sketch the graph of $f$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+  $f'(x) = 2x(x^2-1) = 4x(x-1)(x+1)$. The critical points are $0, -1, 1$. There are no singular points.
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{c||ccccccccc}
+      x & -2 & & -1 & & 0 & & 1 & & 2 \\
+      \hline
+      $f'$ & & - & & + & & - & & + & \\
+      $f$ & max & $\searrow$ & min & $\nearrow$ & max & $\searrow$ & min& $\nearrow$ & max
+    \end{tabular}
+  \end{table}
+
+  $f(-2) = f(2) = 5$, $f(-1) = f(1) = -4$, $f(0) = -3$.
+
+  Since $f$ is continuous and defined on a closed and bounded interval, it must have an absolute min/max. So $5$ is the absolute maximum and $-4$ is the absolute minimum.
+\end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/4-3-ex3.tikz}
+  \end{figure}
+\end{minipage}
+
+\begin{example}
+  Locate all extreme values of $f(x) = x\sqrt{2-x^2}$. Determine whether any of these extreme values are absolute. Sketch the graph.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+    Note that $f$ has domain $[-\sqrt{2}, \sqrt{2}]$.
+    $f'(x) = -2\frac{x^2-1}{\sqrt{2-x^2}}$. Critical points are $\pm1$. Singular points are $\pm \sqrt{2}$ and endpoints are also $\pm \sqrt{2}$.
+
+    $f(\pm \sqrt{2}) = 0$, $f(-1) = -1$, $f(1) = 1$. Since $f$ is continuous on a closed bounded interval it must have maximum value $1$ and minimum value $-1$.
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{c||ccccccc}
+        x & $-\sqrt{2}$ & & -1 & &  1 & & $\sqrt{2}$ \\
+        \hline
+        $f'$ & & - & & + & & - & \\
+        $f$ & max & $\searrow$ & min & $\nearrow$ & max & $\searrow$ & min
+      \end{tabular}
+    \end{table}
+
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+      \centering
+      \input{figures/4-3-ex4.tikz}
+    \end{figure}
+\end{minipage}
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.45\textwidth]{4-3-local-extrema.png}
+% \end{figure}
+
+\end{document}

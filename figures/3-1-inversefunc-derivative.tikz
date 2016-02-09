@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  xmax=8, ymax=8,
+  x=5mm, y=4mm,
+  ticks=none,
+  axis lines=middle]
+  \addplot[blue, domain=0:2.7]  {pow(2,x)} node[above]{$y=f(x)$};
+  \addplot[black, domain=0:6, dashed]  {x} node[above ]{$y=x$};
+  \addplot[black, domain=1.5:2.6, red, thick]  {4+4*ln(2)*(x-2)};
+  \addplot[black, domain=1.5:6, red, thick]  {2+(x-4)/(4*ln(2))};
+  \addplot[blue,domain=1:7,samples=100]  {log2(x)} node[above left] {$y=f^{-1}(x)$};
+  \node [left] at (2,4) {$(a, b)$};
+  \draw[fill] (2, 4) circle [radius =0.1];
+
+  \node [below right] at (4,2) {$(b, a)$};
+  \draw[fill] (4, 2) circle [radius =0.1];
+  \draw[dashed] (2,4) -- (4,2);
+\end{axis}
+\end{tikzpicture}

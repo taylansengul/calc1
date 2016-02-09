@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+  \begin{axis}[domain=-5:5, samples=500, axis lines*=middle, xtick=\empty, ytick={-1.57,1.57}, yticklabels={$-\pi$/2,$\pi$/2}]
+    \addplot[color = red]  {atan(x)/180*pi};
+    \addplot[color = blue, dashed, domain=-5:0]  {-1.57};
+    \addplot[color = blue, dashed, domain=0:5]  {1.57};
+  \end{axis}
+\end{tikzpicture}

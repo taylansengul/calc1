@@ -1,0 +1,55 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{example}
+  How fast is the area of a rectangle changing if one side is 10cm long and is increasing at a rate of 2cm/s and the other side is 8cm long and is decreasing at a rate of 3cm/s?
+\end{example}
+\begin{solution}
+  The area $A$, and the lengths of sides $x$ and $y$ are functions of time $t$. Also $A = x y$. We are given $\frac{dx}{dt} = 2$, $\frac{dy}{dt} = -3$ when $x=10$, $y=8$.
+
+  Then
+  \[
+    \frac{dA}{dt} = \frac{dx}{dt} y + x \frac{dy}{dt}
+  \]
+  gives $\frac{dA}{dt} = -14$.
+\end{solution}
+In the previous problem, if $\frac{dx}{dt}$ and $\frac{dy}{dt}$ are constant, then $x(t) = 10 + 2t$, $y(t) = 8-3t$ and $A(t) = (10+2t)(8-3t)$. So $A(1) = 60$. But we found that $A$ changes -14cm$^2$/s so we expect to find $A(1)=-66$. How is this possible?
+
+This is possible because $A'(t) = -14 - 6t$. Hence $A$ changes in a non-constant fashion event though $x$ and $y$ changes constantly. What we are computing in this problem is $A'(0) = - 14$. And this result holds even if $\frac{dx}{dt}$ and $\frac{dy}{dt}$ are not constant. (maybe velocity of $x$ is not constant and it accelerates according to $x(t) = 10 + 2t + t^2$)
+
+\begin{example}
+  How fast is the surface area of a ball changing when the volume of the ball is $32 \pi/3$ cm$^3$ and is increasing at 2cm$^3/s$? (The surface are of the ball is $A = 4\pi r^2$ and the volume is $V = \frac{4}{3} \pi r^3$. Note that $V(r) = \int_0^r A(r) dr$)
+\end{example}
+\begin{solution}
+  When $V=32 \pi/3$, $r=2$, $\frac{dV}{dt} = 2$
+  \[
+    \frac{dV}{dt} = 4 \pi r^2 \frac{dr}{dt}
+  \]
+  gives $\frac{dr}{dt} = \frac{1}{8 \pi}$.
+
+  Now
+  \[
+    \frac{dA}{dt} = 8 \pi r \frac{dr}{dt} = 2
+  \]
+\end{solution}
+
+\begin{example}
+  A point is moving to the right along the first quadrant portion of the curve $x^2 y^3 = 72$. When the point has coordinates $(3,2)$, its horizontal velocity is 2 units/s. What is its vertical velocity?
+\end{example}
+\begin{solution}
+  Taking $d/dt$ of both sides
+  \[
+    2x \frac{dx}{dt} y^3 + x^2 3 y^2 \frac{dy}{dt} = 0
+  \]
+  At $x=3$, $y=2$, $\frac{dx}{dt} = 2$,
+  \[
+    \frac{dy}{dt} = - \frac{8}{3}.
+  \]
+
+\end{solution}
+
+\begin{example}
+  The area of a circle is decreasing at a rate of 2 cm$^2$/min. How fast is the radius of the circle changing when the area is 100 cm$^2$?
+\end{example}
+\end{document}

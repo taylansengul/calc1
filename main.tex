@@ -1,6 +1,6 @@
 \documentclass[12pt]{memoir}
 \usepackage{subfiles} % to use subfiles
-\usepackage[margin=0.8in]{geometry}
+\usepackage[top=2.5cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry}
 \usepackage{taylanmacros}
 \usepackage{fourier}
 \usepackage{multicol}
@@ -8,7 +8,7 @@
 \pgfplotsset{compat=1.12}
 \chapterstyle{bianchi}
 \usetikzlibrary{shapes.geometric,fit} % used in P-4-functions.tex
-
+\usepgfplotslibrary{fillbetween} %  5-2-ex2.tikz
 \title{Calculus I Lecture Notes}
 \author{Taylan Şengül}
 
@@ -65,17 +65,55 @@
     \subfile{src/2-6-higher}
     \section{Mean Value Theorem}
     \subfile{src/2-8-mean}
-    % \section{Implicit Differentiation}
-    % \subfile{src/2-9-implicit}
-%     \section{Antiderivatives}
-%     \subfile{src/2-10-antider}
+    \section{Implicit Differentiation}
+    \subfile{src/2-9-implicit}
+    \section{Exam 1 Review}
+    \subfile{src/exam1}
+    % \section{Antiderivatives}
+    % \subfile{src/2-10-antider}
 
-% \chapter{Transcendental Functions}
-%     \section{Inverse Functions}
-%     \subfile{src/3-1-inverse}
-%     \section{Exponential and Logarithmic Functions}
-%     \subfile{src/3-2-exp}
-%     \section{The Natural Logarithm and Exponential}
-%     \subfile{src/3-3-naturallog}
+\chapter{Transcendental Functions}
+    \section{Inverse Functions}
+    \subfile{src/3-1-inverse}
+    \section{Exponential and Logarithmic Functions}
+    \subfile{src/3-2-exp}
+    \section{The Natural Logarithm and Exponential}
+    \subfile{src/3-3-naturallog}
+    \section{The Inverse Trigonometric Functions}
+    \subfile{src/3-4-inversetrig}
+
+\chapter{Applications of Derivatives}
+    \section{Related Rates}
+    \subfile{src/4-1-related.tex}
+    \section{Indeterminate Forms}
+    \subfile{src/4-2-indeterminate-forms.tex}
+    \section{Extreme Values}
+    \subfile{src/4-3-extreme.tex}
+    \section{Concavity and Inflections}
+    \subfile{src/4-4-concavity.tex}
+    \section{Graphs of Functions}
+    \subfile{src/4-5-graph.tex}
+    \section{Extreme Value Problems}
+    \subfile{src/4-6-extreme-problems.tex}
+    \section{Linear Approximation}
+    \subfile{src/4-7-linear-approximation.tex}
+    \section{Exam 2 Review}
+    \subfile{src/exam2}
+
+
+\chapter{Integration}
+    \section{The Definite Integral}
+    \subfile{src/5-1-definite-integral.tex}
+    \section{The Fundamental Theorem of Calculus}
+    \subfile{src/5-2-FTC.tex}
+    \section{The Method of Substitution}
+    \subfile{src/5-3-substitution.tex}
+    \section{Areas of Plane Regions}
+    \subfile{src/5-4-areas.tex}
+    \section{Integration by Parts}
+    \subfile{src/5-5.intByParts.tex}
+    \section{Integrals of Rational Function}
+    \subfile{src/5-6-integralOfRationalFuncs.tex}
+    \section{Inverse Substitutions}
+    \subfile{src/5-7-inverseSubstitutions.tex}
 \end{document}
-

@@ -1,0 +1,17 @@
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+\begin{tikzpicture}
+  \begin{axis}[
+  axis lines=middle, % left, right, box, center, none
+  x=8mm,
+  y=5mm,
+  xmin=-3.5, xmax=3.5, ymin=-4, ymax=4,
+  title={$f(x)=\frac{x^2+1}{x}$},
+  xlabel=$x$,
+  ylabel=$y$,
+  ticks=none
+  ]
+  \addplot[domain=-3:-0.3, very thick] {x+1/x};
+  \addplot[domain=0.35:3, very thick] {x+1/x};
+  \addplot[domain=-3:3, dashed] {x};
+\end{axis}
+\end{tikzpicture}

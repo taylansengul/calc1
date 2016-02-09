@@ -1,0 +1,142 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+Our main goal in this section is to find the area between the graph of a function and the x-axis.
+
+Idea is to approximate this region with rectangles.
+
+Let's start with an easy example.
+\begin{example}
+  Find the area of the region lying under the straight line $y=x+1$, above the x-axis and between the lines $x=0$ and $x=2$.
+\end{example}
+
+\begin{solution}
+  Two ways of approximating the area. With ``smaller'' rectangles and ``larger'' rectangles.
+
+  With ``smaller'' rectangles. Divide the interval [0,2] into $n$ equal pieces, call $x_0=0$, $x_1=2/n$, $x_2=4/n$, $\dots$, $x_n=2$.
+  \[
+    L_n = f(x_0) (x_1 - x_0) + f(x_1) (x_2-x_1) + \cdots + f(x_n-1) (x_n-x_{n-1})
+  \]
+  For $n=1$, $L_1 = f(0) (2-0) = 2$
+  For $n=2$, $L_2 = f(0) (1-0) +f(1) (2-1) = 1 + 2 = 3$,
+  For $n=3$, $L_4 = (f(0) + f(1/2) + f(1) + f(3/2)) (1/2) = 7/2$
+
+  We can show that
+  \[
+    L_n = \frac{2(2n-1)}{n}
+  \]
+  Thus $\lim_{n \to \infty} L_n = 4$. This is in fact the exact area.
+
+  We can repeat this with ``larger'' rectangles. In this case
+  \[
+    U_n = \frac{2(2n+1)}{n}
+  \]
+  And again, $\lim_{n \to \infty} U_n = 4$.
+\end{solution}
+
+This procedure can be used to find the areas under more exotic curves.
+
+In general, if we want to calculate the area between the graph of $y=f(x)$, the x-axis, $a \le x \le b$. We partition the interval $a=x_0 < x_1 < \cdots < x_n = b$. Let $P=\{x_0, x_1, \dots, x_n\}$.
+
+\begin{definition}
+  Let $f(l_i)$ be the smallest value and $f(u_i)$ be the largest value of $f(x)$ on $[x_i, x_{i+1}]$. Then we define the \textbf{lower Riemann sum}
+  \[
+    L(f, P) = f(l_0) (x_1-x_0) + f(l_1) (x_2-x_1) + \cdots f(l_{n-1}) (x_n - x_{n-1})
+  \]
+  and the \textbf{upper Riemann sum}
+  \[
+    U(f, P) = f(u_0) (x_1-x_0) + f(u_1) (x_2-x_1) + \cdots f(u_{n-1}) (x_n - x_{n-1})
+  \]
+
+  Suppose that there exists exactly one number $I$ such that for every partition $P$ of $[a, b]$,
+  \[
+    L(f, P) \le I \le U(f, P)
+  \]
+  Then we say $f$ is \textbf{integrable} on $[a, b]$ and we call $I$, the definite integral of $f$ on $[a,b]$ and write
+  \[
+    I = \int_a^b f(x) dx.
+  \]
+\end{definition}
+Let $R$ be the region bounded by the graph of $f(x)$, the x-axis and the lines $x=a$ and $x=b$. If $f(x) \ge 0$ on $[a, b]$ then
+\[
+  \text{Area(R)} = \int_a^b f(x) dx
+\]
+If $f(x) \le 0$ on $[a, b]$ then
+\[
+  \text{Area(R)} = -\int_a^b f(x) dx
+\]
+
+In general $\int_a^b f(x)$ is the area of the part of $R$ lying above the x-axis minus the area of the part below the x-axis.
+
+\begin{figure}[H]
+  \centering
+  \input{figures/5-1-definite-integral.tikz}
+  \caption{ $\int_a^b f(x) dx = A_1 - A_2$}
+\end{figure}
+
+Here the variable $x$ is a dummy variable. Replacing $x$ by any other symbol does not change value of the integral. The function $f$ is known as \textbf{integrand}. $dx$ is differential of x and  if an integrand depends on more than one variable it tells which one is the variable of integration.
+
+In the first example, we showed that
+\[
+  \int_0^2 (x+1) dx = 4.
+\]
+
+Which functions are integrable?
+\begin{theorem}
+  If $f$ is continuous on $[a, b]$ then $f$ is integrable.
+\end{theorem}
+Piecewise continuous functions are also integrable.
+
+\subsection*{Properties of Definite Integral}
+The following properties are easy consequences of the definition of definite integral.
+\begin{theorem}
+  Let $f$ and $g$ be integrable on an interval containing the points $a$, $b$ and $c$.
+  \begin{enumerate}
+    \item $\int_a^a f(x) dx = 0$.
+    \item We can define $\int_a^b f(x) dx$ when $a>b$. In this case $x_0 = a > x_1 > \cdots x_n = b$. It is easy to see that
+    \[
+      \int_a^b f(x) dx = - \int_b^a f(x) dx.
+    \]
+    \item If $A$ and $B$ are constants then
+    \[
+      \int_a^b (A f(x) + B g(x)) dx =
+      A \int_a^b f(x)dx + B \int_a^b g(x)dx.
+    \]
+    \item
+    \[
+      \int_a^b f(x) dx + \int_b^c f(x) dx =
+      \int_a^c f(x) dx.
+    \]
+    \item If $a \le b$ and $f(x) \le g(x)$ then
+    \[
+      \int_a^b f(x) dx \le \int_a^b g(x) dx
+    \]
+    \item If $f$ is an odd function then
+    \[
+      \int_{-a}^a f(x) dx = 0
+    \]
+    \item If $f$ is an even function then
+    \[
+      \int_{-a}^a f(x) dx = \int_0^a f(x) dx
+    \]
+  \end{enumerate}
+\end{theorem}
+
+\begin{example}
+  Show that $\int_{a}^b c dx =c(b-a)$ and $\int_a^b x dx = \frac{(b^2 - a^2)}{2}$ interpreting the integrals as areas.
+\end{example}
+
+\begin{example}
+  Using the properties of the integral, compute
+  \[
+    \int_{-2}^2 (3+5x) dx
+  \]
+\end{example}
+
+\begin{example}
+  Compute $\int_{-3}^3 \sqrt{9 - x^2}$.
+\end{example}
+\begin{solution}
+  This is the area of the semicircle with radius $3$ and center $(0,0)$. The answer is $\frac{9 \pi}{2}$.
+\end{solution}
+\end{document}
