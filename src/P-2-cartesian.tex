@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 
@@ -56,6 +56,8 @@
   \subsection*{Equations of Lines}
   For any two points $(x_1, y_1)$ and $(x_2, y_2)$ on a non-vertical line $L$, the quantity $m=\dfrac{y_2-y_1}{x_2-x_1}$ is constant and is called the \textbf{slope} of the line $L$.
 
+  A line is increasing if $m>0$, decreasing if $m<0$ and horizontal if $m=0$. If a line is vertical then its slope is undefined.
+
   Let $L$ be a nonvertical line. Let $m$ be the slope of $L$ and $(x_1, y_1)$ be the coordinates of a point on $L$. If $(x,y)$ is another point on $L$, then
   \[
     \frac{y-y_1}{x-x_1} = m
@@ -68,13 +70,17 @@
 
   All points on a \textbf{vertical line} have their $x$ coordinate equal to a constant $a$. So the equation of a vertical line is $x=a$. \textbf{Horizontal lines} have equations of the form $y=a$.
 
-  \textbf{y-intercept} of a nonvertical line $L$ is the $y$-coordinate of the point where $L$ intersects the y-axis. \textbf{x-intercept} of a nonhorizontal is defined similarly.
+  \begin{minipage}{0.5\textwidth}
+    \textbf{y-intercept} of a nonvertical line $L$ is the $y$-coordinate of the point where $L$ intersects the y-axis. \textbf{x-intercept} of a nonhorizontal is defined similarly.
+  \end{minipage}%
+  \begin{minipage}{0.5\textwidth}
+    \begin{figure}[H]
+      \centering
+      \input{figures/P-2-xyintercept.tikz}
+      \caption{a is the x-intercept, b is the y-intercept.}
+    \end{figure}
+  \end{minipage}
 
-  \begin{figure}[H]
-    \centering
-    \input{figures/P-2-xyintercept.tikz}
-    \caption{a is the x-intercept, b is the y-intercept.}
-  \end{figure}
   \begin{example}
     Find an equation of the line through the points $(1,-1)$ and $(3,5)$. Draw the line. Find the x and y intercepts.
   \end{example}
@@ -91,22 +97,24 @@
   We call two lines \textbf{parallel} if their slopes are equal. We call two lines \textbf{perpendicular} if they intersect at right angles ($90^{\circ}$).
 
   \begin{theorem}
-    Two nonvertical lines with slopes $m_1$ and $m_2$ are perpendicular if and only if $m_1 m_2 = -1$.
+    Two nonvertical lines with slopes $m_{L_1}$ and $m_{L_2}$ are perpendicular if and only if $m_{L_1} m_{L_2} = -1$.
   \end{theorem}
 
-  \begin{proof}
-    \begin{figure}[H]
-      \centering
-      \input{figures/P2-perpLines.tikz}
-    \end{figure}
-    Use the similarity of the triangles ABC and DAC to get
-    \[
-      \frac{\abs{BC}}{\abs{AC}} = \frac{\abs{AC}}{\abs{CD}} \implies
-      \frac{\abs{BC}\abs{CD}}{\abs{AC}^2} = 1
-    \]
-    Slope of $L_1$ ($m_1$) is $\abs{BC}/\abs{AC}=1$ and slope of $L_2$ ($m_2$) is $-\abs{CD}/\abs{AC}$. So $m_1 m_2 = -1$.
-  \end{proof}
-
+    \begin{minipage}{0.5\textwidth}
+      \begin{proof}
+        Use the similarity of the triangles ABC and DAC to get
+        \[
+          m_{L_1} = \frac{\abs{BC}}{\abs{AC}} = \frac{\abs{AC}}{\abs{CD}} = -\frac{1}{m_{L_2}} \implies
+          m_{L_1}m_{L_2} = 1
+        \]
+      \end{proof}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+      \begin{figure}[H]
+        \centering
+        \input{figures/P2-perpLines.tikz}
+      \end{figure}
+    \end{minipage}
 
   \begin{example}
     Find an equation of the line through $(1, -2) $ that is parallel to the line $L$ with equation $3x-2y=1$.

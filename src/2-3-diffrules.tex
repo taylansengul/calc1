@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
   Differentiability is stronger than continuity.
@@ -71,6 +71,16 @@
       (f g)'(x) = f'(x) g(x) + f(x) g'(x).
     \]
   \end{theorem}
+  \begin{proof}
+     \[
+       \begin{split}
+        (fg)'(x) = & \lim_{h \to 0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h} =
+        \lim_{h \to 0} \frac{\left( f(x+h)-f(x) \right)g(x+h) + f(x)\left( g(x+h) -g(x) \right)}{h} \\
+        = & \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \lim_{h \to 0 }g(x+h) +
+        \lim_{h \to 0} f(x) \lim_{h \to 0} \frac{g(x+h) -g(x) }{h}
+       \end{split}
+     \]
+  \end{proof}
 
   \begin{example}
     Find the derivative of $f(x) = (x^2+x+1)(2x + \frac{1}{x})$.

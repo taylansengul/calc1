@@ -1,14 +1,74 @@
 \documentclass[12pt]{memoir}
+\setcounter{chapter}{-1}
+\chapterstyle{bianchi}
+
 \usepackage{subfiles} % to use subfiles
 \usepackage[top=2.5cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry}
-\usepackage{taylanmacros}
 \usepackage{fourier}
 \usepackage{multicol}
 \usepackage{sidecap}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{pgfplots}
+\usepackage{multicol}
 \pgfplotsset{compat=1.12}
-\chapterstyle{bianchi}
+
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage{hyperref}
+\usepackage{bigints} % for big integrals
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{float} % to force figure placement in text. use the [H] option in the figure.
+\usepackage{graphicx}
+\graphicspath{{./figures/}}
+
+\usepackage{tikz}
+\usetikzlibrary{shadows}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations}
+\usetikzlibrary{patterns}
 \usetikzlibrary{shapes.geometric,fit} % used in P-4-functions.tex
-\usepgfplotslibrary{fillbetween} %  5-2-ex2.tikz
+\usepgfplotslibrary{fillbetween} %  5-4-ex2.tikz
+\tikzset{>=stealth} %% makes all arrows the same
+\colorlet{penColor}{green!50!black} % Color of a curve in a plot
+\colorlet{background}{Apricot!7} % Color of the page
+\colorlet{gridColor}{gray!30} % Color of grid in a plot
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+
+% Colors
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+% Operators
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}
+\newcommand{\inpr}[2]{\langle #1, #2 \rangle}
+\renewcommand\Re{\operatorname{Re}}
+\renewcommand\Im{\operatorname{Im}}
+
+% ENVIRONMENTS
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{exercise}{Exercises}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{proposition}{Proposition}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+
 \title{Calculus I Lecture Notes}
 \author{Taylan Şengül}
 

@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 
@@ -62,16 +62,16 @@ Compute the following integrals.
 Let $2 x^2 = u$ then $4x dx = du$.
 \[
   I =
-  \frac{1}{4} \int \sin u du= 
-  -\frac{\cos u}{4} + C = 
+  \frac{1}{4} \int \sin u du=
+  -\frac{\cos u}{4} + C =
   -\frac{\cos 2x^2}{4} + C
 \]
 \item $I = \displaystyle \int \sec^2(3x+2) dx$
 
 Let $3x+2 = u$ then $3dx = du$.
 \[
-  I = \int \sec^2 u \frac{du}{3} = 
-  \frac{\tan u}{3} + C = 
+  I = \int \sec^2 u \frac{du}{3} =
+  \frac{\tan u}{3} + C =
   \frac{1}{3}\tan(3x+2) + C
 \]
 \item $I = \displaystyle \int \frac{x}{(x-4)^3} dx$
@@ -115,5 +115,37 @@ Let $u = \sec x + \tan x$, then
 \]
 \end{enumerate}
 \end{example}
+
+\rule{\textwidth}{1pt}
+\begin{multicols}{2}
+\begin{exercise}
+~\\
+  \begin{enumerate}
+    \item $\bigint x e^{x^2} dx$
+
+    Answer: $\frac{1}{2} e^{x^2} + C$
+
+    \item $\bigint_0^{2\pi} \sin^2 x \cos^2 x dx$
+
+    Answer: $\frac{\pi}{4}$
+
+    \item $\bigint_e^{e^2} \dfrac{dt}{t \ln t}$,
+
+    Answer: $\ln 2$
+
+    \item $\bigint \dfrac{dx}{e^x + 1}$
+
+    Answer: $x - \ln(1+e^x) + C$.
+
+    \item $\bigint \dfrac{x^2}{2 + x^6}$
+
+    Answer: $\frac{1}{3\sqrt{2}} \arctan(x^3/\sqrt{2}) + C$
+
+    \item $\bigint \sec^5x\tan x dx$
+
+    Answer: $\frac{1}{5}\sec^5x + C$
+  \end{enumerate}
+\end{exercise}
+\end{multicols}
 
 \end{document}

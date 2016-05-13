@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
   \textbf{Problem:} Find a straight line $L$ that is tangent to a curve $C$ at a point $P$.
@@ -19,7 +19,7 @@
   \begin{definition}
     Suppose $f$ is cts at $x=x_0$ and
     \[
-      \Lim{h}{0} \dfrac{f(x_0 + h) - f(x_0)}{h} = m
+      \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{h} = m
     \]
     If the limit exists, then the line with equation
     \[
@@ -36,7 +36,7 @@
   \begin{solution}
     The slope is
     \[
-      m = \Lim{h}{0} \dfrac{f(1+h)-f(1)}{h} = 2.
+      m = \lim_{h \to 0} \dfrac{f(1+h)-f(1)}{h} = 2.
     \]
     And an equation is $y=2(x-1)+1$.
   \end{solution}
@@ -46,7 +46,7 @@
   \begin{solution}
     The slope of the tangent line is
     \[
-      m = \Lim{h}{0} \dfrac{h^{1/3}}{h} = \infty.
+      m = \lim_{h \to 0} \dfrac{h^{1/3}}{h} = \infty.
     \]
     So the tangent line is a vertical line $x=0$ (in other words the y-axis).
     \begin{figure}[H]

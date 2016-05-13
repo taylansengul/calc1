@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 
@@ -34,7 +34,7 @@ $x=a$, then that function has a limit at $x=a$ if the left- and
 right-limits are equal.
 
 \begin{example}
-    Show that $\Lim{x}{0^+} \sqrt{x} = 0$.
+    Show that $\lim_{x \to 0+} \sqrt{x} = 0$.
 
     Solution: Choose $\delta = \epsilon^2$.
 \end{example}
@@ -83,11 +83,11 @@ What happens to $f(x)$ as $x$ becomes ``larger and larger'' and ask?
 
 \subsection*{Infinite Limits}
 \begin{definition}
-    $\Lim{x}{a} f(x) = \infty$ if for every $B>0$ there exists $\delta>0$ such that $f(x) > B$ whenever $0<\abs{x-a}<\delta$.
+    $\lim_{x \to a} f(x) = \infty$ if for every $B>0$ there exists $\delta>0$ such that $f(x) > B$ whenever $0<\abs{x-a}<\delta$.
 \end{definition}
 
 \begin{example}
-    Verify that $\Lim{x}{0} \frac{1}{x^2} = \infty$.
+    Verify that $\lim_{x \to 0} \frac{1}{x^2} = \infty$.
 
     Solution: Choose $\delta = 1/\sqrt{B}$.
 \end{example}

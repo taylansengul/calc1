@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 
@@ -136,17 +136,12 @@
 
   \begin{example}
     \[
-      \lim_{x \to -\infty} \sqrt{x^2+x} - x =
-      \lim_{x \to -\infty} \frac{(\sqrt{x^2+x} - x)(\sqrt{x^2+x} + x)}{\sqrt{x^2+x} + x} =
-      \lim_{x \to -\infty} \frac{x}{\abs{x}\sqrt{1+\frac{1}{x}} + x} =
-      \lim_{x \to -\infty} \frac{1}{-\sqrt{1+\frac{1}{x}} + 1}
-    \]
-
-    If $x<0$ then $\sqrt{1+\frac{1}{x}}<1$ and $-\sqrt{1+\frac{1}{x}} + 1 >0$. Hence the denominator is positive and approaches to zero. So
-    \[
-      \lim_{x \to -\infty} \frac{1}{-\sqrt{1+\frac{1}{x}} + 1} = \infty.
+      \lim_{x \to -\infty} \sqrt{x^2+x} - x
     \]
   \end{example}
+  \begin{solution}
+    Both $-x$ and $\sqrt{x^2+x}$ grow large as $x\to -\infty$. So the limit is $\infty$.
+  \end{solution}
 
   \subsection*{Behaviour of Polynomials at Infinity}
   \begin{example}
@@ -165,6 +160,10 @@
     If $P(x) = a_n x^n + \cdots + a_0$ is a polynomial then
     \[
       \lim_{x \to \pm \infty} P(x) = \lim_{x \to \pm \infty} a_n x^n.
+    \]
+    If $Q(x) = b_m x^m + \dots + b_0$ is also a polynomial then
+    \[
+      \lim_{x \to \pm \infty} \frac{P(x)}{Q(x)}= \lim_{x \to \pm \infty} \frac{a_n x^n}{b_m x^m}
     \]
   \end{theorem}
 

@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 	Let $f(x) = \sqrt{4 - x^2}$. Domain of $f$ is $[-2, 2]$.
@@ -53,19 +53,20 @@ Note that $f$ is discontinuous at $c$ if
 	\caption{f is discontinuous at $a$ because of (ii) and discontinuous at $b$ because of (i). f is continuous at $c$.}
 \end{figure}
 
+\begin{definition}
+	$f$ is called a continuous function if $f$ is continuous at every pt of its domain.
+\end{definition}
+
 \begin{example}
-	$f(x) = \sqrt{4 - x^2}$ is continuous at every point of its domain.
+	$f(x) = \sqrt{4 - x^2}$ is continuous at every point of its domain. So it is a continuous function.
 	\begin{figure}[H]
 		\centering
 		\input{figures/1-3-semiCircle.tikz}
 	\end{figure}
 \end{example}
 
-\begin{definition}
-	$f$ is called a continuous function if $f$ is continuous at every pt of its domain.
-\end{definition}
 
-According to this definition $f(x) = \frac{1}{x}$ is continuous!!! $0$ is not in domain of $f$. So we say $f$ is undefined rather than discontinuous at $0$.
+According to this definition $f(x) = \frac{1}{x}$ is also continuous!!! $0$ is not in domain of $f$. So we say $f$ is undefined rather than discontinuous at $0$.
 
 \textbf{There are lots of continuous functions:}
 \begin{itemize}
@@ -175,8 +176,7 @@ is continuous for all $x$.
 	\]
 	Prove the continuity of $\cos x$ as an exercise.
 \end{proof}
-\subsection*{Continuous Functions on Closed Intervals [a, b] are bounded}
-We say a function $f$ is \textbf{bounded} if there exists $M$ and $N$ such that $M \le f(x) \le N$ for all $x$ in the domain of $f$.
+\subsection*{Extreme Value Theorem}
 
 \begin{theorem}
 	If $f$ is continuous on the closed interval $[a, b]$ then there exist numbers $p$ and $q$ in the interval $[a,b]$ s.t.
@@ -187,9 +187,9 @@ We say a function $f$ is \textbf{bounded} if there exists $M$ and $N$ such that 
 	$f(p)$ is called the \textbf{absolute minimum value} and $f(q)$ is called the \textbf{absolute maximum value}.
 \end{theorem}
 
-This theorem is an existence theorem. It only guarantees the existence of $p$ and $q$ but does not tell how to actually find them.
+Extreme value theorem is an existence theorem. It only guarantees the existence of $p$ and $q$ but does not tell how to actually find them.
 
-Also the theorem says that continuous functions on closed intervals must be bounded.
+We say a function $f$ is \textbf{bounded} if there exists $M$ and $N$ such that $M \le f(x) \le N$ for all $x$ in the domain of $f$. Extreme value theorem says that continuous functions on closed intervals must be bounded.
 
 \begin{example}
 	The conclusions of the theorem may fail if the function $f$ is not continuous or the interval is not closed.
@@ -216,11 +216,12 @@ Also the theorem says that continuous functions on closed intervals must be boun
 		\quad
 		\begin{subfigure}[t]{0.4\textwidth}
 			\input{figures/1-3-ctsFuncsOnClosedInts3.tikz}
-			\caption{This function is defined on the closed interval $[0,1]$, discontinuous, bounded, has no minimum but no maximum.}
+			\caption{This function is defined on the closed interval $[0,1]$, discontinuous, bounded, has no minimum and no maximum.}
 		\end{subfigure}
 	\end{figure}
 \end{example}
 
+\subsection*{Intermediate Value Theorem}
 \begin{theorem}[Intermediate Value Theorem]
 	If $f$ is continuous on $[a, b]$ and if $s$ is between $f(a)$ and $f(b)$ then there exists $c$ in $[a, b]$ s.t. $f(c) = s$.
 \end{theorem}
@@ -231,6 +232,9 @@ Also the theorem says that continuous functions on closed intervals must be boun
 	\caption{Illustration of the intermediate value theorem.}
 \end{figure}
 
+\begin{example}
+	If a child grows from 1 m to 1.5 m between the ages of two and six years, then, at some time between two and six years of age, the child's height must have been 1.23 m.
+\end{example}
 In particular, a continuous function on a closed interval takes every value between its minimum $m$ and maximum $M$. Hence its range is a closed interval $[m, M]$.
 \begin{example}
 	Show that the equation $x^3 - x - 1 = 0$ has a solution in the interval $[1, 2]$.

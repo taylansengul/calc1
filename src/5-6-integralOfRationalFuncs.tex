@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 
@@ -8,7 +8,7 @@ In this section we are concerned with integrals of the form
 \]
 where $P(x)$ and $Q(x)$ are both polynomials.
 
-We will look at methods to deal with such integrals when deg$(P(x)) <$deg$(Q(x))$. 
+We will look at methods to deal with such integrals when deg$(P(x)) <$deg$(Q(x))$.
 
 \subsection*{The case deg$(Q(x)) = 1$ and deg$(P(x)) = 0$}
 \begin{example}
@@ -38,7 +38,7 @@ If $Q(x) = a x^2 + bx + c$ has no real roots, we have to \textbf{complete to squ
 	\]
 	Letting $u = (x+3/2)$ and $du = dx$,
 	\[
-		\int \frac{dx}{(x + \frac{3}{2})^2 + \frac{3}{4}} = 
+		\int \frac{dx}{(x + \frac{3}{2})^2 + \frac{3}{4}} =
 		\int \frac{du}{u^2 + \frac{3}{4}} = \frac{2}{\sqrt{3}} \tan^{-1} \frac{2x}{\sqrt{3}}  + C
 	\]
 	The last part follows from the last example.
@@ -125,5 +125,41 @@ If deg$(P(x)) \ge $deg$(Q(x))$ then we divide $P(x)$ to $Q(x)$ and get a rationa
 		\frac{x^3+3x^2}{x^2+1} = \frac{x^2}{2} + 3x - \frac{1}{2} \ln(x^2+1) - 3 \tan^{-1}x + C
 	\]
 \end{solution}
+
+\rule{\textwidth}{1pt}
+\begin{multicols}{2}
+\begin{exercise}
+~\\
+	\begin{enumerate}
+		\item $\bigint \dfrac{2 dx}{5 - 4x} dx$,
+
+		Answer: $-\frac{1}{2} \ln\abs{5-4x} + C$
+
+		\item $\bigint \dfrac{2x+2}{x^2 + 4} dx$
+
+		Answer: $\arctan(x/2) + \ln\abs{4+x^2} + C$
+
+		\item $\bigint \dfrac{x^2}{x^2 + x - 2} dx$
+
+		Answer: $x + \frac{1}{3} \ln\abs{1-x} - \frac{4}{3} \ln\abs{2+x} + C$.
+
+		\item $\bigint \dfrac{x^2 dx}{(x^2-1)(x^2-4)}$
+
+		Answer: $\frac{1}{6} (-\ln\abs{1-x}+ 2 \ln \abs{2-x} + \ln\abs{1+x} -2 \ln\abs{2+x}) + C$
+
+		\item $\bigint \dfrac{dx}{x^4 - 4 x^3}$
+
+		Answer: $\frac{1}{8x^2} + \frac{1}{16x} + \frac{1}{64}\ln\abs{4-x} - \frac{1}{64} \ln\abs{x} + C$
+
+		\item $\bigint \dfrac{1}{x^3+9x} dx$
+
+		Answer: $\frac{1}{9}\ln\abs{x} - \frac{1}{18} \ln\abs{9+x^2} + C$
+
+		\item $\bigint \dfrac{1}{e^{2x} - 4e^x + 4}$
+
+		Answer: $\frac{1}{4}\left( -\frac{2}{-2+e^x} + x - \ln \abs{2-e^x}\right) + C$
+	\end{enumerate}
+\end{exercise}
+\end{multicols}
 
 \end{document}

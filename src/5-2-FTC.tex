@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 In this section we develop the relation between the integral and the derivative.
@@ -84,46 +84,6 @@ We will use the evaluation symbol
 \end{example}
 
 \begin{example}
-  Find the area of the region lying above the x-axis and under the curve $y=3x-x^2$.
-\end{example}
-\begin{minipage}{0.5\textwidth}
-  \begin{solution}
-    The points where the graph intersects the x-axis are $y=0$ which gives $x=0$, $x=$.
-
-    The area is
-    \[
-      \int_0^3 (3x-x^2) dx = \left. \left( \frac{3}{2}x^2 - \frac{1}{3}x^3 \right) \right\vert_0^3 = \frac{9}{2}.
-    \]
-  \end{solution}
-\end{minipage}%
-\begin{minipage}{0.5\textwidth}
-  \begin{figure}[H]
-    \centering
-    \input{figures/5-2-ex1.tikz}
-  \end{figure}
-\end{minipage}
-
-\begin{example}
-  Find the are under of the region lying above the line $y=1$ and below the curve $y=\frac{5}{x^2+1}$.
-\end{example}
-\begin{minipage}{0.5\textwidth}
-  \begin{solution}
-    The curves $y=1$ and $y=\frac{5}{x^2+1}$ intersect at $x=\pm 2$. The area
-
-    The area is
-    \[
-      \int_{-2}^2 \frac{5}{x^2+1} dx - \int_{-2}^2 1 dx = 5 \tan^{-1}x \mid_0^2 - 4 = 10\tan^.
-    \]
-  \end{solution}
-\end{minipage}%
-\begin{minipage}{0.5\textwidth}
-  \begin{figure}[H]
-    \centering
-    \input{figures/5-2-ex2.tikz}
-  \end{figure}
-\end{minipage}
-
-\begin{example}
   Find the derivatives of the following functions.
   \begin{enumerate}
     \item $F(x) = \bigint_x^3 e^{-t^2} dt$
@@ -150,4 +110,30 @@ In general
 \[
   \frac{d}{dx} \int_{f(x)}^{g(x)} h(t) dt = h(f(x)) f'(x) - h(g(x))g'(x).
 \]
+
+\rule{\textwidth}{1pt}
+\begin{multicols}{2}
+\begin{exercise}
+~\\
+  \begin{enumerate}
+    \item $\frac{d}{dx} \bigint_2^x \frac{\sin t}{t} dt$
+
+    Answer: $\frac{\sin x}{x}$
+
+    \item $\frac{d}{dx} \bigint_{\sin x}^{\cos x} \frac{1}{1-x^2} dx$
+
+    Answer: $\frac{-\sin x}{1-\cos^2 x} - \frac{\cos x}{1-\sin^2 x}$
+
+    \item $\frac{d}{dx} F(\sqrt{x})$, if $F(t) = \bigint_0^t \cos(x^2)dx$
+
+    Answer: $\frac{1}{2\sqrt{x}} \cos(x)$
+
+    \item Find $H'(2)$ if $H(x) = 3x \bigint_4^x^2 e^{\sqrt{t}}dt$
+
+    Answer: $6e^{-2}$
+
+  \end{enumerate}
+\end{exercise}
+\end{multicols}
+
 \end{document}

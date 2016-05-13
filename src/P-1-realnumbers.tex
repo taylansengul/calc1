@@ -1,39 +1,33 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
-The \textbf{integers} are $\mathbb{Z}= \left\{ \dots, -2, -1, 0,1, 2, \dots \right\}$. Some important subsets of the set of integers are:
-\begin{itemize}
-  \item[-] even integers that are of the form $2k$, for some $k\in \mathbb{Z}$,
-  \item[-] odd integers that are of the form $2k+1$, for some $k\in \mathbb{Z}$
-  \item[-] positive and negative integers,
-  \item[-] primes, etc...
-\end{itemize}
 
+The \textbf{integers} are $\mathbb{Z}= \left\{ \dots, -2, -1, 0,1, 2, \dots \right\}$.
 The \textbf{rational numbers} are $\mathbb{Q=}\left\{ \frac{m}{n}:m,n\in \mathbb{Z}\text{ and }n\neq 0\right\}$.
 
 \textit{Pythagoreans thought that all numbers are ratios of integers. The discovery of irrational numbers is said to have shocked them.}
 
 \begin{example}
-$\sqrt{2}$ is not a rational number.
-
-Suppose that it is rational. Then $\sqrt{2}=m/n$, where $m,n\in \mathbb{Z}$ \ and $n\neq 0$. Also assume $m$ and $n$ have no common divisor.
-\[
-  m^{2}/n^{2}=2  \implies m^{2}=2n^{2}
-\]
-Thus $m$ is even and we can write $m=2k$, where $k\in \mathbb{Z}$.
-\[
-  4k^{2}=2n^{2} \implies n^{2}=2k^{2}
-\]
-Thus n is also even. But m and n cannot both be even. Accordingly, there can be no rational number whose square is 2.
+Prove that $\sqrt{2}$ is not a rational number.
 \end{example}
+\begin{solution}
+  Suppose that it is rational. Then $\sqrt{2}=m/n$, where $m,n\in \mathbb{Z}$ \ and $n\neq 0$. Also assume $m$ and $n$ have no common divisor.
+  \[
+    m^{2}/n^{2}=2  \implies m^{2}=2n^{2}
+  \]
+  Thus $m$ is even and we can write $m=2k$, where $k\in \mathbb{Z}$.
+  \[
+    4k^{2}=2n^{2} \implies n^{2}=2k^{2}
+  \]
+  Thus n is also even. But m and n cannot both be even. Accordingly, there can be no rational number whose square is 2.
+\end{solution}
 
-The set of irrational numbers is denoted by $\mathbb{I}$.
-
-The set of real numbers is $\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$.
-
+The set of \textbf{irrational numbers} is denoted by $\mathbb{I}$.
+The set of \textbf{real numbers} is $\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$.
 Note that $\mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$.
 
-The real numbers are ordered such that
+\subsection*{Ordering of Real Numbers}
+If $a,b,c \in \mathbb{R}$ then
 \begin{enumerate}
 \item $a<b \implies a+c<b+c$
 

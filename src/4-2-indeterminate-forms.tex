@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 
@@ -15,6 +15,13 @@ The limit of such an indeterminate form can be any number.
 There are other types of indeterminate forms $[\infty/\infty]$, $[0 \cdot \infty]$, $[\infty - \infty]$, $[0^{\infty}]$, $[\infty^0]$, $[1^{\infty}]$.
 
 Indeterminate forms can usually be brought to the form $[0/0]$ or $[\infty/\infty]$. To evaluate limits of the form $[0/0]$ a very useful method is the following.
+
+Suppose $f(a) = g(a) = 0$, $g'(a) \neq 0$ and $f$, $g$ have continuous derivatives at $x=a$. Then
+\[
+  \lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{\frac{f(x)-f(a)}{x-a}}{\frac{g(x)-g(a)}{x-a}} = \lim_{x \to a} \frac{f'(x)}{g'(x)}
+\]
+
+More generally, we have
 \begin{theorem}[l'Hopital's Rules]
   Suppose that $f$ and $g$ are differentiable on an interval containing $a$. Suppose also that
   $\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0$ and $\lim_{x \to a} \frac{f'(x)}{g'(x)} = L$. Then
@@ -24,7 +31,7 @@ Indeterminate forms can usually be brought to the form $[0/0]$ or $[\infty/\inft
   Similar results hold for $\lim_{x \to a+}$ and $\lim_{x \to a-}$ and for the cases $a= \pm \infty$.
 \end{theorem}
 \begin{proof}
-  Proof follows from generalized mean value theorem.
+  Proof follows from generalized mean value theorem which we did not cover.
 \end{proof}
 
 \texttt{Note that in applying l'Hopital's rule we calculate the quotient of the derivatives, not the derivative of the quotients.}

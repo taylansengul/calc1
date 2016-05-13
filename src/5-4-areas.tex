@@ -1,6 +1,46 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
+\begin{example}
+  Find the area of the region lying above the x-axis and under the curve $y=3x-x^2$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+    The points where the graph intersects the x-axis are $y=0$ which gives $x=0$, $x=$.
+
+    The area is
+    \[
+      \int_0^3 (3x-x^2) dx = \left. \left( \frac{3}{2}x^2 - \frac{1}{3}x^3 \right) \right\vert_0^3 = \frac{9}{2}.
+    \]
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/5-4-ex1.tikz}
+  \end{figure}
+\end{minipage}
+
+\begin{example}
+  Find the area of the region lying above the line $y=1$ and below the curve $y=\frac{5}{x^2+1}$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+    The curves $y=1$ and $y=\frac{5}{x^2+1}$ intersect at $x=\pm 2$. The area
+
+    The area is
+    \[
+      \int_{-2}^2 \frac{5}{x^2+1} dx - \int_{-2}^2 1 dx = 5 \tan^{-1}x \mid_0^2 - 4 = 10\tan^.
+    \]
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+    \centering
+    \input{figures/5-4-ex2.tikz}
+  \end{figure}
+\end{minipage}
+
 Suppose $f(x) \le g(x)$ for $a \le x \le b$. Then the area of the region between these two curves and the lines $x=a$ and $x=b$ is
 \[
 	\text{Area} = \int_a^b (g(x) - f(x)) dx.
@@ -21,12 +61,12 @@ Suppose $f(x) \le g(x)$ for $a \le x \le b$. Then the area of the region between
 			\text{Area} = \int_{-1}^2 \left(4-x^2) - (x^2 - 2x)  \right) dx = 9
 		\]
 
-	\end{solution}  
+	\end{solution}
 \end{minipage}%
 \begin{minipage}{0.5\textwidth}
   \begin{figure}[H]
 	\centering
-	\input{figures/5-4-ex1.tikz}
+	\input{figures/5-4-ex3.tikz}
 \end{figure}
 \end{minipage}
 
@@ -48,7 +88,7 @@ Suppose $f(x) \le g(x)$ for $a \le x \le b$. Then the area of the region between
 \begin{minipage}{0.5\textwidth}
   \begin{figure}[H]
     	\centering
-    	\input{figures/5-4-ex2.tikz}
+    	\input{figures/5-4-ex4.tikz}
    \end{figure}
 \end{minipage}
 
@@ -73,9 +113,35 @@ Suppose $f(x) \le g(x)$ for $a \le x \le b$. Then the area of the region between
 \begin{minipage}{0.5\textwidth}
   \begin{figure}[H]
     	\centering
-    	\input{figures/5-4-ex3.tikz}
+    	\input{figures/5-4-ex5.tikz}
    \end{figure}
 \end{minipage}
 
+\rule{\textwidth}{1pt}
+\begin{multicols}{2}
+\begin{exercise}
+~\\
+  \begin{enumerate}
+    \item Find the area bounded by the curves $y=x^2-2x$, and $y=3x-x^2$.
 
+    Answer: $\frac{125}{24}$
+
+    \item Find the area bounded by the curves $y=x^3$, and $y=x$ in the region $x \ge 0$.
+
+    Answer: $\frac{1}{4}$.
+
+    \item Find the area bounded by $y= \sin x$ and $y= \cos x$ between two consecutive intersections of these curves.
+
+    Answer: $2\sqrt{2}$
+
+    \item Find the area bounded by the curves $y=\frac{1}{x}$ and $2x+2y = 5$.
+
+    Answer: $\frac{15}{8} - \ln4$
+
+    \item Find the area bounded by the curves $x-y=7$ and $x=2y^2-y+3$.
+
+    Answer: $9$
+  \end{enumerate}
+\end{exercise}
+\end{multicols}
 \end{document}

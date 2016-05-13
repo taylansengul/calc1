@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 \usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
 
 \begin{document}
@@ -20,7 +20,7 @@
  Let $f: \mathbb{R} \to \mathbb{R}$. By definition of a function any vertical line intersects the graph at one point. $f$ is 1-1 if its graph is never intersected by any horizontal line more than once.
 
  \begin{theorem}
-  Increasing or decreasing functions are 1-1.
+  Increasing or decreasing functions are 1-1. Thus if $f'(x)>0$ for all $x$ in an interval $I$, then $f$ is $1-1$ on $I$. Similarly if $f'(x)<0$ for all $x$ in $I$ then $f$ is $1-1$ on $I$.
 \end{theorem}
 
 \begin{definition}
@@ -36,13 +36,17 @@ Given $y=f(x)$, to find the inverse function, we solve $x$ in terms of $y$.
   Show that $f(x) = 2x -1$ is one-to-one and find its inverse $f^{-1}(x)$.
 \end{example}
 \begin{solution}
-  Since $f'(x) = 2 >0$, $f$ is increasing on $\mathbb{R}$ and therefore one-to-one for all $x$. Let $y = f^{-1}(x)$, solve for $y$ to get
+  Since $f'(x) = 2 >0$, $f$ is increasing on $\mathbb{R}$ and therefore one-to-one for all $x$. Solve $y=f(x) = 2x-1$ for $x$, to get
+  \[
+    x = \frac{y+1}{2}
+  \]
+  Then $x = f^{-1}(y) = \frac{y+1}{2}$ or
   \[
     f^{-1}(x) = \frac{x+1}{2}.
   \]
 \end{solution}
 
-Usually, we can not solve $y=f(x)$, for example for $y=x+x^3$.
+Usually, we can not solve $y=f(x)$ for $x$. For example $y=x+x^3$ is 1-1 (check) but it is not possible solve it for $x$.
 
 \subsection*{Properties of inverse functions}
 \begin{enumerate}

@@ -1,9 +1,11 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
-  A \textbf{function} $f$ on a set $D$ into a set $R$ is a rule that assigns a unique element $f(x)$ in $R$ to each element $x$ in $D$.
+  A \textbf{function} $f$ on a set $D$ (called the \textbf{domain}) into a set $R$ (called the target or codomain) is a rule that assigns a unique element $f(x)$ in $R$ to \textit{each} element $x$ in $D$.
 
-  $D$ is called the \textbf{domain} of $f$. $R$ is called the target or \textbf{codomain} of $f$. The \textbf{range} of $f$ is a subset of $R$ containing of all possible values $f(x)$.
+  The \textbf{range} of $f$ is a subset of $R$ containing of all possible values $f(x)$. The range set is not necessarily the same as the target set.
+
+  So technically a function is a triple $(f, D, R)$. However, the triple notation is too cumbersome and we will usually call a function by the label of its rule $f$.
 
   \begin{figure}[H]
     \centering
@@ -21,7 +23,9 @@
     Define a function on the set of all real numbers by $f(x)=x^2+1$. Find $f(0), \, f(2), \, f(x+2)$.
   \end{example}
 
-  When defining a function, its domain should be defined. For example,
+  In this class, the target set $R$ of a function will almost always be the set of real numbers $\mathbb{R}$. Such functions are called real valued functions.
+
+  In this class, the domain set will always be a subset of real numbers. When defining a function, its domain should be defined. For example,
   \[
     f(x) = \frac{1}{x}, \qquad x > 0
   \]
@@ -30,21 +34,14 @@
     f(x) = \frac{1}{x}, \qquad x < 0.
   \]
 
-  If we do not specify the domain of a function $f$, then the \textbf{domain convention} is to assume that the domain of $f$ is the set of all real numbers for which $f$ is defined.
+  However we will usually skip writing the domain of a function. When we do this, the \textbf{domain convention} is to assume that the domain of a function is the set of all real numbers for which its rule is defined.
 
-  So if we write
+  The domain of the function
   \[
     f(x)=\frac{1}{x},
   \]
-  we are assuming $f$ is defined for all real numbers except $0$.
+  is the set of all real numbers except $0$.
 
-
-  \begin{example}
-    Find the domain of $f(x) = \sqrt{2-x}$.
-  \end{example}
-  \begin{solution}
-    Its domain is all $x$ for which $2-x \ge 0$, i.e. the interval $(-\infty, 2]$.
-  \end{solution}
 
   \begin{example}
     Find the domain of $f(x) = \dfrac{1}{x^2 - x}$.
@@ -93,6 +90,13 @@ The square root function $f(x) = \sqrt{x}$ has domain $[0, \infty)$ and takes $x
   \centering
   \input{figures/P4-sqrt.tikz}
 \end{figure}
+
+\begin{example}
+  Find the domain of $f(x) = \sqrt{2-x}$.
+\end{example}
+\begin{solution}
+  Its domain is all $x$ for which $2-x \ge 0$, i.e. the interval $(-\infty, 2]$.
+\end{solution}
 
 \subsubsection*{The absolute value function}
 The absolute value function is

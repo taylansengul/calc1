@@ -1,18 +1,16 @@
 \begin{tikzpicture}
-\begin{axis}[axis lines=middle,
-            xmax = 2.5, ymax = 2,
-            xlabel=$x$,
-            ylabel=$y$,
-            enlargelimits,
-            ytick=\empty,
-            xtick={0,1}]
-\addplot[name path=F,blue,domain={0:1.2}] {x^2} node[pos=1, above]{$y=x^2$};
-
-\addplot[name path=G,domain={0:1.5}, samples=100] {sqrt(x)} node[pos=1, below]{$y=\sqrt{x}$};
-
-\addplot[pattern=north west lines, pattern color=brown!50]fill between[of=F and G, soft clip={domain=0:1}]
-;
-\draw[thin, dashed] (axis cs: 1, 0) -- (axis cs: 1,1);
-
-\end{axis}
+    \begin{axis}[
+    xmin=-4, xmax= 4, ymin=0, ymax=6,
+    xlabel=$x$, ylabel=$y$,
+    xtick={-2, 2},
+    yticklabels={,,},
+    title={$y=\frac{5}{x^2+1}$},
+    axis lines=middle]
+    \addplot[name path=F, domain=-3:3, samples=100]  {5/(x^2+1)};
+    \addplot[name path=G, domain=-3:3]  {1};
+    \addplot[pattern=north west lines, pattern color=brown!50] fill between[of=F and G, soft clip={domain=-2:2}];
+    \node[below left] at (axis cs: 0,1) {$1$};
+    \draw[thin, dashed] (axis cs: -2, 0) -- (axis cs: -2,1);
+    \draw[thin, dashed] (axis cs: 2, 0) -- (axis cs: 2,1);
+    \end{axis}
 \end{tikzpicture}

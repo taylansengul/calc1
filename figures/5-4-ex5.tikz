@@ -1,0 +1,18 @@
+
+\begin{tikzpicture}
+    \begin{axis}[
+            axis x line=middle,
+            axis y line=middle,
+            xlabel={$x$},
+            ylabel={$y$},
+            axis line style={<->},
+            xmin=-13,xmax=5,
+            ymin=-4,ymax=6,
+            ytick={-3,4},
+            samples=100,
+        ]
+        \addplot[name path=F,domain=-4:4]({x^2-12},{x});
+        \addplot[name path=G,domain=-5:5] ({x},{x});
+        \addplot[pattern=north west lines, pattern color=brown!50] fill between[of=F and G, soft clip={domain y=-3:4}, reverse=true];
+    \end{axis}
+\end{tikzpicture}

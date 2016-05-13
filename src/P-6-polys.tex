@@ -1,4 +1,4 @@
-\documentclass[../main.tex]{subfiles}
+\documentclass[../calc1-main.tex]{subfiles}
 
 \begin{document}
 
@@ -14,13 +14,19 @@
   Write polynomials of degree 0, 1 and 2.
 \end{example}
 
-Just as the quotient of two integers is called a rational number, the quotient of two polynomials is called a \textbf{rational function}. Give an example.
+Just as the quotient of two integers is called a rational number, the quotient of two polynomials is called a \textbf{rational function}. For example $f(x) = \frac{1-x}{3x^2 + 2x + 1}$ is a rational function.
 
-Let $A_m$ be a polynomial of degree $m$, $B_n$ be a polynomial of degree $n$ with $m\ge n$. Then there are polynomial $Q_{m-n}$ of degree $m-n$, $R_k$ of degree $k<n$ such that
-\[
-  \frac{A_m}{B_n} = Q_{m-n} + \frac{R_k}{B_n}.
-\]
-The quotient $Q_{m-n}$ and the remainder $R_k$ can be calculated by the ``long division''.
+\begin{theorem}[Euclidean Division]
+  Let $p(x)$ (the dividend) of degree $m$ and $d(x)$ (the divisor) of degree $n$ be two polynomials with $m\ge n$.
+  Then there are polynomials $q(x)$ (the quotient) of degree $m-n$, and $r(x)$ (the remainder) with $r(x) = 0$ or deg($r(x)$)$=k<n$ such that
+  \[
+    p(x) = d(x) q(x) + r(x)
+  \]
+\end{theorem}
+\begin{proof}
+  The proof is the standard ``long division'' algorithm.
+\end{proof}
+
 \begin{example}
   Using the long division algorithm, show that
   \[
@@ -28,25 +34,34 @@ The quotient $Q_{m-n}$ and the remainder $R_k$ can be calculated by the ``long d
   \]
 \end{example}
 
-If $P$ is a polynomial and $P(r) = 0$ then $r$ is called a \textbf{root} of $P$.
+If $p$ is a polynomial and $p(r) = 0$ then $r$ is called a \textbf{root} of $p$.
 
-The Fundamental Theorem of Algebra says every polynomial of degree greater than 0 must have a root. But these roots may be complex.
+\begin{theorem}[The Fundamental Theorem of Algebra]
+   Every non-constant polynomial must have a root which may be a complex number.
+\end{theorem}
+
 \begin{example}
   $x^2+1$ has no real roots. Its roots are $i=\sqrt{-1}$ and $-i$.
 \end{example}
 
 \begin{theorem}
-  If r is a root of the polynomial $P$ then
+  If r is a root of the polynomial $p$ then
   \[
-    P(x) = (x-r) Q(x),
+    p(x) = (x-r) q(x),
   \]
-  for some polynomial $Q$ whose degree is 1 less than $P$.
+  for some polynomial $q$ whose degree is 1 less than $p$.
 \end{theorem}
 
-The polynomial $x(x-7)^3$ has 4 roots: 0 and the other three are each equal to 7. We say that $7$ is a root of \textbf{multiplicity} $3$.
-
-By the Fundamental Theorem of Algebra and the above theorem, every polynomial of degree $n$ has exactly $n$ (not necessarily distinct) roots.
-
+\begin{theorem}
+  Every polynomial of degree $n$ has exactly $n$ (not necessarily distinct) roots.
+  \[
+    p(x) = (x-x_1)^{m_1}(x-x_2)^{m_2}\cdots(x-x_k)^{m_k}
+  \]
+  with $m_1 + m_2 + \cdots + m_k = \text{deg}(p(x))$.
+\end{theorem}
+\begin{proof}
+  Proof follows from the Fundamental Theorem of Algebra and the above theorem.
+\end{proof}
 \subsection*{Roots of Quadratic Polynomials}
 To obtain the solutions of
 \[
