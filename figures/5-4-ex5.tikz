@@ -5,14 +5,14 @@
             axis y line=middle,
             xlabel={$x$},
             ylabel={$y$},
-            axis line style={<->},
-            xmin=-13,xmax=5,
-            ymin=-4,ymax=6,
             ytick={-3,4},
+            xticklabels={,,},
             samples=100,
+            width=8cm
         ]
-        \addplot[name path=F,domain=-4:4]({x^2-12},{x});
-        \addplot[name path=G,domain=-5:5] ({x},{x});
+        \addplot[name path=F,domain=-4:4]({x^2-12},{x}) node[pos=0.7, above left] {$x=y^2-12$};
+
+        \addplot[name path=G,domain=-5:5] {x} node[pos=0, above left] {$y=x$};
         \addplot[pattern=north west lines, pattern color=brown!50] fill between[of=F and G, soft clip={domain y=-3:4}, reverse=true];
     \end{axis}
 \end{tikzpicture}

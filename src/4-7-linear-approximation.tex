@@ -28,7 +28,7 @@ We say that $L$ approximates $f$ near $x=a$ and write $f(x) \approx L(x)$.
 \end{solution}
 
 \begin{example}
-  Approximate $\cos \pi/5 = \cos 36^{\deg}$ using the linearization of $\cos x$ at $x=\pi/6$.
+  Approximate $\cos \pi/5 = \cos 36^{\circ}$ using the linearization of $\cos x$ at $x=\pi/6$.
 \end{example}
 
 \begin{solution}
@@ -49,4 +49,22 @@ where $s$ is some number between $a$ and $x$. (The proof depends on the generali
 Since we do not know $s$, we have to choose $f''(s)$ to be largest (in absolute value) possible value, to get the maximum error.
 
 So for the previous example, $f''(x) = -\sin x$, $a=\pi/6$, $x=\pi/5$, $\pi/6<s<\pi/5$. Note that $f''(s) \le 1$. So the error is smaller that $\frac{1}{2}(x-a)^2 = \frac{\pi^2}{1800}<0.00549$. So $0.81367 -0.00549 < \cos \pi/5 < 0.81367 + 0.00549$.
+
+\rule{\textwidth}{1pt}
+\begin{multicols}{2}
+\begin{exercise}
+~\\
+  \begin{enumerate}
+    \item Sketch $y=\frac{1}{\sqrt{x}}$ and its linearization about $x=4$.
+    \item Approximate $\sqrt{50}$ using linearization.
+
+    Answer: $7+ \frac{1}{14}$.
+    \item Approximate $\sin 46^{\circ}$ using linearization.
+
+    Answer: $\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} \frac{\pi}{180}$. (Note: $f(x) = \sin x^{\circ} = \sin \frac{\pi x}{180}$)
+  \end{enumerate}
+\end{exercise}
+\end{multicols}
+\rule{\textwidth}{1pt}
+
 \end{document}

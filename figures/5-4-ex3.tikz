@@ -5,10 +5,11 @@
             ylabel=$y$,
             enlargelimits,
             ytick=\empty,
-            xtick={-1,2}]
-\addplot[name path=F, domain={-1.5:2.5}] {x^2-2*x} node[pos=1, above]{$y=x^2-2x$};
+            xtick={-1,2},
+            width=8cm]
+\addplot[name path=F, domain={-1.5:2.5}] {x^2-2*x} node[pos=.7, below]{$y=x^2-2x$};
 
-\addplot[name path=G, domain={-1.5:2.5}] {4-x^2} node[pos=0, below]{$y=4-x^2$};
+\addplot[name path=G, domain={-1.5:2.5}] {4-x^2} node[pos=.4, right]{$y=4-x^2$};
 
 \addplot[pattern=north west lines, pattern color=brown!50]fill between[of=F and G, soft clip={domain=-1:2}, reverse=true]
 ;
