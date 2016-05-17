@@ -11,9 +11,8 @@
             domain=-1.05:0.95,
             samples=100,
             pattern=north west lines,
-            draw=blue,
-            pattern color=blue,
-            fill opacity=0.2,
+            draw=black,
+            pattern color=brown!50,
             samples=200,
             area legend] {x^3-x+0.1} \closedcycle;
     \node at (axis cs: -.6, .2) {$A_1$};

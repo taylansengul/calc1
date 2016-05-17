@@ -1,0 +1,307 @@
+\documentclass[../calc1-main.tex]{subfiles}
+
+\begin{document}
+
+Consider $I = \bigint_a^b f(x) dx$, where $f$ is continuous on $(a, b)$.
+
+If $a=-\infty$ or $b=\infty$ then we say $I$ is an \textbf{improper integral of type I.}
+
+If $f$ is unbounded as $x$ approaches to $a$ or $b$ then we ay $I$ is an \textbf{improper integral of type II.}
+
+\subsection*{Improper Integrals of Type I}
+\begin{example}
+	Find the area of the region lying under the curve $y=\frac{1}{x^2}$ and above the x-axis to the right of $x=1$.
+\end{example}
+
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+  	The area is $A = \bigint_1^{\infty} \frac{dx}{x^2}$ which is an improper interal  of type-I.
+  	\[
+  	\begin{split}
+  		A = & 
+  		\int_1^{\infty} \frac{dx}{x^2} = \lim_{R \to \infty} \int_1^R \frac{dx}{x^2} \\
+  		= & \lim_{R \to \infty} \left.\left( -\frac{1}{x} \right)\right \vert_1^R= 
+  		\lim_{R \to \infty} \left( -\frac{1}{R} + 1 \right) = 
+  		1
+  	\end{split}
+  	\]
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+    xmin=.5, xmax= 3, ymin=0, ymax=1.6,
+    % xlabel=$x$, ylabel=$y$,
+    xtick={1},
+    yticklabels={,,},
+    axis lines=middle,
+    width=6cm,]
+    \addplot[domain=.7:3, samples=100]  {1/(x^2)} node[pos=.5, above right] {$y=1/x^2$};
+    \addplot+[mark=none,
+            domain=1:3,
+            samples=100,
+            pattern=north west lines,
+            draw=black,
+            pattern color=brown!50,
+            area legend] {1/(x^2)} \closedcycle;
+    \end{axis}
+	\end{tikzpicture}
+	\end{figure}
+\end{minipage}
+
+
+
+\begin{example}
+	Find the area of the region lying under the curve $y=\frac{1}{x}$ and above the x-axis to the right of $x=1$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+  \begin{solution}
+  	The area is
+  	\[
+  	\begin{split}
+  		A & = \int_1^{\infty} \frac{dx}{x} =
+  		\lim_{R \to \infty} \int_1^R \frac{dx}{x} \\
+  		& = \lim_{R \to \infty} \left.\left( \ln x \right)\right \vert_1^R= 
+  		\lim_{R \to \infty} \left( \ln R \right) = 
+  		\infty
+  	\end{split}
+  	\]
+  \end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\begin{figure}[H]
+  	\centering
+  \begin{tikzpicture}
+    \begin{axis}[
+    xmin=.5, xmax= 3, ymin=0, ymax=1.5,
+    % xlabel=$x$, ylabel=$y$,
+    xtick={1},
+    yticklabels={,,},
+    axis lines=middle,
+    width=6cm,]
+    \addplot[domain=.7:3, samples=100]  {1/x} node[pos=.5, above right] {$y=1/x$};
+    \addplot+[mark=none,
+            domain=1:3,
+            samples=100,
+            pattern=north west lines,
+            draw=black,
+            pattern color=brown!50,
+            area legend] {1/x} \closedcycle;
+    \end{axis}
+\end{tikzpicture}
+\end{figure}
+\end{minipage}
+
+\begin{definition}
+	If $f$ is continuous on $[a, \infty]$
+	\[
+		\int_a^{\infty} f(x) dx = \lim_{R \to \infty} \int_a^R f(x) dx
+	\]
+	Similarly if $f$ is continuous on $(-\infty, b]$
+	\[
+		\int_{-\infty}^b f(x) dx = \lim_{R \to -\infty} \int_R^b f(x) dx
+	\]
+	In either cases, if the limit is finite, we say the integral \textbf{converges} and if the limit does not exists, we say the integral \textbf{diverges}. If the limit is $\infty$ or $-\infty$ we say the integral diverges to $\infty$ or $-\infty$.
+\end{definition}
+
+For integrals of the form $\bigint_{-\infty}^{\infty} f(x) dx$, we write
+\[
+	\int_{-\infty}^{\infty} f(x) dx = \int_{-\infty}^0 f(x) dx + \int_0^{\infty} f(x) dx
+\]
+The integral on the left converges if and only if both integrals on the right converges.
+
+\begin{example}
+	Evaluate $\bigint_{-\infty}^{\infty} \frac{1}{1+x^2} dx$.
+\end{example}
+\begin{minipage}{0.5\textwidth}
+\begin{solution}
+	\[
+		I = 
+		\int_{-\infty}^{\infty} \frac{1}{1+x^2} dx =
+		\int_{-\infty}^0 \frac{1}{1+x^2} dx + \int_0^{\infty} \frac{1}{1+x^2} dx
+	\]
+	For the first integral,
+	\[
+		\int_0^{\infty} \frac{1}{1+x^2} dx = 
+		\lim_{R \to \infty}\int_0^R \frac{dx}{1+x^2} = 
+		\lim_{R \to \infty}\int_0^R \arctan R = 
+		\frac{\pi}{2}
+	\]
+	For the second integral,
+	\[
+		\int_0^{\infty} \frac{dx}{1+x^2} = 
+		\lim_{R \to -\infty}\int_R^0 \frac{dx}{1+x^2} = 
+		\lim_{R \to -\infty}\int_R^0 -\arctan R = 
+		\frac{\pi}{2}
+	\]
+	So the answer is $I = 2$.
+
+	We could solve this problem by observing that the integrand has even symmetry and thus
+	\[
+		I = 2\int_0^{\infty} \frac{dx}{1+x^2}
+	\]
+\end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+  	\centering
+  	\begin{tikzpicture}
+  	    \begin{axis}[
+  	    xmin=-2, xmax= 2, ymin=0, ymax=1.5,
+  	    % xlabel=$x$, ylabel=$y$,
+  	    xtick={0},
+  	    yticklabels={,,},
+  	    axis lines=middle,
+  	    width=6cm,]
+  	    \addplot[domain=-2:2, samples=100]  {1/(1+x^2)} node[pos=.5, above] {$y=\frac{1}{1+x^2}$};
+  	    \addplot+[mark=none,
+  	            domain=-2:2,
+  	            samples=100,
+  	            pattern=north west lines,
+  	            draw=black,
+  	            pattern color=brown!50,
+  	            area legend] {1/(1+x^2)} \closedcycle;
+  	    \end{axis}
+  	\end{tikzpicture}
+  \end{figure}
+\end{minipage}
+
+
+\subsection*{Improper Integrals of Type-II}
+\begin{definition}
+	If $f$ is continuous on the interval $(a,b]$ and is possibly unbounded near $a$ then
+	\[
+		\int_a^b f(x) dx = \lim_{c \to a+} \int_c^b f(x) dx
+	\]
+	Similarly, if $fF$ is continuous on the interval $[a,b)$ and is possibly unbounded near $b$ then
+	\[
+		\int_a^b f(x) dx \lim_{c \to b-} \int_a^c f(x) dx
+	\]
+\end{definition}
+
+\begin{example}
+	Find the area of the region lying under $y=1/\sqrt{x}$, above the $x$-axis, between $x=0$ and $x=1$.
+\end{example}
+
+\begin{minipage}{0.5\textwidth}
+\begin{solution}
+The area is
+	\[
+		\int_0^1 \frac{1}{\sqrt{x}} dx =
+		\lim_{c \to 0+} \int_c^1 \frac{1}{\sqrt{x}} dx =
+		\lim_{c \to 0+} \left. 2 x^{1/2} \right \vert_c^1 =
+		\lim_{c \to 0+} (2 - 2\sqrt{c}) = 2
+	\]
+\end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+  	\centering
+  	\begin{tikzpicture}
+  	    \begin{axis}[
+  	    xmin=0, xmax= 1.5, ymin=0, ymax=2,
+  	    % xlabel=$x$, ylabel=$y$,
+  	    xtick={1},
+  	    yticklabels={,,},
+  	    axis lines=left,
+  	    width=6cm,]
+  	    \addplot[domain=.1:1.5, samples=100]  {1/sqrt(x)} node[pos=.9, above] {$y=\frac{1}{\sqrt{x}}$};
+  	    \addplot+[mark=none,
+  	            domain=0:1,
+  	            samples=100,
+  	            pattern=north west lines,
+  	            draw=black,
+  	            pattern color=brown!50,
+  	            area legend] {1/sqrt(x)} \closedcycle;
+  	    \end{axis}
+  	\end{tikzpicture}
+  \end{figure}
+\end{minipage}
+
+
+
+\begin{example}
+	Evaluate $\bigint_0^2 \frac{dx}{\sqrt{2x-x^2}}$
+\end{example}
+
+\begin{minipage}{0.5\textwidth}
+\begin{solution}
+By the substitution $u = x-1$
+\[
+	I = \int_0^2 \frac{dx}{\sqrt{2x-x^2}} = 
+	\int_0^2 \frac{dx}{\sqrt{1-(x-1)^2}} =
+	\int_{-1}^1 \frac{du}{\sqrt{1-u^2}}
+\]
+By the even symmetry,
+\[
+	I = 2\int_0^1 \frac{du}{\sqrt{1-u^2}}
+\]
+This is an improper integral of Type-II as the integrand is unbounded at $u=1$.
+\[
+	I = 2 \lim_{c \to 1-} \int_0^c \frac{du}{\sqrt{1-u^2}} =
+	2 \lim_{c \to 1-} \left. \arcsin u \right \vert_0^c =
+	2 \lim_{c \to 1-} \arcsin c = 2 \arcsin 1 = \pi
+\]
+\end{solution}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \begin{figure}[H]
+  	\centering
+  	\begin{tikzpicture}
+  	    \begin{axis}[
+  	    xmin=0, xmax= 2.5, ymin=0, ymax=2,
+  	    % xlabel=$x$, ylabel=$y$,
+  	    xtick={1},
+  	    yticklabels={,,},
+  	    axis lines=left,
+  	    width=6cm,]
+  	    \addplot[domain=0:1.9, samples=100]  {1/sqrt(2*x-x^2)} node[pos=.6, right] {$y=\frac{1}{\sqrt{2x-x^2}}$};
+  	    \addplot+[mark=none,
+  	            domain=0:1.9,
+  	            samples=100,
+  	            pattern=north west lines,
+  	            draw=black,
+  	            pattern color=brown!50,
+  	            area legend] {1/sqrt(2*x-x^2)} \closedcycle;
+  	    \end{axis}
+  	\end{tikzpicture}
+  \end{figure}
+\end{minipage}
+
+
+
+\rule{\textwidth}{1pt}
+\begin{multicols}{2}
+\begin{exercise}
+Evaluate the following integrals or show they diverge.
+	\begin{enumerate}
+		\item $\bigint_0^{\infty} \cos x dx$
+
+		Answer: the integral diverges.
+		\item $\bigint_0^{\infty} e^{-2x} dx$
+
+		Answer: $1/2$.
+		\item $\bigint_0^{\infty} x e^{-x} dx$
+
+		Answer: $1$.
+		\item $\bigint_0^{\pi/2} \tan x dx$
+
+		Answer: the integral diverges to $\infty$.
+		\item $\bigint_0^1 \frac{dx}{x}$
+
+		Answer: the integral diverges to $\infty$.
+		\item $\bigint_0^1 \ln x dx$
+
+		Answer: $-1$.
+
+		\item $\bigint_{-\infty}^{\infty} x e^{-x^2} dx$
+
+		Answer: $0$.
+	\end{enumerate}
+\end{exercise}
+\end{multicols}
+\rule{\textwidth}{1pt}
+
+\end{document}
