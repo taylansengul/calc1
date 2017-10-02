@@ -59,18 +59,18 @@ This is one of the most powerful method to integrate, known as the \textbf{integ
 \end{solution}
 
 \begin{example}
-	$I = \displaystyle \int x \tan^{-1} x dx$
+	$I = \displaystyle \int x \arctan x dx$
 \end{example}
 \begin{solution}
-	Let $u=\tan^{-1}x, dv = x dx$. Then $du = dx/(1+x^2)$ and $v = x^2/2$.
+	Let $u=\arctan x, dv = x dx$. Then $du = dx/(1+x^2)$ and $v = x^2/2$.
 
 	\[
-		I = \frac{1}{2} x^2 \tan^{-1}x -\frac{1}{2} \int \frac{x^2}{1+x^2} dx
-		= \frac{1}{2} x^2 \tan^{-1}x -\frac{1}{2} \int \left( 1- \frac{1}{1+x^2} \right) dx
+		I = \frac{1}{2} x^2 \arctan x -\frac{1}{2} \int \frac{x^2}{1+x^2} dx
+		= \frac{1}{2} x^2 \arctan x -\frac{1}{2} \int \left( 1- \frac{1}{1+x^2} \right) dx
 	\]
 	And
 	\[
-		I = \frac{1}{2} x^2 \tan^{-1}x - \frac{1}{2} (x - \tan^{-1}x) + C
+		I = \frac{1}{2} x^2 \arctan x - \frac{1}{2} (x - \arctan x) + C
 	\]
 \end{solution}
 
@@ -136,6 +136,13 @@ This is one of the most powerful method to integrate, known as the \textbf{integ
     \item $\bigint_1^e \sin(\ln x) dx$
 
     Answer: $\frac{1}{2}(1 - e \cos1 + e\sin1)$
+
+    \item $\int \arctan x dx$
+
+    Hint: use $\arctan x = u$, $dx = dv$. Answer: $x \arctan x - \frac{1}{2} \ln(1+x^2) + c$
+    % In[26]:= Integrate[ArcTan[x], x]
+
+    % Out[26]= x ArcTan[x] - 1/2 Log[1 + x^2]
   \end{enumerate}
 \end{exercise}
 \end{multicols}

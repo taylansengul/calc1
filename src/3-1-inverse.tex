@@ -73,11 +73,17 @@ Usually, we can not solve $y=f(x)$ for $x$. For example $y=x+x^3$ is 1-1 (check)
 
 \subsection*{Inverting Non One-to-one Functions by Restricting the Domain of Definition}
 \begin{minipage}{0.5\textwidth}
-  The function $f(x) = x^2$ is not one-to-one because $(-a)^2 = a^2$ for any $a$. Hence $f$ is not invertible. Let us define a new function $F$ by restricting the domain of $f$,
+  The function $f(x) = x^2$ defined on all real numbers is not one-to-one because $(-a)^2 = a^2$ for any $a$. Hence $f$ is not invertible.
+
+  In fact $f$ is not invertible on any interval around $x=0$. Notice that $f'(0)=0$.
+
+  Let us define a new function $F$ by restricting the domain of $f$,
   \[
     F(x) = x^2, \quad x \geq 0.
   \]
   Then $F^{-1}(x) = \sqrt{x}$.
+
+
 \end{minipage}%
 \begin{minipage}{0.5\textwidth}
   \begin{figure}[H]
@@ -105,7 +111,7 @@ This formula says if $f'(y) \neq 0$ then $f^{-1}$ is differentiable at $x$.
   \input{figures/3-1-inversefunc-derivative.tikz}
 \end{figure}
 
-% A geometric proof that $\tan \theta \tan \beta = 1$. figures/3-1-inversederGeo.eps
+% A geometric proof that $\tan \theta \tan \beta = 1$. 3-1-inversederGeo.eps
 
 In Leibniz notation, $\frac{dy}{dx} = (f^{-1})'(x)$ while $\frac{dx}{dy} = f'(y)$, the above formula reads
 \[

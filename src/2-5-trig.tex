@@ -74,6 +74,16 @@
       \end{split}
     \]
   \end{solution}
+
+  \begin{example}
+    Find the limit of
+    \begin{itemize}
+      \item $\lim_{x \to 0} \frac{\sin x}{\sin 2x}$
+      \item $\lim_{x \to 0} \frac{x \sin x}{2-2\cos x}$
+      \item $\lim_{x \to 0} \frac{1-\cos x}{x^2}$
+      \item $\lim_{x \to 0} \frac{\tan 2x}{x}$
+    \end{itemize}
+  \end{example}
   \begin{theorem}
     $\sin x$ is differentiable for every $x$ and
     \[
@@ -84,7 +94,7 @@
     \[
       \begin{split}
         \frac{d}{dx} \sin x & =
-        \lim_{h \to 0} \frac{\sin(x+h) + \sin x}{h} =
+        \lim_{h \to 0} \frac{\sin(x+h) - \sin x}{h} =
         \lim_{h \to 0} \frac{\sin x \cos h + \cos x \sin h - \sin x}{h}\\ &=
         \lim_{h \to 0} \frac{\sin x (\cos h-1)}{h} + \lim_{h \to 0} \frac{\cos x \sin h}{h} =
         \sin x \lim_{h \to 0} \frac{(\cos h-1)}{h} + \cos x \lim_{h \to 0} \frac{\sin h}{h} = \cos x

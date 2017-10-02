@@ -8,7 +8,7 @@
   \end{enumerate}
   Both are based on the concept of limit.
 
-  We say $\lim_{x \to a} f(x) = L$ to mean that $f(x)$ is ``close enough'' to $L$ when $x$ is ``close enough'' to \emph{but not equal to} $a$. Hence $f(a)$ is unimportant for $\lim_{x \to a} f(x)$.
+  We say $\lim_{x \to a} f(x) = L$ to mean that $f(x)$ is ``close enough'' to $L$ for any $x$ ``close enough'' to $a$.
 
   \begin{example}
     Which value is $x$ close to when $x$ is close to 2?
@@ -83,41 +83,41 @@
   \begin{solution}
     The one-sided limits exist, but are not equal
     \[
-      \lim_{x\searrow0}f(x) = 1 \text{ and } \lim_{_x\nearrow0}f(x) = -1.
+      \lim_{x\to0+}f(x) = 1 \text{ and } \lim_{x\to0-}f(x) = -1.
     \]
     Hence $\lim_{x\to 0} f(x)$ does not exist.
   \end{solution}
 
 
-% \begin{example} Evaluate the expressions by referencing the plot in Figure~\ref{plot:piecewise-exercise}.
-% \begin{figure}[H]
-%   \centering
-%   \input{figures/1-1-limitEx.tikz}
-%   \label{plot:piecewise-exercise}
-% \end{figure}
+\begin{example} Evaluate the expressions by referencing the plot in \autoref{plot:piecewise-exercise}.
+\begin{figure}[H]
+  \centering
+  \input{figures/1-1-limitEx.tikz}
+  \caption{\label{plot:piecewise-exercise}}
+\end{figure}
 
-% \begin{enumerate}
-% \begin{multicols}{3}
-% \item $\lim_{x\to 4} f(x)$
-% \item $\lim_{x\to -3} f(x)$
-% \item $\lim_{x\to 0} f(x)$
-% \item $\lim_{x\to 0-} f(x)$
-% \item $\lim_{x\to 0+} f(x)$
-% \item $f(-2)$
-% \item $\lim_{x\to 2-} f(x)$
-% \item $\lim_{x\to -2-} f(x)$
-% \item $\lim_{x\to 0} f(x+1)$
-% \item $f(0)$
-% \item $\lim_{x\to 1-} f(x-4)$
-% \item $\lim_{x\to 0+} f(x-2)$
-% \end{multicols}
-% \end{enumerate}
+\begin{enumerate}[a)]
+\begin{multicols}{3}
+\item $\lim_{x\to 4} f(x)$
+\item $\lim_{x\to -3} f(x)$
+\item $\lim_{x\to 0} f(x)$
+\item $\lim_{x\to 0-} f(x)$
+\item $\lim_{x\to 0+} f(x)$
+\item $f(-2)$
+\item $\lim_{x\to 2-} f(x)$
+\item $\lim_{x\to -2-} f(x)$
+\item $\lim_{x\to 0} f(x+1)$
+\item $f(0)$
+\item $\lim_{x\to 1-} f(x-4)$
+\item $\lim_{x\to 0+} f(x-2)$
+\end{multicols}
+\end{enumerate}
 
-% (a) $8$, (b) $6$, (c) DNE,
-% (d) $-2$, (e) $-1$, (f) $8$,
-% (g) $7$, (h) $6$, (i) $3$,
-% (j) $-3/2$, (k) $6$, (l) $2$
-% \end{example}
+(a) $8$, (b) $6$, (c) DNE,
+(d) $-2$, (e) $-1$, (f) $8$,
+(g) $7$, (h) $6$, (i) $3$,
+(j) $-3/2$, (k) $6$, (l) $2$
+\end{example}
 
 \subsection*{Properties of Limits}
 \begin{theorem}
@@ -241,7 +241,7 @@ Most of the limits you need to compute in this class will be $\lim_{x \to a} f(x
     \item $\lim_{x \to 0} \dfrac{\abs{3x-1}-\abs{3x+1}}{x}$.
 
     Answer: -6
-    \item $\lim_{x \to 2-} \dfrac{x^2-4}{\abs{x+2}}$.
+    \item $\lim_{x \to -2-} \dfrac{x^2-4}{\abs{x+2}}$.
 
     Answer:
     \item $\lim_{y \to 1} \dfrac{y-4\sqrt{y}+3}{y^2-1}$.

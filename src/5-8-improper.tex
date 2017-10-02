@@ -6,22 +6,34 @@ Consider $I = \bigint_a^b f(x) dx$, where $f$ is continuous on $(a, b)$.
 
 If $a=-\infty$ or $b=\infty$ then we say $I$ is an \textbf{improper integral of type I.}
 
-If $f$ is unbounded as $x$ approaches to $a$ or $b$ then we ay $I$ is an \textbf{improper integral of type II.}
+If $f$ is unbounded as $x$ approaches to $a$ or $b$ then we say $I$ is an \textbf{improper integral of type II.}
 
 \subsection*{Improper Integrals of Type I}
+\begin{definition}
+  If $f$ is continuous on $[a, \infty)$
+  \[
+    \int_a^{\infty} f(x) dx = \lim_{R \to \infty} \int_a^R f(x) dx
+  \]
+  Similarly if $f$ is continuous on $(-\infty, b]$
+  \[
+    \int_{-\infty}^b f(x) dx = \lim_{R \to -\infty} \int_R^b f(x) dx
+  \]
+  In either cases, if the limit is finite, we say the integral \textbf{converges} and if the limit does not exists, we say the integral \textbf{diverges}. If the limit is $\infty$ or $-\infty$ we say the integral diverges to $\infty$ or $-\infty$.
+\end{definition}
+
 \begin{example}
 	Find the area of the region lying under the curve $y=\frac{1}{x^2}$ and above the x-axis to the right of $x=1$.
 \end{example}
 
 \begin{minipage}{0.5\textwidth}
   \begin{solution}
-  	The area is $A = \bigint_1^{\infty} \frac{dx}{x^2}$ which is an improper interal  of type-I.
+  	The area is $A = \bigint_1^{\infty} \frac{dx}{x^2}$ which is an improper integral  of type-I.
   	\[
   	\begin{split}
-  		A = & 
+  		A = &
   		\int_1^{\infty} \frac{dx}{x^2} = \lim_{R \to \infty} \int_1^R \frac{dx}{x^2} \\
-  		= & \lim_{R \to \infty} \left.\left( -\frac{1}{x} \right)\right \vert_1^R= 
-  		\lim_{R \to \infty} \left( -\frac{1}{R} + 1 \right) = 
+  		= & \lim_{R \to \infty} \left.\left( -\frac{1}{x} \right)\right \vert_1^R=
+  		\lim_{R \to \infty} \left( -\frac{1}{R} + 1 \right) =
   		1
   	\end{split}
   	\]
@@ -63,8 +75,8 @@ If $f$ is unbounded as $x$ approaches to $a$ or $b$ then we ay $I$ is an \textbf
   	\begin{split}
   		A & = \int_1^{\infty} \frac{dx}{x} =
   		\lim_{R \to \infty} \int_1^R \frac{dx}{x} \\
-  		& = \lim_{R \to \infty} \left.\left( \ln x \right)\right \vert_1^R= 
-  		\lim_{R \to \infty} \left( \ln R \right) = 
+  		& = \lim_{R \to \infty} \left. \ln x \right \vert_1^R=
+  		\lim_{R \to \infty} \ln R =
   		\infty
   	\end{split}
   	\]
@@ -94,18 +106,6 @@ If $f$ is unbounded as $x$ approaches to $a$ or $b$ then we ay $I$ is an \textbf
 \end{figure}
 \end{minipage}
 
-\begin{definition}
-	If $f$ is continuous on $[a, \infty]$
-	\[
-		\int_a^{\infty} f(x) dx = \lim_{R \to \infty} \int_a^R f(x) dx
-	\]
-	Similarly if $f$ is continuous on $(-\infty, b]$
-	\[
-		\int_{-\infty}^b f(x) dx = \lim_{R \to -\infty} \int_R^b f(x) dx
-	\]
-	In either cases, if the limit is finite, we say the integral \textbf{converges} and if the limit does not exists, we say the integral \textbf{diverges}. If the limit is $\infty$ or $-\infty$ we say the integral diverges to $\infty$ or $-\infty$.
-\end{definition}
-
 For integrals of the form $\bigint_{-\infty}^{\infty} f(x) dx$, we write
 \[
 	\int_{-\infty}^{\infty} f(x) dx = \int_{-\infty}^0 f(x) dx + \int_0^{\infty} f(x) dx
@@ -118,30 +118,18 @@ The integral on the left converges if and only if both integrals on the right co
 \begin{minipage}{0.5\textwidth}
 \begin{solution}
 	\[
-		I = 
+		I =
 		\int_{-\infty}^{\infty} \frac{1}{1+x^2} dx =
-		\int_{-\infty}^0 \frac{1}{1+x^2} dx + \int_0^{\infty} \frac{1}{1+x^2} dx
+		\int_{-\infty}^0 \frac{1}{1+x^2} dx + \int_0^{\infty} \frac{1}{1+x^2} dx = 2 \int_0^{\infty} \frac{1}{1+x^2} dx
 	\]
-	For the first integral,
+	since the integrand is an even function.
 	\[
-		\int_0^{\infty} \frac{1}{1+x^2} dx = 
-		\lim_{R \to \infty}\int_0^R \frac{dx}{1+x^2} = 
-		\lim_{R \to \infty}\int_0^R \arctan R = 
+		\int_0^{\infty} \frac{1}{1+x^2} dx =
+		\lim_{R \to \infty}\int_0^R \frac{dx}{1+x^2} =
+		\lim_{R \to \infty}\int_0^R \arctan R =
 		\frac{\pi}{2}
 	\]
-	For the second integral,
-	\[
-		\int_0^{\infty} \frac{dx}{1+x^2} = 
-		\lim_{R \to -\infty}\int_R^0 \frac{dx}{1+x^2} = 
-		\lim_{R \to -\infty}\int_R^0 -\arctan R = 
-		\frac{\pi}{2}
-	\]
-	So the answer is $I = 2$.
-
-	We could solve this problem by observing that the integrand has even symmetry and thus
-	\[
-		I = 2\int_0^{\infty} \frac{dx}{1+x^2}
-	\]
+	So the answer is $I = \pi$.
 \end{solution}
 \end{minipage}%
 \begin{minipage}{0.5\textwidth}
@@ -230,7 +218,7 @@ The area is
 \begin{solution}
 By the substitution $u = x-1$
 \[
-	I = \int_0^2 \frac{dx}{\sqrt{2x-x^2}} = 
+	I = \int_0^2 \frac{dx}{\sqrt{2x-x^2}} =
 	\int_0^2 \frac{dx}{\sqrt{1-(x-1)^2}} =
 	\int_{-1}^1 \frac{du}{\sqrt{1-u^2}}
 \]

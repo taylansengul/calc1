@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+  \begin{axis}[x=1cm, y=.8cm, axis lines*=middle, xtick={-1,1}, ytick={-1.57,1.57}, yticklabels={$-\pi$/2,$\pi$/2}]
+    \addplot[thick, domain=-pi/2:pi/2]  (sin(deg(x)), x);
+    \addplot[red, dashed, domain=-3*pi/2:3*pi/2]  (sin(deg(x)), x);
+  \end{axis}
+\end{tikzpicture}

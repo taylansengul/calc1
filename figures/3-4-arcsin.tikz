@@ -1,5 +1,0 @@
-\begin{tikzpicture}
-  \begin{axis}[domain=-1:1, width=8cm, samples=500, axis lines*=middle, xtick={-1,1}, ytick={-1.57,1.57}, yticklabels={$-\pi$/2,$\pi$/2}]
-    \addplot[thick]  {asin(x)/180*pi};
-  \end{axis}
-\end{tikzpicture}

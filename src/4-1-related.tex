@@ -14,7 +14,17 @@
   \]
   gives $\frac{dA}{dt} = -14$.
 \end{solution}
-In the previous problem, if $\frac{dx}{dt}$ and $\frac{dy}{dt}$ are constant, then $x(t) = 10 + 2t$, $y(t) = 8-3t$ and $A(t) = (10+2t)(8-3t)$. So $A(1) = 60$. But we found that $A$ changes -14cm$^2$/s so we expect to find $A(1)=-66$. How is this possible?
+In the previous problem, notice that the average changes
+\[
+  \begin{aligned}
+    & \frac{A(1)-A(0)}{1-0} = 12\cdot 5 - 10 \cdot 8 = - 20, \\
+    & \frac{A(.5)-A(0)}{.5-0} = 2(11\cdot 6.5 - 10 \cdot 8) = - 17 \\
+    & \frac{A(.1)-A(0)}{.1-0} = 10(10.2\cdot 7.7 - 10 \cdot 8) = - 14.6
+  \end{aligned}
+\]
+converge to the instantaneous rate we found.
+
+
 
 This is possible because $A'(t) = -14 - 6t$. Hence $A$ changes in a non-constant fashion event though $x$ and $y$ changes constantly. What we are computing in this problem is $A'(0) = - 14$. And this result holds even if $\frac{dx}{dt}$ and $\frac{dy}{dt}$ are not constant. (maybe velocity of $x$ is not constant and it accelerates according to $x(t) = 10 + 2t + t^2$)
 

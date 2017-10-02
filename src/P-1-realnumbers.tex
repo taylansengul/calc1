@@ -83,8 +83,9 @@ Properties \textit{(can be proved from definition)}:
   \item $\abs{-x} = \abs{x}$, (Do not fall into the trap $\abs{-x} = x$, this is not always true!)
   \item $\abs{ab} = \abs{a} \abs{b}$,
   \item $\abs{a+b} \le \abs{a} + \abs{b}$, (triangle inequality).
+  \item for any $x$, $x^2 = \abs{x^2} = \abs{x}^2$ (follows from (2))
 \end{enumerate}
-From (2), for any $x$, $x^2 = \abs{x^2} = \abs{x}^2$
+
 
 If D is a nonnegative number
 \[
@@ -117,8 +118,13 @@ More generally,
 \end{example}
 
 \begin{example}
-  Solve the equation $\abs{x+1} > \abs{x-3}$.
-
-  Solution. The distance between $x$ and $-1$ is greater than the distance between $x$ and $3$. So $x>1$.
+  Solve the inequality $\abs{x+1} > \abs{x-3}$.
 \end{example}
+\begin{solution}
+  Trying to solve $\abs{x+1} > \abs{x-3}$ directly is complicated.
+
+  \textit{1st method}. The problem asks to find $x$ for which the distance between $x$ and $-1$ is greater than the distance between $x$ and $3$.
+
+  \textit{2nd method}. Take the square of both sides to get $(x+1)^2 > (x-3)^2$ and solve for $x$.
+\end{solution}
 \end{document}

@@ -227,7 +227,7 @@
   \end{definition}
   \textbf{Derivative of $y=\log_a x$.}
   \[
-    \frac{d}{dx} \log_a x = \frac{d}{dx} \frac{\ln x}{\ln a} = \frac{1}{a x}.
+    \frac{d}{dx} \log_a x = \frac{d}{dx} \frac{\ln x}{\ln a} = \frac{1}{x \ln a}.
   \]
 
   \subsection*{Logarithmic Differentiation}
@@ -265,5 +265,35 @@
       \frac{y'}{y} = \frac{1}{x+1} + \cdots
     \]
   \end{solution}
+
+
+  \subsection*{Hyperbolic Functions}
+  The hyperbolic sine function $\sinh$ (pronounced `zinch' (rhymes with `pinch')) is
+  \[
+    \sinh x = \frac{e^x - e^{-x}}{2}
+  \]
+  and the hyperbolic cosine function $\cosh$ (pronounced `kosh' (rhymes with `gosh')) is
+  \[
+    \cosh x = \frac{e^x + e^{-x}}{2}
+  \]
+
+  One can also define $\tanh$, $\coth$, etc.
+
+  These functions have many remarkable properties some of which resemble trigonometric functions. Show that
+  \[
+    \cosh 0 = 1, \qquad \sinh 0 = 0
+  \]
+  \[
+    2 \sinh x \cosh x = \sinh 2x
+  \]
+  \[
+    \frac{d \sinh x}{dx} = \cosh x, \qquad \frac{d \cosh x}{dx} = \sinh x.
+  \]
+
+  The reason these functions are called hyperbolic is
+  \[
+    \cosh^2 x - \sinh^2 x = 1
+  \]
+  So the parametric curve $(\cosh x, \sinh x)$ defines the hyperbola $x^2 - y^2 = 1$.
 
 \end{document}

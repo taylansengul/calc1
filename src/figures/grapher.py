@@ -110,7 +110,7 @@ def openOutputFile(name, width, graphics_extension="eps"):
     texfile=open(filename+".tex","w")
     topMatter = r"""
     \begin{picture} (%6f,%6f)(0,0)
-    \put(0.0, 0.0){\includegraphics{figures/%s.pdf}}
+    \put(0.0, 0.0){\includegraphics{%s.pdf}}
     """%(BoundingBox[2], BoundingBox[3], filename)
     # The above lines go into the TeX file.  Even though windows uses the
     # backslash, it seems TeX always uses a slash to separate directories and files
@@ -167,7 +167,7 @@ def grid(XMIN, XMAX, DX, YMIN, YMAX, DY):
 def inBoundingBox(x,y):
     global BoundingBox
     return BoundingBox[0]<x and x<BoundingBox[2]  \
-            and BoundingBox[1]<y and y<BoundingBox[3] 
+            and BoundingBox[1]<y and y<BoundingBox[3]
 def __polygon__(P,s):
     # don't call directly
     x2=(scale*P[0][0]+hshift)
@@ -184,7 +184,7 @@ def __polygon__(P,s):
             if inBB2:
                 outfile.write("%6.2f %6.2f lineto\n" % (x2,y2))
             else:
-                outfile.write("stroke\n")                
+                outfile.write("stroke\n")
                 print "%s %6.2f %6.2f %6.2f%6.2f"%(\
                         "__polygon__ going out of bounds:",x1,y1,x2,y2)
         else:
@@ -207,7 +207,7 @@ def polygonF(P, fillcolor=0):
     else:
         __polygon__(P,"gsave \n")
         setrgbcolor(fillcolor)
-        outfile.write("fill grestore stroke \n") 
+        outfile.write("fill grestore stroke \n")
 def plot(x, y, tmin, tmax):
     global scale, hshift, scale, vshift, outfile, ViewBox
     print "plot parameter range %lf...%lf"%(tmin, tmax)
@@ -293,10 +293,10 @@ def arrowhead(A, B, len=10, wid=3, overshoot=1.0):
     direction=(bb-aa)/abs(bb-aa)
     arrow=[0+0j,    # set up the basic arrow
            complex(-len, -wid),
-           complex(-0.7*len, 0), 
+           complex(-0.7*len, 0),
            complex(-len, wid),
            0+0j]
-    arrow = [bb+direction*(p+overshoot)/scale for p in arrow] 
+    arrow = [bb+direction*(p+overshoot)/scale for p in arrow]
     arrow = [[p.real, p.imag] for p in arrow]
     __polygon__(arrow, " gsave fill grestore stroke")
 def arrow(A, B, len=10, wid=3, overshoot=1.0):
