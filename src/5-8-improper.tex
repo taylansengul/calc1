@@ -1,8 +1,8 @@
-\documentclass[../calc1-main.tex]{subfiles}
+\documentclass[calc1-main.tex]{subfiles}
 
 \begin{document}
 
-Consider $I = \bigint_a^b f(x) dx$, where $f$ is continuous on $(a, b)$.
+Consider $I = \displaystyle \int_a^b f(x) dx$, where $f$ is continuous on $(a, b)$.
 
 If $a=-\infty$ or $b=\infty$ then we say $I$ is an \textbf{improper integral of type I.}
 
@@ -27,7 +27,7 @@ If $f$ is unbounded as $x$ approaches to $a$ or $b$ then we say $I$ is an \textb
 
 \begin{minipage}{0.5\textwidth}
   \begin{solution}
-  	The area is $A = \bigint_1^{\infty} \frac{dx}{x^2}$ which is an improper integral  of type-I.
+  	The area is $A = \displaystyle \int_1^{\infty} \frac{dx}{x^2}$ which is an improper integral  of type-I.
   	\[
   	\begin{split}
   		A = &
@@ -106,14 +106,18 @@ If $f$ is unbounded as $x$ approaches to $a$ or $b$ then we say $I$ is an \textb
 \end{figure}
 \end{minipage}
 
-For integrals of the form $\bigint_{-\infty}^{\infty} f(x) dx$, we write
-\[
-	\int_{-\infty}^{\infty} f(x) dx = \int_{-\infty}^0 f(x) dx + \int_0^{\infty} f(x) dx
-\]
-The integral on the left converges if and only if both integrals on the right converges.
+\begin{definition}
+  For integrals of the form $\displaystyle \int_{-\infty}^{\infty} f(x) dx$, we define
+  \[
+    \int_{-\infty}^{\infty} f(x) dx = \int_{-\infty}^0 f(x) dx + \int_0^{\infty} f(x) dx
+  \]
+  The integral on the left converges if and only if both integrals on the right converges.
+\end{definition}
+
+Note that $\int_{-\infty}^{\infty} f(x) dx$ and $\lim_{R \to \infty} \int_{-R}^{R} f(x) dx$ may or may not be equal. For example $\int_{-\infty}^{\infty} x dx$ is divergent according to our definition since $\int_{0}^{\infty} x dx = \infty$ is divergent. But $\lim_{R \to \infty} \int_{-R}^{R} x dx = 0$.
 
 \begin{example}
-	Evaluate $\bigint_{-\infty}^{\infty} \frac{1}{1+x^2} dx$.
+	Evaluate $\displaystyle \int_{-\infty}^{\infty} \frac{1}{1+x^2} dx$.
 \end{example}
 \begin{minipage}{0.5\textwidth}
 \begin{solution}
@@ -163,7 +167,7 @@ The integral on the left converges if and only if both integrals on the right co
 	\[
 		\int_a^b f(x) dx = \lim_{c \to a+} \int_c^b f(x) dx
 	\]
-	Similarly, if $fF$ is continuous on the interval $[a,b)$ and is possibly unbounded near $b$ then
+	Similarly, if $f$ is continuous on the interval $[a,b)$ and is possibly unbounded near $b$ then
 	\[
 		\int_a^b f(x) dx \lim_{c \to b-} \int_a^c f(x) dx
 	\]
@@ -211,7 +215,7 @@ The area is
 
 
 \begin{example}
-	Evaluate $\bigint_0^2 \frac{dx}{\sqrt{2x-x^2}}$
+	Evaluate $\displaystyle \int_0^2 \frac{dx}{\sqrt{2x-x^2}}$
 \end{example}
 
 \begin{minipage}{0.5\textwidth}
@@ -265,26 +269,26 @@ This is an improper integral of Type-II as the integrand is unbounded at $u=1$.
 \begin{exercise}
 Evaluate the following integrals or show they diverge.
 	\begin{enumerate}
-		\item $\bigint_0^{\infty} \cos x dx$
+		\item $\displaystyle \int_0^{\infty} \cos x dx$
 
 		Answer: the integral diverges.
-		\item $\bigint_0^{\infty} e^{-2x} dx$
+		\item $\displaystyle \int_0^{\infty} e^{-2x} dx$
 
 		Answer: $1/2$.
-		\item $\bigint_0^{\infty} x e^{-x} dx$
+		\item $\displaystyle \int_0^{\infty} x e^{-x} dx$
 
 		Answer: $1$.
-		\item $\bigint_0^{\pi/2} \tan x dx$
+		\item $\displaystyle \int_0^{\pi/2} \tan x dx$
 
 		Answer: the integral diverges to $\infty$.
-		\item $\bigint_0^1 \frac{dx}{x}$
+		\item $\displaystyle \int_0^1 \frac{dx}{x}$
 
 		Answer: the integral diverges to $\infty$.
-		\item $\bigint_0^1 \ln x dx$
+		\item $\displaystyle \int_0^1 \ln x dx$
 
 		Answer: $-1$.
 
-		\item $\bigint_{-\infty}^{\infty} x e^{-x^2} dx$
+		\item $\displaystyle \int_{-\infty}^{\infty} x e^{-x^2} dx$
 
 		Answer: $0$.
 	\end{enumerate}

@@ -1,4 +1,4 @@
-\documentclass[../calc1-main.tex]{subfiles}
+\documentclass[calc1-main.tex]{subfiles}
 
 \begin{document}
 In this section we develop the relation between the integral and the derivative.
@@ -108,7 +108,7 @@ We will use the evaluation symbol
 
 In general
 \[
-  \frac{d}{dx} \int_{f(x)}^{g(x)} h(t) dt = h(f(x)) f'(x) - h(g(x))g'(x).
+  \frac{d}{dx} \int_{f(x)}^{g(x)} h(t) dt = h(g(x)) g'(x) - h(f(x)) f'(x).
 \]
 
 \rule{\textwidth}{1pt}
@@ -116,21 +116,21 @@ In general
 \begin{exercise}
 ~\\
   \begin{enumerate}
-    \item $\frac{d}{dx} \bigint_2^x \frac{\sin t}{t} dt$
+    \item $\displaystyle \frac{d}{dx} \int_2^x \frac{\sin t}{t} dt$
 
     Answer: $\frac{\sin x}{x}$
 
-    \item $\frac{d}{dx} \bigint_{\sin x}^{\cos x} \frac{1}{1-x^2} dx$
+    \item $\displaystyle \frac{d}{dx} \int_{\sin x}^{\cos x} \frac{1}{1-x^2} dx$
 
-    Answer: $-\frac{1}{\sin x} - \frac{}{\cos x}$
+    Answer: $-\frac{1}{\sin x} - \frac{1}{\cos x}$
 
-    \item $\frac{d}{dx} F(\sqrt{x})$, if $F(t) = \bigint_0^t \cos(x^2)dx$
+    \item $\displaystyle \frac{d}{dx} F(\sqrt{x})$, if $F(t) = \int_0^t \cos(x^2)dx$
 
     Answer: $\frac{1}{2\sqrt{x}} \cos(x)$
 
-    \item Find $H'(2)$ if $H(x) = 3x \bigint_4^x^2 e^{\sqrt{t}}dt$
+    \item Find $H'(2)$ if $\displaystyle H(x) = 3x \int_4^{x^2} e^{\sqrt{t}}dt$
 
-    Answer: $6e^{-2}$
+    Answer: $6e^2$
 
   \end{enumerate}
 \end{exercise}

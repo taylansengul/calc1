@@ -1,4 +1,4 @@
-\documentclass[../calc1-main.tex]{subfiles}
+\documentclass[calc1-main.tex]{subfiles}
 
 \begin{document}
 Our main goal in this section is to find the area between the graph of a function and the x-axis.
@@ -17,15 +17,17 @@ Let's start with an easy example.
   \[
     L_n = f(x_0) (x_1 - x_0) + f(x_1) (x_2-x_1) + \cdots + f(x_n-1) (x_n-x_{n-1})
   \]
-  For $n=1$, $L_1 = f(0) (2-0) = 2$
-  For $n=2$, $L_2 = f(0) (1-0) +f(1) (2-1) = 1 + 2 = 3$,
-  For $n=3$, $L_4 = (f(0) + f(1/2) + f(1) + f(3/2)) (1/2) = 7/2$
-
-  We can show that
+  \begin{align*}
+  & L_1 = f(0) (2-0) = 2, \\
+  & L_2 = f(0) (1-0) +f(1) (2-1) = 1 + 2 = 3, \\
+  & L_4 = (f(0) + f(1/2) + f(1) + f(3/2)) (1/2) = 7/2, \\
+  & L_n = \frac{2(2n-1)}{n}
+  \end{align*}
+  Thus
   \[
-    L_n = \frac{2(2n-1)}{n}
+    \lim_{n \to \infty} L_n = 4
   \]
-  Thus $\lim_{n \to \infty} L_n = 4$. This is in fact the exact area.
+  which is the area.
 
   We can repeat this with ``larger'' rectangles. In this case
   \[
@@ -35,10 +37,9 @@ Let's start with an easy example.
 \end{solution}
 
 This procedure can be used to find the areas under more exotic curves.
-
-In general, if we want to calculate the area between the graph of $y=f(x)$, the x-axis, $a \le x \le b$. We partition the interval $a=x_0 < x_1 < \cdots < x_n = b$. Let $P=\{x_0, x_1, \dots, x_n\}$.
-
 \begin{definition}
+  Suppose $f:[a,b] \to \mathbb{R}$.
+  If $a=x_0 < x_1 < \cdots < x_n = b$ then the set $P=\{x_0, x_1, \dots, x_n\}$ is called a \textbf{partition} of the interval $[a,b]$.
   Let $f(l_i)$ be the smallest value and $f(u_i)$ be the largest value of $f(x)$ on $[x_i, x_{i+1}]$. Then we define the \textbf{lower Riemann sum}
   \[
     L(f, P) = f(l_0) (x_1-x_0) + f(l_1) (x_2-x_1) + \cdots f(l_{n-1}) (x_n - x_{n-1})
@@ -57,14 +58,17 @@ In general, if we want to calculate the area between the graph of $y=f(x)$, the 
     I = \int_a^b f(x) dx.
   \]
 \end{definition}
-Let $R$ be the region bounded by the graph of $f(x)$, the x-axis and the lines $x=a$ and $x=b$. If $f(x) \ge 0$ on $[a, b]$ then
-\[
-  \text{Area(R)} = \int_a^b f(x) dx
-\]
-If $f(x) \le 0$ on $[a, b]$ then
-\[
-  \text{Area(R)} = -\int_a^b f(x) dx
-\]
+
+\begin{definition}
+  Let $R$ be the region bounded by the graph of $f(x)$, the x-axis and the lines $x=a$ and $x=b$. If $f(x) \ge 0$ on $[a, b]$ then we define
+  \[
+    \text{Area(R)} = \int_a^b f(x) dx
+  \]
+  If $f(x) \le 0$ on $[a, b]$ then
+  \[
+    \text{Area(R)} = -\int_a^b f(x) dx
+  \]
+\end{definition}
 
 In general $\int_a^b f(x)$ is the area of the part of $R$ lying above the x-axis minus the area of the part below the x-axis.
 
@@ -87,38 +91,30 @@ Which functions are integrable?
 \end{theorem}
 Piecewise continuous functions are also integrable.
 
+\begin{example}
+  Not every function is integrable. Define $f: [0, 1] \to \mathbb{R}$ such that $f(x) = 0$ is $x$ is a rational number and $f(x)= 1$ if $x$ is an irrational number. Let $P$ be a partition of $[0,1]$. Then the smallest value $f(l_i)$ in the subinterval $[x_i, x_{i+1}]$ is 0 since every such interval contains a rational, while the largest value $f(u_i)$ is 1 since every such interval also contains an irrational. Thus $L(f, P) = 0$ and $U(f, P) = 1$. This is true for any partition $P$. Hence there are infinitely many numbers between $L(f,P)$ and $U(f,P)$ for any partition $P$. Hence $f$ is not integrable on $[0,1]$.
+\end{example}
+
 \subsection*{Properties of Definite Integral}
 The following properties are easy consequences of the definition of definite integral.
 \begin{theorem}
   Let $f$ and $g$ be integrable on an interval containing the points $a$, $b$ and $c$.
   \begin{enumerate}
-    \item $\int_a^a f(x) dx = 0$.
-    \item We can define $\int_a^b f(x) dx$ when $a>b$. In this case $x_0 = a > x_1 > \cdots x_n = b$. It is easy to see that
-    \[
-      \int_a^b f(x) dx = - \int_b^a f(x) dx.
-    \]
-    \item If $A$ and $B$ are constants then
-    \[
-      \int_a^b (A f(x) + B g(x)) dx =
-      A \int_a^b f(x)dx + B \int_a^b g(x)dx.
-    \]
-    \item
-    \[
-      \int_a^b f(x) dx + \int_b^c f(x) dx =
-      \int_a^c f(x) dx.
-    \]
-    \item If $a \le b$ and $f(x) \le g(x)$ then
-    \[
-      \int_a^b f(x) dx \le \int_a^b g(x) dx
-    \]
-    \item If $f$ is an odd function then
-    \[
-      \int_{-a}^a f(x) dx = 0
-    \]
-    \item If $f$ is an even function then
-    \[
-      \int_{-a}^a f(x) dx = \int_0^a f(x) dx
-    \]
+    \item $\displaystyle \int_a^a f(x) dx = 0$.
+
+    \item We can define $\int_a^b f(x) dx$ when $a>b$. In this case the partition points are $x_0 = a > x_1 > \cdots x_n = b$. Hence $\displaystyle \int_a^b f(x) dx = - \int_b^a f(x) dx$.
+
+    \item If $c$ is a constant $\displaystyle \int_a^b c f(x) dx = c \int_a^b f(x)dx$.
+
+    \item $\displaystyle \int_a^b (f(x) + g(x)) dx = \int_a^b f(x) dx + \int_a^b g(x)dx$
+
+    \item $\displaystyle \int_a^b f(x) dx + \int_b^c f(x) dx = \int_a^c f(x) dx.$
+
+    \item If $a \le b$ and $f(x) \le g(x)$ then $\displaystyle \int_a^b f(x) dx \le \int_a^b g(x) dx$.
+
+    \item If $f$ is an odd function then $\displaystyle \int_{-a}^a f(x) dx = 0$.
+
+    \item If $f$ is an even function then $\displaystyle \int_{-a}^a f(x) dx = 2 \int_0^a f(x) dx$.
   \end{enumerate}
 \end{theorem}
 
